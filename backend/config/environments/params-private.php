@@ -7,5 +7,7 @@
  * Time: 5:51 PM
  */
 return array(
-	'env.code' => 'private'
+	'env.code' => 'private',
+		'db.connectionString' => 'mysql:host=127.0.0.1;dbname=AfcDB'
+
 );
