@@ -58,6 +58,16 @@ return CMap::mergeArray(
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		/* 'modules' => array(), */
 		'components' => array(
+			#Beanstalk queue extension
+			'yiinstalk' => array(
+      			'class' => 'common.extensions.yiinstalk',
+      			'connections' => array(
+        			'default' => array(
+          				'host' => '127.0.0.1',
+          				'port' => 11300,
+        			),
+      			),
+    		),
 			'errorHandler' => array(
 				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
 				'errorAction'=>'site/error'
