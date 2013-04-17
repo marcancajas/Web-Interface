@@ -1,10 +1,3 @@
-<?php
-/**
- * index.php
- *
- * @author: antonio ramirez <antonio@clevertech.biz>
- * Date: 7/22/12
- * Time: 8:30 PM
- */
-?>
+<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
+<h1>User View</h1>
 This is index view file...
