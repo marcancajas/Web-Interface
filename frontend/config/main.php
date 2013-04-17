@@ -34,7 +34,7 @@ return CMap::mergeArray(
 		'params' => $params,
 		// preload components required before running applications
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#preload-detail
-		'preload' => array('log'),
+		'preload' => array('bootstrap','log'),
 		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#language-detail
 		'language' => 'en',
 		// uncomment if a theme is used
@@ -59,6 +59,10 @@ return CMap::mergeArray(
 		/* 'modules' => array(), */
 		'components' => array(
 			#Beanstalk queue extension
+			'bootstrap' => array(
+				'class' => 'common.extensions.bootstrap.components.Bootstrap',
+				'responsiveCss' => true,
+			),
 			'yiinstalk' => array(
       			'class' => 'common.extensions.yiinstalk',
       			'connections' => array(
