@@ -63,15 +63,15 @@ return CMap::mergeArray(
 		),
 		/* uncomment and set if required */
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
-		/* 'modules' => array(
+		'modules' => array(
 			'gii' => array(
 				'class' => 'system.gii.GiiModule',
 				'password' => 'clevertech',
 				'generatorPaths' => array(
-					'bootstrap.gii'
-				)
+				'bootstrap.gii'),
+				'ipFilters' => array('127.0.0.1', '192.168.*'),   // EDIT TO TASTE
 			)
-		), */
+		),
 		'components' => array(
 			'user' => array(
 				'allowAutoLogin'=>true,
