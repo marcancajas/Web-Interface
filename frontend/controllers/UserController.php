@@ -18,7 +18,9 @@ class UserController extends Controller {
 
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->render('Index');
+	}
+
 	public function actionConnectToWorker()
 	{
 		echo Yii::app()->session->sessionID;
