@@ -68,10 +68,11 @@ return CMap::mergeArray(
 				'responsiveCss' => true,
 			),
 			'yiinstalk' => array(
-      			'class' => 'common.extensions.yiinstalk',
+      			'class' => 'common.extensions.Yiinstalk',
+      			'pheanstalkPath'=>'common.vendors.Pheanstalk',
       			'connections' => array(
         			'default' => array(
-          				'host' => '127.0.0.1',
+          				'host' => '192.168.42.254',
           				'port' => 11300,
         			),
       			),
