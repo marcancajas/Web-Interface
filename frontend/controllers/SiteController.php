@@ -53,7 +53,8 @@ class SiteController extends Controller {
 	/**
 	 * Displays the login page
 	 */
-	public function actionLogin() {
+	public function actionLogin()
+	{
 		$model = new LoginForm;
 
 		/*
@@ -65,11 +66,14 @@ class SiteController extends Controller {
 */
 
 		// collect user input data
-		if (isset($_POST['LoginForm'])) {
+		if (isset($_POST['LoginForm']))
+		{
 			$model->attributes = $_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if ($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if ($model->validate(array('username', 'password')) && $model->login())
+			{
+				$this->redirect(user()->returnUrl);
+			}
 		}
 		// display the login form
 		$this->render('login', array('model' => $model));
