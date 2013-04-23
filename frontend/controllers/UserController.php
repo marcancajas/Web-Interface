@@ -8,7 +8,7 @@ class UserController extends Controller {
 				'users'=>array('*')),
 			// logged in users
 			array('allow',
-				'actions'=>array('index'),
+				'actions'=>array('Index','connectToWorker'),
 				'users' => array('@')),
 			// not logged in users can't do anything except above
 			array('deny',
