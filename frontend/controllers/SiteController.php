@@ -11,7 +11,7 @@ class SiteController extends Controller {
 	public function accessRules() {
 		return array(
 			// not logged in users should be able to login and view captcha images as well as errors
-			array('allow', 'actions' => array('index', 'captcha', 'login', 'error', 'KK')),
+			array('allow', 'actions' => array('index', 'captcha', 'login', 'error')),
 			// logged in users can do whatever they want to
 			array('allow', 'users' => array('@')),
 			// not logged in users can't do anything except above
