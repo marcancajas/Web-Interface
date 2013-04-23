@@ -43,6 +43,7 @@ return CMap::mergeArray(
 		// @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
 		'import' => array(
 			'common.components.*',
+			'common.components.tubes.*',
 			'common.extensions.*',
 			'common.models.*',
 			// uncomment if behaviors are required
@@ -58,6 +59,9 @@ return CMap::mergeArray(
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		/* 'modules' => array(), */
 		'components' => array(
+			'user' => array(
+				'returnUrl' => '/user',
+			),
 			#Beanstalk queue extension
 			'bootstrap' => array(
 				'class' => 'common.extensions.bootstrap.components.Bootstrap',
