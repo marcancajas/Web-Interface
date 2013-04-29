@@ -89,6 +89,14 @@ return CMap::mergeArray(
 				'enableParamLogging' => YII_DEBUG,
 				'charset' => 'utf8'
 			),
+			'session' => array (
+				'class'=> 'CDbHttpSession',
+				'autoCreateSessionTable'=> false,
+				'connectionID' => 'db',
+				'sessionTableName' => 'YiiSession',
+				'autoStart' => true,
+				'timeout' => 600
+			),
 			'urlManager' => array(
 				'urlFormat' => 'path',
 				'showScriptName' => false,
