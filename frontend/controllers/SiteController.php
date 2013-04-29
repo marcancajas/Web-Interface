@@ -72,7 +72,8 @@ class SiteController extends Controller {
 			// validate user input and redirect to the previous page if valid
 			if ($model->validate(array('username', 'password')) && $model->login())
 			{
-				$this->redirect(user()->returnUrl);
+				//echo user()->returnUrl;
+				$this->redirect(array('/user/index'));
 			}
 		}
 		// display the login form
