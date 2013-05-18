@@ -25,6 +25,9 @@
     
     
     <header>
+        <div id="logo">
+    	<img src="http://placehold.it/770x400&text=First+thumbnail" />
+        </div>
     </header>    
         
         
