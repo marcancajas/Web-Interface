@@ -23,18 +23,9 @@
 
 <body>
     
-    
-    <header>
-        <div id="logo">
-    	<img src="http://placehold.it/770x400&text=First+thumbnail" />
-        </div>
-    </header>    
         
-        
-
-<div class="container" id="navigation">
-    
-  
+ <div id="nav_container"> //Start of Navigation
+	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', // null or 'inverse'
 	'brand' => '',
@@ -45,6 +36,8 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
 				array('label' => 'Home', 'url' => array('/Site/Index')),
+                                '---',
+                                array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
                                 '---',
 				array('label' => 'ChaosENGINE', 'url' => array('/Site/ChaosENGINE', 'view' => 'ChaosENGINE')),
                                 '---',
@@ -74,18 +67,24 @@
 	),
 )); ?>
     
-
+        </div> //End of Navigation
     
-	<!-- mainmenu -->
-	<div class="container" style="margin-top:80px">
-		<?php if (isset($this->breadcrumbs)): ?>
-			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-			'links' => $this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-		<?php endif?>
- 
+<div id="Head_container">
         
-               
+    <div id="logo_container">
+	<div id="logo">
+    	<img src="http://placehold.it/770x400&text=First+thumbnail" alt="ChaosEngine" />
+    </div>
+    <div id="welcome_msg">
+    	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    </div>
+    <div class="clear"></div>
+    </div>
+    
+</div>
+                  
+        <div id="carousel_background">
+            <div id="carousel_container">
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
         array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>'First Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
@@ -93,7 +92,8 @@
         array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>'Third Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
     ),
 )); ?>
-                
+            </div>
+        </div>        
                 
                 
                 
