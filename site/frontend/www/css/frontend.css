@@ -25,9 +25,9 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
 
 /*****	HEADER	*****/
 
-#Head_container { width:100%; margin:0 auto; padding:40px 0 40px 0; background-color:#ffffff}
+#Head_container { width:100%; margin:0 auto; padding:40px 0 20px 0; background-color:#ffffff}
 #logo_container { background-color:#ffffff; width:1150px; margin:0 auto;}
-#logo { width:215px; float:left; margin-right:75px; }
+#logo { width:215px; float:left; padding: 25px 0 10px 0}
 #welcome_msg { width:620px; float:left; background:url(../images/welcome-bg.png) no-repeat; padding:55px 20px 0 20px; position:relative; }
 #welcome_msg p { color:#999999; font-size:16px; }
 #welcome_msg img { margin:0 0 0 -20px; padding:0; position:absolute; bottom:0; }
@@ -43,7 +43,7 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
 #carousel_container { 
     background-color:#000000; 
     width:1150px;
-    height: 250px;
+    height: 300px;
     margin:0 auto;
 }
 

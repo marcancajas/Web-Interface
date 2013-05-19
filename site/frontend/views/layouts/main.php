@@ -23,8 +23,8 @@
 
 <body>
     
-        
- <div id="nav_container"> //Start of Navigation
+    
+ <div id="nav_container"> 
 	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', // null or 'inverse'
@@ -35,22 +35,23 @@
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
+                          
 				array('label' => 'Home', 'url' => array('/Site/Index')),
-                                '---',
+                    
                                 array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
-                                '---',
+                       
 				array('label' => 'ChaosENGINE', 'url' => array('/Site/ChaosENGINE', 'view' => 'ChaosENGINE')),
-                                '---',
+                     
                                 array('label' => 'Features', 'url' => array('/Site/Features', 'view' => 'Features')),
-                                '---',
+                         
 				array('label' => 'Community Forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
-                                '---',
+                          
                                 array('label' => 'Blog', 'url' => array('/Site/Blog', 'view' => 'Blog')),
-                                '---',
+                          
 				array('label' => 'About', 'url' => array('/Site/Page', 'view' => 'about')),
-                                '---',
+                         
                                 array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
-                                '---',			
+                      		
 				array('label' => 'Logout pull-right (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 			),
 		),
@@ -67,13 +68,14 @@
 	),
 )); ?>
     
-        </div> //End of Navigation
-    
+        </div> 
+     
+        
 <div id="Head_container">
         
     <div id="logo_container">
 	<div id="logo">
-    	<img src="http://placehold.it/770x400&text=First+thumbnail" alt="ChaosEngine" />
+    	<img src="http://placehold.it/770x400&text=SiteLogo" alt="ChaosEngine" />
     </div>
     <div id="welcome_msg">
     	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -82,20 +84,9 @@
     </div>
     
 </div>
-                  
-        <div id="carousel_background">
-            <div id="carousel_container">
-                <?php $this->widget('bootstrap.widgets.TbCarousel', array(
-    'items'=>array(
-        array('image'=>'http://placehold.it/770x400&text=First+thumbnail', 'label'=>'First Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-        array('image'=>'http://placehold.it/770x400&text=Second+thumbnail', 'label'=>'Second Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-        array('image'=>'http://placehold.it/770x400&text=Third+thumbnail', 'label'=>'Third Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
-    ),
-)); ?>
-            </div>
-        </div>        
-                
-                
+       
+      <div id="carousel_background"> 
+      </div>
                 
 		<?php echo $content; ?>
 		<hr/>
