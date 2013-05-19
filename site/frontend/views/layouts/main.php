@@ -67,7 +67,7 @@
 		),
 	),
 )); ?>
-    
+        </div>
         </div> 
      
         
@@ -75,7 +75,7 @@
         
     <div id="logo_container">
 	<div id="logo">
-    	<img src="http://placehold.it/770x400&text=SiteLogo" alt="ChaosEngine" />
+    	<img src="http://placehold.it/770x300&text=SiteLogo" alt="ChaosEngine" />
     </div>
     <div id="welcome_msg">
     	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -84,30 +84,25 @@
     </div>
     
 </div>
-       
-      <div id="carousel_background"> 
-      </div>
                 
-		<?php echo $content; ?>
+		<?php echo $content; ?> <!--Call to content .php file of the page-->
 		<hr/>
+                                
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott.<br/>
-			All Rights Reserved.<br/>
-			<?php echo Yii::powered(); ?>
-		</div>
-		<!-- footer -->
-	</div>
+<div id="footer">
+	Copyright &copy; <?php echo date('Y'); ?> by SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott.<br/>
+	All Rights Reserved.<br/>
+	<?php echo Yii::powered(); ?>
 </div>
+		<!-- footer -->
+                
 <!-- page -->
+<!-- Google Analytics -->
+<script>
+	var _gaq=[['_setAccount','<?php echo param('google.analytics.account'); // check global.php shortcut file at "common/lib/" ?>'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 </body>
 </html>

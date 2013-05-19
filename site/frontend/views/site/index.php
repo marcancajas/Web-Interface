@@ -1,6 +1,20 @@
+<?php
+/**
+ * index.php
+ *
+ * @author: antonio ramirez <antonio@clevertech.biz>
+ * Date: 7/22/12
+ * Time: 8:30 PM
+ */
+?>
+
 <tt><?php $this->getLayoutFile('main'); ?></tt>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
 	      media="screen"/>
+
+
+
+
 <div id="carousel_background"> 
             <div id="carousel_container">
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
