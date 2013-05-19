@@ -89,11 +89,26 @@
 		<hr/>
                                 
                 
-<div id="footer">
-	Copyright &copy; <?php echo date('Y'); ?> by SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott.<br/>
-	All Rights Reserved.<br/>
+<div id="footer_background">
+    <div id="footer_container">
+    
+	<div id="nav">
+        Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. <br/>
+        All Rights Reserved.<br/>
 	<?php echo Yii::powered(); ?>
+    	<ul>
+            <li class="current"><a href="#">HOME</a></li>
+            <li><a href="#">GAMES</a></li>
+            <li><a href="#">ChaosENGINE</a></li>
+            <li class="last"><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="clear"></div>    
+        </div>                                     
+    </div>  
 </div>
+                
+                   
+              
 		<!-- footer -->
                 
 <!-- page -->

@@ -12,17 +12,6 @@ root {
 
 body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#959595; background:#ffffff url(../images/bg.png) repeat-x; }
 
-/*****	NAVIGATION	*****/
-
-#nav_container { background-color:#373737; width:100%; }
-#nav { width:950px; height:40px; margin:0 auto; }
-#nav ul { margin:10px 0 0 0; padding:0; list-style:none; float:right; }
-#nav ul li { float:left; width:100px; border-right:1px dotted #666666; text-align:center; }
-#nav ul li a { color:#ccc; text-decoration:none; font-size:10px; letter-spacing:1px; padding:20px;}
-#nav ul li.current a, #nav ul li a:hover { color:#509dc9; }
-#nav ul li.last { border:none; }
-.clear { clear:both;}
-
 /*****	HEADER	*****/
 
 #Head_container { width:100%; height: 175px; margin:0 auto; background-color:#ffffff; border-bottom: solid 1px #ececec}
@@ -32,22 +21,13 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
 #welcome_msg p { color:#999999; font-size:16px; }
 #welcome_msg img { margin:0 0 0 -20px; padding:0; position:absolute; bottom:0; }
 
-
-
-
-
-
-
-
-
-
-
 /***** MYCAROUSEL *****/
 
 #carousel_background {
     width:100%;
     margin:0 auto; 
     background-color:#000000;
+    height: 300px;
 }
 
 #carousel_container { 
@@ -57,31 +37,33 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
     margin:0 auto;
 }
 
+/***** PAGE CONTENT *****/
 
-
-#separator_background {
+#page_background {
     width:100%;
     margin:0 auto; 
-    background-color:#ffffff;
+    background-color: #ffffff ;
+    border-top: solid 3px #0e509e;
 }
 
-#separator_container { 
+#page_container { 
     background-color:#ffffff; 
     width:1150px;
-    height: 300px;
+
     margin:0 auto;
 }
 
 
 
 
-
+/***** LOGIN CSS *****/
 
 
 #login_background {
     width:100%;
     margin:0 auto; 
     background-color:#ffffff;
+    height: 300px;
 }
 
 #login_container { 
@@ -90,16 +72,6 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
     height: 300px;
     margin:0 auto;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /*****	SERVICES	*****/
@@ -127,6 +99,24 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 
 /*****	FOOTER	*****/
 
-#footer_container { width:100%; background:#373737 url(../images/footer-line.png) top repeat-x; }
-#footer { width:950px; margin:0 auto; padding:10px 0 10px 0; }
-#footer img { margin-right:15px; border:0; }
+#footer_background {
+    width:100%;
+    margin:0 auto; 
+    background-color:#ffffff;
+    height: 300px;
+}
+
+#footer_container { 
+    background-color:#ffffff; 
+    width:1150px;
+    height: 300px;
+    margin:0 auto;
+}
+
+#nav { width:100%; height:40px; margin:0 auto; }
+#nav ul { margin:10px 0 0 0; padding:0; list-style:none; float:right; }
+#nav ul li { float:left; width:120px; border-right:1px dotted #666666; text-align:center; }
+#nav ul li a { color:#ccc; text-decoration:none; font-size:10px; letter-spacing:1px; padding:20px;}
+#nav ul li.current a, #nav ul li a:hover { color:#509dc9; }
+#nav ul li.last { border:none; }
+.clear { clear:both;}
