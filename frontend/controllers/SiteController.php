@@ -88,5 +88,27 @@ class SiteController extends Controller {
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
+	public function actionRegister()
+	{
+		//This action is responsible for handling user registration
+		//Create new user model
+		$model=new User();
+		//$this->performAjaxValidation($model);
+		if(isset($_POST['User']))
+		{
+			//If a user object is passed in, set the attributes in the user database
+			$model->attributes=$_POST['User'];
+			$model->password=$_POST['User']['newPassword'];
+			if($model->save())
+			{
+
+			}
+		}
+		//Render the registration form with the empty user object
+		$this->render('register',array('model'=>$model
+									)
+					);
+	}
+
 
 }
