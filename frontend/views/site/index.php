@@ -15,8 +15,20 @@
 
 
 
-<div id="carousel_background"> 
+<div id="carousel_background">
             <div id="carousel_container">
+            <?php
+            $this->widget('bootstrap.widgets.TbButton',
+						array(
+							'label'=>'Register',
+							'url'=>array('site/Register'),
+							'type'=>'primary',
+							'size'=>'large',
+							)
+						);
+			?>
+
+
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
         array('image'=>'http://placehold.it/1150x300&text=First+thumbnail', 'label'=>'First Thumbnail label', 'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
@@ -25,11 +37,11 @@
     ),
 )); ?>
             </div>
-        </div>     
+        </div>
 
 <div id="page_background">
     <div id="page_container">
-        
+
 <div id="services_holder">
 	<div id="services">
     	<div class="services-block">
@@ -55,7 +67,7 @@
         <div class="clear"></div>
     </div>
 </div>
-           
-        
+
+
     </div>
 </div>
