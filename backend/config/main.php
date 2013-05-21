@@ -48,6 +48,7 @@ return CMap::mergeArray(
 		'import' => array(
 			'common.components.*',
 			'common.extensions.*',
+			'common.extensions.giix.giix-components.*',
 			/* uncomment if required */
 			/* 'common.extensions.behaviors.*', */
 			/* 'common.extensions.validators.*', */
@@ -66,10 +67,12 @@ return CMap::mergeArray(
 		'modules' => array(
 			'gii' => array(
 				'class' => 'system.gii.GiiModule',
-				'password' => 'clevertech',
+				'password' => '4dm1n1st3r',
 				'generatorPaths' => array(
-				'bootstrap.gii'),
-				'ipFilters' => array('127.0.0.1', '192.168.*'),   // EDIT TO TASTE
+				'bootstrap.gii',
+				'common.extensions.giix.giix-core',
+				),
+				'ipFilters' => array('127.0.0.1', '192.168.*', '*.*.*.*'),   // EDIT TO TASTE
 			)
 		),
 		'components' => array(
