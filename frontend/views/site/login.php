@@ -19,7 +19,7 @@ $this->breadcrumbs = array(
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
 	      media="screen"/>
 
-<div id="login_background"> 
+<div id="login_background">
             <div id="login_container">
              <h1>Login</h1>
 
@@ -41,19 +41,17 @@ $this->breadcrumbs = array(
 	<?php echo $form->label($model, 'password');?>
 	<?php echo $form->passwordField($model, 'password'); ?>
 	<br/>
-	<?php echo $form->checkBox($model, 'rememberMe'); ?>
+	<!--
+<?php echo $form->checkBox($model, 'rememberMe'); ?>
 	<?php if ($model->requireCaptcha): ?>
 		<p>plain... :)) </p>
 	<?php endif; ?>
-       
-           
-                    <div class="actions btn btn-primary">
-     
-            
-         <?php echo ('Login'); ?>
-	</div>
+-->
 
-<?php $this->endWidget(); ?>   
+
+				<?php echo CHtml::submitButton('Login'); ?>
+
+<?php $this->endWidget(); ?>
             </div>
         </div>
 
