@@ -44,6 +44,7 @@ return CMap::mergeArray(
 		'import' => array(
 			'common.components.*',
 			'common.components.tubes.*',
+			'common.extensions.giix.giix-components.*',
 			'common.extensions.*',
 			'common.models.*',
 			// uncomment if behaviors are required
