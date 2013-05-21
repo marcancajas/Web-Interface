@@ -1,3 +1,4 @@
+<tt><?php $this->getLayoutFile('main'); ?></tt>
 <?php
 /**
  * login.php
@@ -12,7 +13,15 @@ $this->breadcrumbs = array(
 	'Login',
 );
 ?>
-<h1>Login</h1>
+
+<tt><?php $this->getLayoutFile('main'); ?></tt>
+
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
+	      media="screen"/>
+
+<div id="login_background"> 
+            <div id="login_container">
+             <h1>Login</h1>
 
 <p>Please fill out the following form with your login credentials:</p>
 
@@ -31,14 +40,21 @@ $this->breadcrumbs = array(
 	<br/>
 	<?php echo $form->label($model, 'password');?>
 	<?php echo $form->passwordField($model, 'password'); ?>
-	<?php echo $form->label($model, 'password');?>
 	<br/>
 	<?php echo $form->checkBox($model, 'rememberMe'); ?>
 	<?php if ($model->requireCaptcha): ?>
 		<p>plain... :)) </p>
 	<?php endif; ?>
-	<div class="actions">
-		<?php echo CHtml::submitButton('Login'); ?>
+       
+           
+                    <div class="actions btn btn-primary">
+     
+            
+         <?php echo ('Login'); ?>
 	</div>
 
-<?php $this->endWidget(); ?>
+<?php $this->endWidget(); ?>   
+            </div>
+        </div>
+
+
