@@ -24,8 +24,6 @@ $this->breadcrumbs = array(
              <h1>Login</h1>
 
 <p>Please fill out the following form with your login credentials:</p>
-
-
 <?php $form = $this->beginWidget('CActiveForm', array(
 	'id' => 'login-form',
 	'enableAjaxValidation' => false,
@@ -45,16 +43,11 @@ $this->breadcrumbs = array(
 	<?php if ($model->requireCaptcha): ?>
 		<p>plain... :)) </p>
 	<?php endif; ?>
-       
-           
-                    <div class="actions btn btn-primary">
-     
-            
-         <?php echo ('Login'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>   
+	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
+        <?php $this->endWidget(); ?>
+   
             </div>
         </div>
+
 
 

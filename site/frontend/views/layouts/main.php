@@ -36,7 +36,7 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
                           
-				array('label' => 'Home', 'url' => array('/Site/Index')),
+				array('label' => 'Home', 'url' => array('/Site/Index')), 
                     
                                 array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
                        
@@ -55,14 +55,13 @@
 				array('label' => 'Logout pull-right (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 			),
 		),
-		//'<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+		
 		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'htmlOptions' => array('class' => 'pull-right'),
 			'items' => array(
-                            array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
-				
+                          	array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
 			),
 		),
 	),
@@ -75,7 +74,7 @@
         
     <div id="logo_container">
 	<div id="logo">
-    	<img src="http://placehold.it/770x300&text=SiteLogo" alt="ChaosEngine" />
+    	<img src="/site/frontend/www/images/jamEngineLogov4.png" alt="Lee Grant" alt="ChaosEngine" />
     </div>
     <div id="welcome_msg">
     	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -97,7 +96,7 @@
         All Rights Reserved.<br/>
 	<?php echo Yii::powered(); ?>
     	<ul>
-            <li class="current"><a href="#">HOME</a></li>
+            <li><a href="#">HOME</a></li>
             <li><a href="#">GAMES</a></li>
             <li><a href="#">ChaosENGINE</a></li>
             <li class="last"><a href="#">CONTACT</a></li>
