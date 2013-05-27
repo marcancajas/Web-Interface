@@ -120,3 +120,40 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 #nav ul li.current a, #nav ul li a:hover { color:#509dc9; }
 #nav ul li.last { border:none; }
 .clear { clear:both;}
+
+
+/***** USER CONTENTBOX	*****/
+
+#user_background {
+    width:100%;
+    margin:0 auto; 
+    background-color:#ffffff;
+    height: 300px;
+}
+
+
+#user_container { 
+    background-color:#ffffff; 
+    width:1150px;
+    height: 300px;
+    margin:0 auto;
+}
+
+#user_contentbox { 
+    background-color:#ffffff; 
+    width:975px;
+    height: 300px;
+    margin:0 auto;
+    float: right;
+    border: solid 2px #000;    
+}
+
+
+#user_menubox {
+    background-color:#ffffff; 
+    width:150px;
+    height: 300px;
+    margin:0 auto;
+    float: left; 
+    border: solid 2px #000;
+}
