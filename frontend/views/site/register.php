@@ -17,12 +17,20 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	echo $form->textFieldRow($model,'firstname',array('class'=>'span5', 'maxlength'=>50));
 	//Lastname Textfield
 	echo $form->textFieldRow($model,'lastname',array('class'=>'span5', 'maxlength'=>50));
+	//Country dropdown box
+	echo $form->dropDownListRow($model, 'country', GxHtml::listDataEx(country::model()->findAllAttributes(null, true)));
+	//Gender dropdown box
+	echo $form->dropDownListRow($model, 'gender', array('M'=>'Male', 'F'=>'Female'));
+	//Birthdate datePicker
+	echo $form->datepickerRow($model, 'birthdate', array('prepend'=>'<i class="icon-calendar"></i>'));
+
 	//Username Textfield
 	echo $form->textFieldRow($model,'username',array('class'=>'span5','maxlength'=>45));
 	//Email Textfield
 	echo $form->textFieldRow($model,'email',array('class'=>'span5','maxlength'=>255));
 	//Password Textfield
 	echo $form->passwordFieldRow($model,'newPassword',array('class'=>'span5','maxlength'=>50));
+	//Confirm password Textfield
 	echo $form->passwordFieldRow($model,'passwordConfirm',array('class'=>'span5','maxlength'=>50));
 	?>
 	<div class="form-actions">
