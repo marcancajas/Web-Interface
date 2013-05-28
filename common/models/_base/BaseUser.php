@@ -7,7 +7,7 @@
  * property or method in class "User".
  *
  * Columns in table "user" available as properties of the model,
- * and there are no model relations.
+ * followed by relations of table "user" available as properties of the model.
  *
  * @property integer $id
  * @property string $username
@@ -26,38 +26,20 @@
  * @property integer $update_time
  * @property string $firstname
  * @property string $lastname
+ * @property string $registrationKey
+ * @property integer $country
+ * @property string $gender
+ * @property string $birthdate
+ * @property integer $superuser
+ * @property integer $status
+ * @property string $creationDate
  *
+ * @property Country $country0
  */
 abstract class BaseUser extends GxActiveRecord {
 
-	public $newPassword;
-	public $passwordConfirm;
-
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
-	}
-
-	public function behaviors()
-	{
-		Yii::import('common.extensions.behaviors.password.*');
-		return array(
-			// Password behavior strategy
-			"APasswordBehavior" => array(
-				"class" => "APasswordBehavior",
-				"defaultStrategyName" => "bcrypt",
-				"strategies" => array(
-					"bcrypt" => array(
-						"class" => "ABcryptPasswordStrategy",
-						"workFactor" => 12,
-						"minLength" => 8
-					),
-					"legacy" => array(
-						"class" => "ALegacyMd5PasswordStrategy",
-						'minLength' => 8
-					)
-				),
-			)
-		);
 	}
 
 	public function tableName() {
@@ -74,23 +56,23 @@ abstract class BaseUser extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('email', 'email'),
-			array('passwordConfirm', 'compare', 'compareAttribute' => 'newPassword', 'message' => Yii::t('validation', "Passwords don't match")),
-			array('newPassword, password_strategy ', 'length', 'min' => 8),
-			array('username', 'length', 'min'=> 5),
-			//array('requires_new_password, login_attempts, login_time, create_id, create_time, update_id, update_time', 'numerical', 'integerOnly'=>true),
+			array('country, gender, birthdate, superuser, status, creationDate', 'required'),
+			array('requires_new_password, login_attempts, login_time, create_id, create_time, update_id, update_time, country, superuser, status', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>45),
 			array('password, salt, email, validation_key', 'length', 'max'=>255),
 			array('password_strategy, firstname, lastname', 'length', 'max'=>50),
-			//array('login_ip', 'length', 'max'=>32),
-			//array('username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname', 'default', 'setOnEmpty' => true, 'value' => null),
-			//array('id, username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname', 'safe', 'on'=>'search'),
+			array('login_ip', 'length', 'max'=>32),
+			array('registrationKey', 'length', 'max'=>60),
+			array('gender', 'length', 'max'=>1),
+			array('birthdate, creationDate', 'length', 'max'=>11),
+			array('username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname, registrationKey', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname, registrationKey, country, gender, birthdate, superuser, status, creationDate', 'safe', 'on'=>'search'),
 		);
-
 	}
 
 	public function relations() {
 		return array(
+			'country0' => array(self::BELONGS_TO, 'Country', 'country'),
 		);
 	}
 
@@ -104,8 +86,6 @@ abstract class BaseUser extends GxActiveRecord {
 			'id' => Yii::t('app', 'ID'),
 			'username' => Yii::t('app', 'Username'),
 			'password' => Yii::t('app', 'Password'),
-			'newPassword' => Yii::t('labels', 'Password'),
-			'passwordConfirm' => Yii::t('labels', 'Confirm password'),
 			'salt' => Yii::t('app', 'Salt'),
 			'password_strategy' => Yii::t('app', 'Password Strategy'),
 			'requires_new_password' => Yii::t('app', 'Requires New Password'),
@@ -120,14 +100,15 @@ abstract class BaseUser extends GxActiveRecord {
 			'update_time' => Yii::t('app', 'Update Time'),
 			'firstname' => Yii::t('app', 'Firstname'),
 			'lastname' => Yii::t('app', 'Lastname'),
+			'registrationKey' => Yii::t('app', 'Registration Key'),
+			'country' => null,
+			'gender' => Yii::t('app', 'Gender'),
+			'birthdate' => Yii::t('app', 'Birthdate'),
+			'superuser' => Yii::t('app', 'Superuser'),
+			'status' => Yii::t('app', 'Status'),
+			'creationDate' => Yii::t('app', 'Creation Date'),
+			'country0' => null,
 		);
-	}
-
-	public function regenerateValidationKey()
-	{
-		$this->saveAttributes(array(
-			'validationKey' => md5(mt_rand() . mt_rand() . mt_rand()),
-		));
 	}
 
 	public function search() {
@@ -150,10 +131,16 @@ abstract class BaseUser extends GxActiveRecord {
 		$criteria->compare('update_time', $this->update_time);
 		$criteria->compare('firstname', $this->firstname, true);
 		$criteria->compare('lastname', $this->lastname, true);
+		$criteria->compare('registrationKey', $this->registrationKey, true);
+		$criteria->compare('country', $this->country);
+		$criteria->compare('gender', $this->gender, true);
+		$criteria->compare('birthdate', $this->birthdate, true);
+		$criteria->compare('superuser', $this->superuser);
+		$criteria->compare('status', $this->status);
+		$criteria->compare('creationDate', $this->creationDate, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,
 		));
 	}
-
 }
