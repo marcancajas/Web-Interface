@@ -22,9 +22,9 @@
 </head>
 
 <body>
-    
-    
- <div id="nav_container"> 
+
+
+ <div id="nav_container">
 	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', // null or 'inverse'
@@ -35,82 +35,81 @@
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
-                          
+
 				array('label' => 'Home', 'url' => array('/Site/Index')),
-                    
+
                                 array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
-                       
+
 				array('label' => 'ChaosENGINE', 'url' => array('/Site/ChaosENGINE', 'view' => 'ChaosENGINE')),
-                     
+
                                 array('label' => 'Features', 'url' => array('/Site/Features', 'view' => 'Features')),
-                         
+
 				array('label' => 'Community Forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
-                          
+
                                 array('label' => 'Blog', 'url' => array('/Site/Blog', 'view' => 'Blog')),
-                          
+
 				array('label' => 'About', 'url' => array('/Site/Page', 'view' => 'about')),
-                         
+
                                 array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
-                      		
+
 				array('label' => 'Logout pull-right (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 			),
 		),
-		//'<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+
 		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'htmlOptions' => array('class' => 'pull-right'),
 			'items' => array(
-                            array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
-				
+                          	array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
 			),
 		),
 	),
 )); ?>
         </div>
-        </div> 
-     
-        
+        </div>
+
+
 <div id="Head_container">
-        
+
     <div id="logo_container">
 	<div id="logo">
-    	<img src="http://placehold.it/770x300&text=SiteLogo" alt="ChaosEngine" />
+    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov4.png" alt="Lee Grant" alt="ChaosEngine" />
     </div>
     <div id="welcome_msg">
     	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
     </div>
     <div class="clear"></div>
     </div>
-    
+
 </div>
-                
+
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 		<hr/>
-                                
-                
+
+
 <div id="footer_background">
     <div id="footer_container">
-    
+
 	<div id="nav">
         Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. <br/>
         All Rights Reserved.<br/>
 	<?php echo Yii::powered(); ?>
     	<ul>
-            <li class="current"><a href="#">HOME</a></li>
+            <li><a href="#">HOME</a></li>
             <li><a href="#">GAMES</a></li>
             <li><a href="#">ChaosENGINE</a></li>
             <li class="last"><a href="#">CONTACT</a></li>
         </ul>
-        <div class="clear"></div>    
-        </div>                                     
-    </div>  
+        <div class="clear"></div>
+        </div>
+    </div>
 </div>
-                
-                   
-              
+
+
+
 		<!-- footer -->
-                
+
 <!-- page -->
 <!-- Google Analytics -->
 <script>
