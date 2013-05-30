@@ -20,16 +20,12 @@ class User extends BaseUser
 				"class" => "APasswordBehavior",
 				"defaultStrategyName" => "bcrypt",
 				"strategies" => array(
-					"bcrypt" => array(
-						"class" => "ABcryptPasswordStrategy",
-						"workFactor" => 12,
-						"minLength" => 8
+						"bcrypt" => array(
+							"class" => "ABcryptPasswordStrategy",
+							"workFactor" => 12,
+							"minLength" => 8
+							),
 					),
-					"legacy" => array(
-						"class" => "ALegacyMd5PasswordStrategy",
-						'minLength' => 8
-					)
-				),
 			)
 		);
 	}
@@ -40,7 +36,7 @@ class User extends BaseUser
 		return array(
 			array('email', 'email'),
 			array('passwordConfirm', 'compare', 'compareAttribute' => 'newPassword', 'message' => Yii::t('validation', "Passwords don't match")),
-			array('newPassword, password_strategy ', 'length', 'min' => 8),
+			array('newPassword', 'length', 'min' => 8),
 			array('username', 'length', 'min'=> 5),
 			//array('requires_new_password, login_attempts, login_time, create_id, create_time, update_id, update_time', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>45),
@@ -60,6 +56,13 @@ class User extends BaseUser
 			'newPassword' => Yii::t('labels', 'Password'),
 			'passwordConfirm' => Yii::t('labels', 'Confirm password'),
 		);
+	}
+
+	public function regenerateValidationKey()
+	{
+		$this->saveAttributes(array(
+			'validation_key' => md5(mt_rand() . mt_rand() . mt_rand()),
+		));
 	}
 
 
