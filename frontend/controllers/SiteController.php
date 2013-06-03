@@ -109,6 +109,53 @@ class SiteController extends Controller {
 									)
 					);
 	}
+	public function actionActivate()
+	{
+		$info=array();
+		//Get variables(creationDate, registrationKey, userId) passed into the function
+		$creationDate = $_REQUEST['t'];
+		$registrationKey = $_REQUEST['k'];
+		$userId = $_REQUEST['u'];
+		$expireDate = $creationDate + 86400; // expires after 24hours
+		//If the variables supplied to the function are valid get the id of the user they correspond to
+		$user = db()->createCommand()
+			->select('id')
+			->from('user')
+			->where('id=:id and registrationKey=:registrationKey and status=-2')
+			->bindParam(":registrationKey",$registrationKey,PDO::PARAM_STR)
+			->bindParam(":id",$userId,PDO::PARAM_INT)
+			//->bindParam(":status",'-2',PDO::PARAM_INT)
+			->queryRow();
+		if($user)
+		{
+			//If the registrationKey and userId were valid and info was returned from the previous command
+			if(time() <= $expireDate)
+			{
+				//If the registration period(24 Hours) has not expired, set the user status to active
+				db()->createCommand()
+					->update('User',array(
+					'status'=>1),
+					//'registrationKey'=>null),
+					'id=:id', array(':id'=>$userId));
+					//->bindParam(":id",$userId,PDO::PARAM_INT);
+					//->bindParam(':status',user::STATUS_ACTIVE,PDO::PARAM_INT);
+					user()->setFlash('success', '<strong>Registration Successful</strong> - You can now login');
+					$this->render('registerSuccess');
+					//$this->redirect(array('/site/Index'));
+			}
+			else
+			{
+				//The registration period(24 Hours) has expired, ask the user if they want a new registration email sent
+				$this->render('registerFailure');
+			}
+		}
+		else
+		{
+			//The information supplied was invalid
+			$this->render('registerFailure');
+		}
+	}
+
 
 	protected function performAjaxValidation($model, $form = null) {
 		if (Yii::app()->getRequest()->getIsAjaxRequest() && (($form === null) || ($_POST['ajax'] == $form))) {
