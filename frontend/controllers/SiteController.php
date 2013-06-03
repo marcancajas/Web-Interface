@@ -156,6 +156,16 @@ class SiteController extends Controller {
 		}
 	}
 
+	protected function sendEmail($email, $body)
+	{
+		//This function is responsible for sending emails to users.
+		$message = new YiiMailMessage;
+        $message->subject    = 'Email Registration';
+        $message->setBody($body, 'text/html');
+        $message->addTo($email);
+        $message->from = 'joshgiblett@gmail.com';
+        Yii::app()->mail->send($message);
+	}
 
 	protected function performAjaxValidation($model, $form = null) {
 		if (Yii::app()->getRequest()->getIsAjaxRequest() && (($form === null) || ($_POST['ajax'] == $form))) {
