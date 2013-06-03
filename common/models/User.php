@@ -62,7 +62,7 @@ class User extends BaseUser
 			//Check the username contains 1 number
 			array('username', 'match', 'pattern' => '/^[a-zA-Z0-9]*[0-9]{1}[a-zA-Z0-9]*$/u','message' => Yii::t('user',"Username must be minimum 6 digits long, contain letters and 1 number")),
 			//Checks the birthdate is in the correct format
-			array('birthdate', 'type', 'type' => 'date', 'message' => Yii::t('user',"{attribute} is not valid. Dates must be in the form dd-mm-yyyy"), 'dateFormat' => 'dd-mm-yyyy'),
+			//array('birthdate', 'type', 'type' => 'date', 'message' => Yii::t('user',"{attribute} is not valid. Dates must be in the form dd-mm-yyyy"), 'dateFormat' => 'dd-mm-yyyy'),
 			//Set the searchable fields
 			//array('id, username, email, login_attempts, login_time, login_ip, create_id, create_time, update_id, update_time, firstname, lastname'				, 'gender', 'superuser', 'status', 'birthdate', 'safe', 'on'=>'search'),
 		);
