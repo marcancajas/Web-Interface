@@ -93,7 +93,7 @@ class SiteController extends Controller {
 		//This action is responsible for handling user registration
 		//Create new user model
 		$model=new User();
-		//$this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 		if(isset($_POST['User']))
 		{
 			//If a user object is passed in, set the attributes in the user database
@@ -108,6 +108,13 @@ class SiteController extends Controller {
 		$this->render('register',array('model'=>$model
 									)
 					);
+	}
+
+	protected function performAjaxValidation($model, $form = null) {
+		if (Yii::app()->getRequest()->getIsAjaxRequest() && (($form === null) || ($_POST['ajax'] == $form))) {
+			echo GxActiveForm::validate($model);
+			Yii::app()->end();
+		}
 	}
 
 
