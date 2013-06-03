@@ -57,8 +57,10 @@ abstract class BaseUser extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('country, gender, birthdate, superuser, status, creationDate', 'required'),
-			/* array('requires_new_password, login_attempts, login_time, create_id, create_time, update_id, update_time, country, superuser, status', 'numerical', 'integerOnly'=>true), */
+			//Check the email address is a valid email address i.e someone@example.com
+			array('email', 'email'),
+			//
+			array('requires_new_password, login_attempts, login_time, create_id, create_time, update_id, update_time, country, superuser, status', 					'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>45),
 			array('password, salt, email, validation_key', 'length', 'max'=>255),
 			array('password_strategy, firstname, lastname', 'length', 'max'=>50),
@@ -67,7 +69,6 @@ abstract class BaseUser extends GxActiveRecord {
 			array('gender', 'length', 'max'=>1),
 			array('birthdate, creationDate', 'length', 'max'=>11),
 			/* array('username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname, registrationKey', 'default', 'setOnEmpty' => true, 'value' => null), */
-			array('id, username, password, salt, password_strategy, requires_new_password, email, login_attempts, login_time, login_ip, validation_key, create_id, create_time, update_id, update_time, firstname, lastname, registrationKey, country, gender, birthdate, superuser, status, creationDate', 'safe', 'on'=>'search'),
 		);
 	}
 
