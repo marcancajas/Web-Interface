@@ -4,6 +4,12 @@ Yii::import('common.models._base.BaseUser');
 
 class User extends BaseUser
 {
+	//Constans for user status
+	const STATUS_INACTIVE=0;
+	const STATUS_ACTIVE=1;
+	const STATUS_BANNED=-1;
+	const STATUS_PENDING=-2;
+	const PASSWORD_LEN_MIN=6;
 	public $newPassword;
 	public $passwordConfirm;
 	public static function model($className=__CLASS__) {
