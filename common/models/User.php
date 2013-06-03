@@ -10,6 +10,8 @@ class User extends BaseUser
 	const STATUS_BANNED=-1;
 	const STATUS_PENDING=-2;
 	const PASSWORD_LEN_MIN=6;
+
+	//Variables which will be used for validating the password
 	public $newPassword;
 	public $passwordConfirm;
 	public static function model($className=__CLASS__) {
