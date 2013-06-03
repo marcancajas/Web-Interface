@@ -14,7 +14,8 @@ class User extends BaseUser
 	//Variables which will be used for validating the password
 	public $newPassword;
 	public $passwordConfirm;
-	public static function model($className=__CLASS__) {
+	public static function model($className=__CLASS__)
+	{
 		return parent::model($className);
 	}
 
