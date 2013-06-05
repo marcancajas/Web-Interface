@@ -57,7 +57,7 @@
 			),
 		),
 
-		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
+		//(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">'.user()->name.'</a></p>' : '',
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'htmlOptions' => array('class' => 'pull-right'),
