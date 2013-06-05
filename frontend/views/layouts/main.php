@@ -40,7 +40,7 @@
 
                                 array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
 
-				array('label' => 'ChaosENGINE', 'url' => array('/Site/ChaosENGINE', 'view' => 'ChaosENGINE')),
+				array('label' => 'JAMengine', 'url' => array('/Site/ChaosENGINE', 'view' => 'JAMengine')),
 
                                 array('label' => 'Features', 'url' => array('/Site/Features', 'view' => 'Features')),
 
@@ -96,7 +96,7 @@
 
     <div id="logo_container">
 	<div id="logo">
-    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="Lee Grant" alt="ChaosEngine" />
+    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="Lee Grant" alt="JAMengine" />
         </div>
         <div id="welcome_msg">
     	<p><h5>A research project prototype of a innovative online games engine platform. Experience the next-gen online platform, with install-free games and extendable server technologies. Sign up for beta.
