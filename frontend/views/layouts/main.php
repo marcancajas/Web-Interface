@@ -53,6 +53,7 @@
                                 array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
 
 				array('label' => 'Logout pull-right (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+
 			),
 		),
 
@@ -62,6 +63,8 @@
 			'htmlOptions' => array('class' => 'pull-right'),
 			'items' => array(
                           	array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
+                          	array('label' => 'Register', 'url' => array('/Site/Register'), 'visible' => Yii::app()->user->isGuest),
+
 			),
 		),
 	),
