@@ -18,7 +18,8 @@
 <div id="carousel_background">
             <div id="carousel_container">
             <?php
-            $this->widget('bootstrap.widgets.TbButton',
+            /*
+$this->widget('bootstrap.widgets.TbButton',
 						array(
 							'label'=>'Register',
 							'url'=>array('site/Register'),
@@ -26,6 +27,7 @@
 							'size'=>'large',
 							)
 						);
+*/
 			?>
 
 
