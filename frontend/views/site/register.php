@@ -1,5 +1,16 @@
 <!--Registration form-->
-<h1>Register</h1>
+
+
+<tt><?php $this->getLayoutFile('main'); ?></tt>
+
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
+	      media="screen"/>
+
+<div id="login_background">
+            <div id="login_container">
+                <h1>Register</h1>
+
+
 
 <?php
 //Form
@@ -18,7 +29,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	//Lastname Textfield
 	echo $form->textFieldRow($model,'lastname',array('class'=>'span5', 'maxlength'=>50));
 	//Country dropdown box
-	echo $form->dropDownListRow($model, 'country', GxHtml::listDataEx(country::model()->findAllAttributes(null, true)));
+	//echo $form->dropDownListRow($model, 'country', GxHtml::listDataEx(country::model()->findAllAttributes(null, true)));
 	//Gender dropdown box
 	echo $form->dropDownListRow($model, 'gender', array('M'=>'Male', 'F'=>'Female'));
 	//Birthdate datePicker
@@ -45,3 +56,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	</div>
 
 <?php $this->endWidget(); ?>
+
+        
+            </div>
+</div>

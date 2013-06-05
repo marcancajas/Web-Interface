@@ -14,12 +14,42 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
 
 /*****	HEADER	*****/
 
-#Head_container { width:100%; height: 175px; margin:0 auto; background-color:#ffffff; border-bottom: solid 1px #ececec}
-#logo_container { background-color:#ffffff; width:1150px; margin:0 auto;}
-#logo { width:215px; padding-top: 60px; float:left;}
-#welcome_msg { width:620px; float:left; background:url(../images/welcome-bg.png) no-repeat; padding:100px 20px 0 75px; position:relative; }
-#welcome_msg p { color:#999999; font-size:16px; }
-#welcome_msg img { margin:0 0 0 -20px; padding:0; position:absolute; bottom:0; }
+#Head_container { 
+    width:100%; 
+    height: 175px; 
+    margin:0 auto; 
+    background-color:#ffffff; 
+    border-bottom: solid 1px #ececec;
+}
+#logo_container { 
+    background-color:#ffffff; 
+    width:1150px; 
+    margin:0 auto;
+}
+#logo { 
+    width:215px; 
+    padding-top: 60px; 
+    padding-left: 60px;
+    float:left; 
+    position:static;
+}
+#welcome_msg { 
+    width:620px; 
+    float:right;
+    background:url(../images/welcome-bg.png) no-repeat; 
+    padding:65px 150px 0px 75px; 
+    position:static;
+}
+#welcome_msg p { 
+    color:#999999; 
+    font-size:16px; 
+}
+#welcome_msg img { 
+    margin:0 0 0 -20px; 
+    padding:0; 
+    position:static; 
+    bottom:0; 
+}
 
 /***** MYCAROUSEL *****/
 
@@ -63,13 +93,13 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
     width:100%;
     margin:0 auto; 
     background-color:#ffffff;
-    height: 300px;
+    height: auto;
 }
 
 #login_container { 
     background-color:#ffffff; 
     width:1150px;
-    height: 300px;
+    height: auto;
     margin:0 auto;
 }
 

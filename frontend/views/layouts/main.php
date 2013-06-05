@@ -56,18 +56,40 @@
 			),
 		),
 
+            
+            
+            
+             //Registration Button
+            (!Yii::app()->user->isGuest) ?:
+		array(
+			'class' => 'bootstrap.widgets.TbMenu',
+			'htmlOptions' => array('class' => 'pull-right'),
+			'items' => array(
+                          	array('label' => 'Register', 'url' => array('/Site/Register'), 'visible' => Yii::app()->user->isGuest),
+                            
+			),
+		),
+           
+            //Login Button
 		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'htmlOptions' => array('class' => 'pull-right'),
 			'items' => array(
                           	array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
+                            
 			),
 		),
+            
+       
 	),
-)); ?>
+)); 
+        
+        ?>
+            
+            
         </div>
-        </div>
+</div>
 
 
 <div id="Head_container">
@@ -75,11 +97,27 @@
     <div id="logo_container">
 	<div id="logo">
     	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="Lee Grant" alt="ChaosEngine" />
-    </div>
-    <div id="welcome_msg">
-    	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-    </div>
-    <div class="clear"></div>
+        </div>
+        <div id="welcome_msg">
+    	<p><h5>A research project prototype of a innovative online games engine platform. Experience the next-gen online platform, with install-free games and extendable server technologies. Sign up for beta.
+            
+            <?php
+           $this->widget('bootstrap.widgets.TbButton',
+						array(
+							'label'=>'Register Here',
+							'url'=>array('site/Register'),
+							'type'=>'primary',
+							'size'=>'small',
+							)
+						);
+			?></h5>
+                     </p>
+      
+        
+        
+        
+        </div>
+        <div class="clear"></div>
     </div>
 
 </div>
