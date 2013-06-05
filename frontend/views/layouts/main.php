@@ -80,7 +80,7 @@
     	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov4.png" alt="Lee Grant" alt="ChaosEngine" />
     </div>
     <div id="welcome_msg">
-    	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    	<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
     </div>
     <div class="clear"></div>
     </div>
