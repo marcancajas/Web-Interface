@@ -55,7 +55,7 @@
 
                                 array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
 
-				array('label' => 'Logout pull-right (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+				array('label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 			),
 		),
 
@@ -64,13 +64,13 @@
             
             
               (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
-              array(
+             /* array(
                     'class'=>'bootstrap.widgets.TbMenu',
                     'htmlOptions'=>array('class'=>'pull-right'),
                     'items'=>array(
 
                     ),
-               ),
+               ), */
             
               (!Yii::app()->user->isGuest) ?:
               '<ul class="nav pull-right">
@@ -85,22 +85,20 @@
                        
                        <!-- Login form here -->
                       
-                       <!-- Need to fix this for $model, not sure how -->
-                        
-                       <form id="loginform action="SiteController.php" method="post">
+                       <form id="login-form" action="site/login" method="post">
                        <fieldset id="body">
                              <fieldset>
-                             <label for = "username">Username or e-mail</label>
-                             <input type="text" name="username" id="username" />
+                             <label for="LoginForm_username">Username or e-mail</label>
+                             <input name="LoginForm[username]" id="LoginForm_username" type="text" maxlength="45">
                              </fieldset>
                              <fieldset>
-                             <label for = "password">Password</label>
-                             <input type="password" name="password" id="password" />
+                             <label for="LoginForm_password">Password</label>
+                             <input name="LoginForm[password]" id="LoginForm_password" type="password" maxlength="50">
                              </fieldset>
-                             <input type ="submit" id="login" value="Login" />
+                             <input type="submit" name="yt0" value="Login" />
                        </fieldset>
                        </form>
-                     
+                       <!-- End of Login form here -->
                     
                        </div>
                    </li>
