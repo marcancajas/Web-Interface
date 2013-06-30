@@ -71,8 +71,9 @@
 
                     ),
                ),
-
-              '<ul class="nav pull-right">
+            
+              (!Yii::app()->user->isGuest) ?:
+              array('<ul class="nav pull-right">
               
                    <li class="dropdown">
                    
@@ -86,8 +87,8 @@
                       
                        <!-- Need to fix this for $model, not sure how -->
                         
-                       <form id="loginform">
-                       <fieldset id ="body">
+                       <form id="loginform action="SiteController.php" method="post">
+                       <fieldset id="body">
                              <fieldset>
                              <label for = "username">Username or e-mail</label>
                              <input type="text" name="username" id="username" />
@@ -104,7 +105,7 @@
                        </div>
                    </li>
                </ul>'
-            ,
+            ),
             
             
              //Navbar Registration Button
