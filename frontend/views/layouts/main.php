@@ -21,7 +21,6 @@
         <!-- Dropdown Javascript Plugin -->
          <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.js"></script>
          <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.min.js"></script>
-    
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -39,7 +38,7 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
 
-				array('label' => 'Home', 'url' => array('/Site/Index')),
+				array('label' => 'Home', 'url' => array('/Site/Index', 'view' => 'Index')),
 
                                 array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
 
@@ -64,13 +63,13 @@
             
             
               (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
-             /* array(
+               array(
                     'class'=>'bootstrap.widgets.TbMenu',
                     'htmlOptions'=>array('class'=>'pull-right'),
                     'items'=>array(
 
                     ),
-               ), */
+               ), 
             
               (!Yii::app()->user->isGuest) ?:
               '<ul class="nav pull-right">
@@ -85,7 +84,7 @@
                        
                        <!-- Login form here -->
                       
-                       <form id="login-form" action="site/login" method="post">
+                       <form id="login-form" action="/site/frontend/www/Site/login" method="post">
                        <fieldset id="body">
                              <fieldset>
                              <label for="LoginForm_username">Username or e-mail</label>
@@ -185,7 +184,7 @@
 </div>
 
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
-		<hr/>
+		<hr/> 
 
 
 <div id="footer_background">
