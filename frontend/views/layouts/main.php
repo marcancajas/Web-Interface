@@ -17,13 +17,16 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
 	<![endif]-->
-
+          
+        <!-- Dropdown Javascript Plugin -->
+         <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.js"></script>
+         <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+    
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
-
-
+   
  <div id="nav_container">
 	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -57,9 +60,54 @@
 		),
 
             
+            //Navbar Login Button
             
             
-             //Registration Button
+              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
+              array(
+                    'class'=>'bootstrap.widgets.TbMenu',
+                    'htmlOptions'=>array('class'=>'pull-right'),
+                    'items'=>array(
+
+                    ),
+               ),
+
+              '<ul class="nav pull-right">
+              
+                   <li class="dropdown">
+                   
+                    <!-- Work in progress: Pop form on hover and redirect to /site/login on click, still figuring out.. -->
+                    
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="500" data-close-others="false">Login<strong class="caret">
+                       </strong></a>
+                       <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                       
+                       <!-- Login form here -->
+                      
+                       <!-- Need to fix this for $model, not sure how -->
+                        
+                       <form id="loginform">
+                       <fieldset id ="body">
+                             <fieldset>
+                             <label for = "username">Username or e-mail</label>
+                             <input type="text" name="username" id="username" />
+                             </fieldset>
+                             <fieldset>
+                             <label for = "password">Password</label>
+                             <input type="password" name="password" id="password" />
+                             </fieldset>
+                             <input type ="submit" id="login" value="Login" />
+                       </fieldset>
+                       </form>
+                     
+                    
+                       </div>
+                   </li>
+               </ul>'
+            ,
+            
+            
+             //Navbar Registration Button
             (!Yii::app()->user->isGuest) ?:
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
@@ -70,23 +118,38 @@
 			),
 		),
            
-            //Login Button
+           /* Old Login Button
+            
 		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'htmlOptions' => array('class' => 'pull-right'),
-			'items' => array(
-                          	array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
+			'items' => array(                          
+                          	array('label' => 'Login', 'url' => array('/Site/Login'), 
+                                    
+                                    'items'=>array(
+                                    array('label'=>'Username or e-mail', 'url'=>'#'),
+                                    array('label'=>'Password', 'url' =>'#'),
+                                    array('label'=>'Login'),
+                                    'visible' => Yii::app()->user->isGuest),
+                                )
                             
 			),
 		),
             
-       
+            End of Old login button*/
+            
+         
+           
+            
 	),
 )); 
         
         ?>
+          
             
+            
+       
             
         </div>
 </div>

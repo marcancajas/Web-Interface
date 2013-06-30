@@ -116,6 +116,7 @@ AddType text/x-vcard                        vcf
 AddType application/x-shockwave-flash       swf
 AddType text/vtt                            vtt
 
+
 # ----------------------------------------------------------------------
 # Gzip compression
 # ----------------------------------------------------------------------

@@ -37,9 +37,13 @@
            </div>
          
            <div id="user_contentbox">        
-             <li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
-             <h1>User View</h1>
+         
+            <p><h1>User Content Box</h1></p>
+             
+             
+             
              <?php echo CHtml::link('Connect to Worker',array('/User/ConnectToWorker')); ?>
+             
           </div>
          
     </div>

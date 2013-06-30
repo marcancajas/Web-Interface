@@ -111,22 +111,6 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
 h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; font-size:14px; }
 .services-block { width:220px; margin:8px; float:left; }
 
-/*****	ABOUT	*****/
-
-#about_container { background:#ececec url(../images/about-line.png) repeat-x; width:100%; padding-bottom:25px; }
-#about { width:950px; margin:0 auto; padding:25px 0 0 0; }
-#about_me_box { width:479px; background:#000 url(../images/about-bg.png); padding:60px 10px 0 10px; float:left; position:relative; }
-#about_me_box img { position:absolute; bottom:0; left:0; }
-#about_me_box p { margin-bottom:20px; }
-#about_me_box span { background:url(../images/button-right.png) right no-repeat; padding:6px 10px 6px 0; }
-#about_me_box span a { background:url(../images/button-left.png) left no-repeat; padding:6px 0 6px 10px; color:#fff; text-decoration:none; }
-
-#blog { float:left; width:410px; margin-left:40px; }
-#blog img { margin:20px 0 15px 0; }
-#blog p.date { color:#666666; margin-top:-15px; } 
-.post { border-bottom:1px dotted #fff; margin-top:-18px; }
-.post h6 a { color:#509dc9; text-decoration:none; font-weight:bold; font-size:12px; }
-
 /*****	FOOTER	*****/
 
 #footer_background {
@@ -165,17 +149,17 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 #user_container { 
     background-color:#ffffff; 
     width:1150px;
-    height: 300px;
+    height: auto;
     margin:0 auto;
 }
 
-#user_contentbox { 
+#user_contentbox {
     background-color:#ffffff; 
     width:975px;
     height: 300px;
-    margin:0 auto;
     float: right;
-    border: solid 2px #000;    
+    border: solid 2px #000;
+    margin-top: 10px;
 }
 
 
@@ -183,7 +167,7 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
     background-color:#ffffff; 
     width:150px;
     height: 300px;
-    margin:0 auto;
     float: left; 
     border: solid 2px #000;
+    margin-top: 10px;
 }
