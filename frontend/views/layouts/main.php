@@ -73,7 +73,7 @@
                ),
             
               (!Yii::app()->user->isGuest) ?:
-              array('<ul class="nav pull-right">
+              '<ul class="nav pull-right">
               
                    <li class="dropdown">
                    
@@ -105,7 +105,7 @@
                        </div>
                    </li>
                </ul>'
-            ),
+            ,
             
             
              //Navbar Registration Button
