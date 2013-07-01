@@ -171,3 +171,18 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
     border: solid 2px #000;
     margin-top: 10px;
 }
+
+/******* LOGIN DROPDOWN FORM *******/
+
+.dropdown-menu{
+  top: 37px;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;
+    transition-delay:5s;
+}
+
+
+
+

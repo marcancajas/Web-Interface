@@ -19,8 +19,8 @@
 	<![endif]-->
           
         <!-- Dropdown Javascript Plugin -->
-         <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.js"></script>
-         <script LANGUAGE="JavaScript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+   
+       
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -76,11 +76,11 @@
               
                    <li class="dropdown">
                    
-                    <!-- Work in progress: Pop form on hover and redirect to /site/login on click, still figuring out.. -->
+                 
                     
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="500" data-close-others="false">Login<strong class="caret">
+                       <a href="/site/frontend/www/Site/login" class="dropdown-toggle">Login<strong class="caret">
                        </strong></a>
-                       <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                       <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
                        
                        <!-- Login form here -->
                       
@@ -99,7 +99,7 @@
                        </form>
                        <!-- End of Login form here -->
                     
-                       </div>
+                       </ul>
                    </li>
                </ul>'
             ,
