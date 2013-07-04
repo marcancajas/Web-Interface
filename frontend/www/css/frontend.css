@@ -51,7 +51,7 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
     bottom:0; 
 }
 
-/***** MYCAROUSEL *****/
+/***** MYCAROUSEL | CONTENT HOLDER PAGE *****/
 
 #carousel_background {
     width:100%;
@@ -67,7 +67,7 @@ body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-
     margin:0 auto;
 }
 
-/***** PAGE CONTENT *****/
+/***** PAGE CONTENT | SERVICES HOLDER DIV *****/
 
 #page_background {
     width:100%;
@@ -147,7 +147,7 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 
 
 #user_container { 
-    background-color:#ffffff; 
+    background-color:#; 
     width:1150px;
     height: auto;
     margin:0 auto;
@@ -156,19 +156,23 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 #user_contentbox {
     background-color:#ffffff; 
     width:975px;
-    height: 300px;
+    height: 500px;
     float: right;
-    border: solid 2px #000;
+    border-top: solid 2px #ececec;
+    border-right: solid 2px #ececec;
+    border-bottom: solid 2px #ececec;
     margin-top: 10px;
 }
 
 
 #user_menubox {
     background-color:#ffffff; 
-    width:150px;
+    width:170px;
     height: 300px;
     float: left; 
-    border: solid 2px #000;
+    border-top: solid 2px #ececec;
+    border-left: solid 2px #ececec;
+    border-bottom: solid 2px #ececec;
     margin-top: 10px;
 }
 
@@ -180,9 +184,5 @@ h2 a, h3 a, h4 a, h5 a { color:#509dc9; text-decoration:none; font-weight:bold; 
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;
-    transition-delay:5s;
+    transition-delay:1s;
 }
-
-
-
-

@@ -23,17 +23,17 @@
             'items'=>array(
             array('label'=>'MAIN MENU'),
             array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
-            array('label'=>'Library', 'icon'=>'book', 'url'=>'#'),
-            array('label'=>'Messages', 'icon'=>'icon-envelope', 'url'=>'#'),    
+            array('label'=>'Messages', 'icon'=>'icon-envelope', 'url'=>'#'),  
+            array('label'=>'MyGames', 'icon'=>'book', 'url'=>'#'),
             array('label'=>'Application', 'icon'=>'pencil', 'url'=>'#'),
             array('label'=>'ACCOUNT OPTIONS'),
             array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
             array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
             array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
-            array('label'=>'Exit', 'icon'=>'icon-signin', 'url'=>'#'),
+            array('label'=>'Logout', 'icon'=>'icon-off', 'url'=>'#'),
             ),
             )); ?>                
-                
+           <div class="clear"></div>   
            </div>
          
            <div id="user_contentbox">        
@@ -43,7 +43,7 @@
              
              
              <?php echo CHtml::link('Connect to Worker',array('/User/ConnectToWorker')); ?>
-             
+             <div class="clear"></div>
           </div>
          
     </div>

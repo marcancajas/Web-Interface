@@ -4,7 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="language" content="en"/>
-
+        
+      
 	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
@@ -12,24 +13,23 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
 	      media="print"/>
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
+	      media="screen, projection"/>
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
 	<![endif]-->
-          
-        <!-- Dropdown Javascript Plugin -->
-   
-       
+         
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
-   
+
+ <!----- START OF NAVIGATION BAR ----->  
+ 
  <div id="nav_container">
 	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'type' => 'inverse', // null or 'inverse'
+	'type' => 'default', // null or 'inverse'
 	'brand' => '',
 	'brandUrl' => '#',
 	'collapse' => true, // requires bootstrap-responsive.css
@@ -53,16 +53,21 @@
 				array('label' => 'About', 'url' => array('/Site/Page', 'view' => 'about')),
 
                                 array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
+  
+                           
+             //Navbar Logout Button
+    
+                                array('htmlOptions'=>array('class'=>'pull-right'),'label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 
+                                'visible' => !Yii::app()->user->isGuest)
+                                ),
+      
+                                ),
 
-				array('label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-			),
-		),
-
-            
+     
             //Navbar Login Button
             
             
-              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
+              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <span><a href="/site/frontend/www/User/index">username</a></span></p>' : '',
                array(
                     'class'=>'bootstrap.widgets.TbMenu',
                     'htmlOptions'=>array('class'=>'pull-right'),
@@ -136,57 +141,51 @@
 		),
             
             End of Old login button*/
-            
-         
-           
-            
-	),
-)); 
+
+            ), // MAIN ARRAY INCLUSION
+        )); //TB NAVBAR AND ITS ARRAY
         
         ?>
-          
-            
-            
-       
-            
+                   
         </div>
 </div>
 
-
+<!----- START OF HEADER ----->
 <div id="Head_container">
-
     <div id="logo_container">
 	<div id="logo">
     	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="Lee Grant" alt="JAMengine" />
         </div>
         <div id="welcome_msg">
-    	<p><h5>A research project prototype of a innovative online games engine platform. Experience the next-gen online platform, with install-free games and extendable server technologies. Sign up for beta.
-            
-            <?php
-           $this->widget('bootstrap.widgets.TbButton',
-						array(
-							'label'=>'Register Here',
-							'url'=>array('site/Register'),
-							'type'=>'primary',
-							'size'=>'small',
-							)
-						);
-			?></h5>
-                     </p>
-      
-        
-        
-        
+    	<p><h5>A research project prototype of a innovative online games engine platform. Experience the next-gen online platform, with install-free games and extendable server technologies. 
+        Sign up for beta.</h5></p>
         </div>
         <div class="clear"></div>
     </div>
-
 </div>
+
+<!----- START OF PAGE CONTENT ----->
+
+
+
+
+
+
+
 
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 		<hr/> 
 
+                
+                
+   
+                
+                
+                
+                
 
+<!----------------- FOOTER ----------------->                
+                
 <div id="footer_background">
     <div id="footer_container">
 
