@@ -1,0 +1,77 @@
+/* 
+    Document   : user
+    Created on : 28/07/2013, 8:40:42 PM
+    Author     : Marc Ancajas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body { margin:0 auto; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#959595; background:#ffffff url(../images/bg.png) repeat-x; }
+
+/***** JAM PLATFORM CSS SECTION *****/
+
+#user_background {
+    width:100%;
+    margin:0 auto; 
+    background-color:#ffffff;
+    height: 300px;
+}
+
+
+#user_container { 
+    background-color:#ffffff; 
+    width:1150px;
+    height: auto;
+    margin:0 auto;
+}
+
+#user_contentbox {
+    background-color:#ffffff; 
+    width:975px;
+    height: 500px;
+    float: right;
+    border-top: solid 2px #ececec;
+    border-right: solid 2px #ececec;
+    border-bottom: solid 2px #ececec;
+    margin-top: 10px;
+}
+
+
+#user_menubox {
+    background-color:#ffffff; 
+    width:170px;
+    height: 300px;
+    float: left; 
+    border-top: solid 2px #ececec;
+    border-left: solid 2px #ececec;
+    border-bottom: solid 2px #ececec;
+    margin-top: 10px;
+}
+
+#login_background {
+    width:100%;
+    height: 600px;
+    margin:0 auto; 
+    background-color: #ffffff ;
+    border-top: solid 3px #0e509e;
+}
+
+#login_container {
+    width:650px;
+    margin: 15% auto;
+}
+
+#form {
+    float: right;
+    position: static;
+}
+#login_logo {
+    float: left;
+    width: 200px;
+    height: 136px;
+    position: static;
+}

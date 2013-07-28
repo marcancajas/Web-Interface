@@ -44,9 +44,7 @@ return CMap::mergeArray(
 		'import' => array(
 			'common.components.*',
 			'common.components.tubes.*',
-			'common.extensions.giix.giix-components.*',
 			'common.extensions.*',
-			'common.extensions.yii-mail.*',
 			'common.models.*',
 			// uncomment if behaviors are required
 			// you can also import a specific one
@@ -69,18 +67,6 @@ return CMap::mergeArray(
 				'class' => 'common.extensions.bootstrap.components.Bootstrap',
 				'responsiveCss' => true,
 			),
-			'mail' => array(
-                'class' => 'common.extensions.yii-mail.YiiMail',
-                'transportType'=>'smtp',
-                'transportOptions'=>array(
-                        'host'=>$params['mail.host'],
-                        'username'=>$params['mail.username'],
-                        'password'=>$params['mail.password'],
-                        'encryption'=>$params['mail.encryption'],
-                        'port'=>$params['mail.port'],
-                ),
-                'viewPath' => 'application.views.mail',
-        ),
 			'yiinstalk' => array(
       			'class' => 'common.extensions.Yiinstalk',
       			'pheanstalkPath'=>'common.vendors.Pheanstalk',
@@ -111,6 +97,8 @@ return CMap::mergeArray(
 				'autoStart' => true,
 				'timeout' => 600
 			),
+
+
 			'urlManager' => array(
 				'urlFormat' => 'path',
 				'showScriptName' => false,

@@ -1,4 +1,3 @@
-<tt><?php $this->getLayoutFile('main'); ?></tt>
 <?php
 /**
  * login.php
@@ -13,15 +12,27 @@ $this->breadcrumbs = array(
 	'Login',
 );
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
 
-<tt><?php $this->getLayoutFile('main'); ?></tt>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen"/>    
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/user.css" media="screen"/>
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
+</head>
 
-<div id="login_background">
-            <div id="login_container">
-             <h1>Login</h1>
+    <body>
+
+     
+    <div id="login_container">
+    
+       <div id="login_logo">
+    <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
+    </div>
+        <div id="form">
+             <h2>Login</h2>
 
 <p>Please fill out the following form with your login credentials:</p>
 
@@ -52,7 +63,9 @@ $this->breadcrumbs = array(
 				<?php echo CHtml::submitButton('Login'); ?>
 
 <?php $this->endWidget(); ?>
-            </div>
         </div>
-
-
+            </div>
+    <div class="clear"></div>
+       
+        
+    </body>

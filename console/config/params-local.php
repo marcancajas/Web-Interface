@@ -12,5 +12,7 @@
  *
  */
 return array(
-	'env.code' => 'private'
+	'env.code' => 'private',
+	'db.username' => 'webadmin',
+	'db.password' => '4dm1n1st3r',
 );

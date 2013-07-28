@@ -18,7 +18,7 @@ class UserController extends Controller {
 
 	public function actionIndex()
 	{
-		$this->render('Index');
+		$this->renderPartial('Index');
 	}
 
 	public function actionConnectToWorker()

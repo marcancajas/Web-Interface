@@ -25,9 +25,9 @@ return array(
 	'env.code' => 'prod',
 	// DB connection configurations
 	'db.name' => '',
-	'db.connectionString' => 'mysql:host=127.0.0.1;dbname=CurtinWeb',
-	'db.username' => 'root',
-	'db.password' => '4dm1n1st3r',
+	'db.connectionString' => 'mysql:host={DATABASE-HOST};dbname={DATABASE-NAME}',
+	'db.username' => '{DATABASE-USERNAME}',
+	'db.password' => '{DATABASE-PASSWORD}',
 
 	// test database {
 	'testdb.name' => '',

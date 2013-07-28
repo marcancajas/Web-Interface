@@ -1,19 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="language" content="en"/>
-        
-      
-	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
+	
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
 	      media="screen, projection"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
 	      media="print"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen, projection"/>
+   
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
@@ -25,11 +25,10 @@
 <body>
 
  <!----- START OF NAVIGATION BAR ----->  
- 
- <div id="nav_container">
+ <div id="nav_container"
 	<div id="navigation navbar-static-top">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'type' => 'default', // null or 'inverse'
+	'type' => 'inverse', //i niull or 'inverse'
 	'brand' => '',
 	'brandUrl' => '#',
 	'collapse' => true, // requires bootstrap-responsive.css
@@ -40,34 +39,33 @@
 
 				array('label' => 'Home', 'url' => array('/Site/Index', 'view' => 'Index')),
 
-                                array('label' => 'Games', 'url' => array('/Site/Features', 'view' => 'Games')),
+                                array('label' => 'Games', 'url' => array('/Site/Games','viewG' => 'Games')),
 
-				array('label' => 'JAMengine', 'url' => array('/Site/ChaosENGINE', 'view' => 'JAMengine')),
+				array('label' => 'JAMengine', 'url' => array('/Site/JAMengine', 'view' => 'JAMengine')),
 
                                 array('label' => 'Features', 'url' => array('/Site/Features', 'view' => 'Features')),
 
 				array('label' => 'Community Forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
 
-                                array('label' => 'Blog', 'url' => array('/Site/Blog', 'view' => 'Blog')),
+				array('label' => 'About', 'url' => array('/Site/About', 'view' => 'About')),
 
-				array('label' => 'About', 'url' => array('/Site/Page', 'view' => 'about')),
-
-                                array('label' => 'Contact Us', 'url' => array('/Site/Contact')),
+                                array('label' => 'Contact Us', 'url' => array('/Site/Contact','view' => 'Contact')),
   
                            
              //Navbar Logout Button
     
-                                array('htmlOptions'=>array('class'=>'pull-right'),'label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 
-                                'visible' => !Yii::app()->user->isGuest)
+                               /* array('class' => 'pull-right','label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 
+                                'visible' => !Yii::app()->user->isGuest) */
                                 ),
-      
-                                ),
+    
+                                ), 
 
      
             //Navbar Login Button
             
             
-              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <span><a href="/site/frontend/www/User/index">username</a></span></p>' : '',
+              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Go to <span><a href="/site/frontend/www/User/index">JAM Account<strong class="caret">
+                       </strong></a></a></span></p>' : '',
                array(
                     'class'=>'bootstrap.widgets.TbMenu',
                     'htmlOptions'=>array('class'=>'pull-right'),
@@ -102,6 +100,7 @@
                              <input type="submit" name="yt0" value="Login" />
                        </fieldset>
                        </form>
+                       
                        <!-- End of Login form here -->
                     
                        </ul>
@@ -154,11 +153,11 @@
 <div id="Head_container">
     <div id="logo_container">
 	<div id="logo">
-    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="Lee Grant" alt="JAMengine" />
+    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
         <div id="welcome_msg">
-    	<p><h5>A research project prototype of a innovative online games engine platform. Experience the next-gen online platform, with install-free games and extendable server technologies. 
-        Sign up for beta.</h5></p>
+    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable worker servers.
+The idea is to redesigned how games are hosted online and create an efficient and install-free environment for community users.</h6>
         </div>
         <div class="clear"></div>
     </div>
@@ -204,11 +203,6 @@
     </div>
 </div>
 
-
-
-		<!-- footer -->
-
-<!-- page -->
 <!-- Google Analytics -->
 <script>
 	var _gaq=[['_setAccount','<?php echo param('google.analytics.account'); // check global.php shortcut file at "common/lib/" ?>'],['_trackPageview']];

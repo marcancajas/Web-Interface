@@ -1,27 +1,70 @@
 <?php
-
-Yii::import('common.models._base.BaseUser');
-
-class User extends BaseUser
+/**
+ * User.php
+ *
+ * @author: antonio ramirez <antonio@clevertech.biz>
+ * Date: 7/22/12
+ * Time: 11:42 PM
+ */
+/**
+ * This is the model class for table "{{user}}".
+ *
+ * The followings are the available columns in table '{{user}}':
+ * @property integer $id
+ * @property string $password
+ * @property string $salt
+ * @property string $email
+ * @property string $username
+ * @property string $login_ip
+ * @property integer $login_attempts
+ * @property integer $login_time
+ * @property string $validation_key
+ * @property string $password_strategy
+ * @property boolean $requires_new_password
+ * @property integer $create_id
+ * @property integer $create_time
+ * @property integer $update_id
+ * @property integer $update_time
+ * @property integer $delete_id
+ * @property integer $delete_time
+ * @property integer $status
+ */
+class User extends CActiveRecord
 {
-	//Constans for user status
-	const STATUS_INACTIVE=0;
-	const STATUS_ACTIVE=1;
-	const STATUS_BANNED=-1;
-	const STATUS_PENDING=-2;
-	const PASSWORD_LEN_MIN=6;
 
-	//Variables which will be used for validating the password
+	/**
+	 * @var string attribute used for new passwords on user's edition
+	 */
 	public $newPassword;
+
+	/**
+	 * @var string attribute used to confirmation fields
+	 */
 	public $passwordConfirm;
-	public static function model($className=__CLASS__)
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @return Customer the static model class
+	 */
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
 
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'user';
+	}
+
+	/**
+	 * Behaviors
+	 * @return array
+	 */
 	public function behaviors()
 	{
-		//Bcrypt behaviour
 		Yii::import('common.extensions.behaviors.password.*');
 		return array(
 			// Password behavior strategy
@@ -29,61 +72,108 @@ class User extends BaseUser
 				"class" => "APasswordBehavior",
 				"defaultStrategyName" => "bcrypt",
 				"strategies" => array(
-						"bcrypt" => array(
-							"class" => "ABcryptPasswordStrategy",
-							"workFactor" => 12,
-							"minLength" => 8
-							),
+					"bcrypt" => array(
+						"class" => "ABcryptPasswordStrategy",
+						"workFactor" => 14,
+						"minLength" => 8
 					),
+					"legacy" => array(
+						"class" => "ALegacyMd5PasswordStrategy",
+						'minLength' => 8
+					)
+				),
 			)
 		);
 	}
 
+	/**
+	 * @return array validation rules for model attributes.
+	 */
 	public function rules()
 	{
-		//Rules for database columns
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
 		return array(
-			//Check the password and username are not the same
-			array('newPassword', 'compare','operator' => '!=', 'compareAttribute' => 'username', 'message' => Yii::t('validation', "Password must not be the same as Username")),
-			//Check the email address is not already registered
-			array('email', 'unique', 'message' => Yii::t('user',"Email address already in use.")),
-			//Check the username is not already registered
-			array('username', 'unique', 'message' => Yii::t('user',"Username already in use.")),
-			//Check the passwords entered match
+			array('email', 'required', 'on' => 'checkout'),
+			array('email', 'unique', 'on' => 'checkout', 'message' => Yii::t('validation', 'Email has already been taken.')),
+			array('email', 'email'),
+			array('username, email', 'unique'),
 			array('passwordConfirm', 'compare', 'compareAttribute' => 'newPassword', 'message' => Yii::t('validation', "Passwords don't match")),
-			//Set the required fields(firstname, lastname, password, cofirmPassword, country, birthdate, gender, username, email)
-			array('firstname, lastname, newPassword, passwordConfirm, username, email','required'),
-			//Set the minimum password length
-			array('newPassword', 'length', 'min' => 8),
-			//Check the password contains 2 numbers and 1 symbol($_*,!;)
-			array('newPassword', 'match', 'pattern' => '/^[a-zA-Z$_*,!;]*[_$*,!;]{1}[a-zA-Z$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*|[a-zA-Z$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*[_$*,!;]{1}[a-zA-Z$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*|[a-zA-Z$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*[0-9]{1}[a-zA-Z0-9$_*,!;]*[_$*,!;]{1}[a-zA-Z$_*,!;]*$/u','message' => Yii::t('user',"Password must be minimum 8 digits long, contain 1 symbol(_$*,!;) and 2 numbers")),
-			//Set the minimum username length
-			array('username', 'length', 'min'=> 6),
-			//Check the username contains 1 number
-			array('username', 'match', 'pattern' => '/^[a-zA-Z0-9]*[0-9]{1}[a-zA-Z0-9]*$/u','message' => Yii::t('user',"Username must be minimum 6 digits long, contain letters and 1 number")),
-			//Checks the birthdate is in the correct format
-			//array('birthdate', 'type', 'type' => 'date', 'message' => Yii::t('user',"{attribute} is not valid. Dates must be in the form dd-mm-yyyy"), 'dateFormat' => 'dd-mm-yyyy'),
-			//Set the searchable fields
-			//array('id, username, email, login_attempts, login_time, login_ip, create_id, create_time, update_id, update_time, firstname, lastname'				, 'gender', 'superuser', 'status', 'birthdate', 'safe', 'on'=>'search'),
+			array('newPassword, password_strategy ', 'length', 'max' => 50, 'min' => 8),
+			array('email, password, salt', 'length', 'max' => 255),
+			array('requires_new_password, login_attempts', 'numerical', 'integerOnly' => true),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id, password, salt, password_strategy , requires_new_password , email', 'safe', 'on' => 'search'),
 		);
-
 	}
 
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
 	public function attributeLabels()
 	{
-		//Labels
 		return array(
+			'id' => 'ID',
+			'username' => Yii::t('labels', 'Username'),
+			'password' => Yii::t('labels', 'Password'),
 			'newPassword' => Yii::t('labels', 'Password'),
 			'passwordConfirm' => Yii::t('labels', 'Confirm password'),
+			'email' => Yii::t('labels', 'Email'),
 		);
 	}
 
+	/**
+	 * Helper property function
+	 * @return string the full name of the customer
+	 */
+	public function getFullName()
+	{
+
+		return $this->username;
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria = new CDbCriteria;
+
+		$criteria->compare('id', $this->id);
+		$criteria->compare('username', $this->username, true);
+		$criteria->compare('password', $this->password, true);
+		$criteria->compare('email', $this->email, true);
+
+		return new CActiveDataProvider(get_class($this), array(
+			'criteria' => $criteria,
+		));
+	}
+
+	/**
+	 * Makes sure usernames are lowercase
+	 * (emails by standard can have uppercase letters)
+	 * @return parent::beforeValidate
+	 */
+	public function beforeValidate()
+	{
+		if (!empty($this->username))
+			$this->username = strtolower($this->username);
+		return parent::beforeValidate();
+	}
+
+	/**
+	 * Generates a new validation key (additional security for cookie)
+	 */
 	public function regenerateValidationKey()
 	{
 		$this->saveAttributes(array(
 			'validation_key' => md5(mt_rand() . mt_rand() . mt_rand()),
 		));
 	}
-
 
 }

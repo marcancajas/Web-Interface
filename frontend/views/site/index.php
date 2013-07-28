@@ -7,50 +7,9 @@
  * Time: 8:30 PM
  */
 ?>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="language" content="en"/>
-
-	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
-	      media="screen, projection"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
-	      media="print"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>  
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
-	      media="screen, projection"/>
-	<![endif]-->
-
-        <tt><?php $this->getLayoutFile('main'); ?></tt>
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
-              
-        
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
-
-<body>
-
-
-
 
 <div id="carousel_background">
             <div id="carousel_container">
-    <?php /*
-            $this->widget('bootstrap.widgets.TbButton',
-						array(
-							'label'=>'Register',
-							'url'=>array('site/Register'),
-							'type'=>'primary',
-							'size'=>'large',
-							)
-						);
-			*/?>
-
-
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
         
@@ -63,8 +22,8 @@
             </div>
         </div>
 
-<div id="page_background">
-    <div id="page_container">
+<div id="bottom_background">
+    <div id="bottom_container">
 
 <div id="services_holder">
 	<div id="services">
@@ -97,4 +56,3 @@
 </div>
 
 
-</body>

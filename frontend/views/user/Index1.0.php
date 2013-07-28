@@ -1,13 +1,16 @@
 <?php
 /* 
-    Document   : index.php (JAMplatform v1.0)
+    Document   : index.php (Guest)
     Created on : 19/05/2013, 12:22:53 AM
     Author     : Marc Ancajas
     Description:
         Purpose of the stylesheet follows.
 */
 ?>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
+
+<tt><?php $this->getLayoutFile('main'); ?></tt>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
+	      media="screen"/>
 
 <div id="user_background"> 
      <div id="user_container">
@@ -27,7 +30,7 @@
             array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
             array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
             array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
-            array('label'=>'Logout', 'icon'=>'icon-off', 'url' => array('/site/logout','view' => 'Contact')),
+            array('label'=>'Logout', 'icon'=>'icon-off', 'url'=>'#'),
             ),
             )); ?>                
            <div class="clear"></div>   

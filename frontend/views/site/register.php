@@ -1,13 +1,9 @@
 <!--Registration form-->
 
-
 <tt><?php $this->getLayoutFile('main'); ?></tt>
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
-
-<div id="login_background">
-            <div id="login_container">
+<div id="content_background">
+            <div id="content_container">
                 <h1>Register</h1>
 
 

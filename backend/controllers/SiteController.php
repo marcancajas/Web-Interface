@@ -110,7 +110,6 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		$model = new LoginForm();
-
 		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form')
 		{
 			echo CActiveForm::validate($model, array('username', 'password', 'verifyCode'));
@@ -129,6 +128,7 @@ class SiteController extends Controller
 			'model' => $model,
 			'sent' => $sent,
 		));
+
 	}
 
 	/**
