@@ -8,6 +8,7 @@
  */
 ?>
 
+	
 <div id="carousel_background">
             <div id="carousel_container">
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(

@@ -83,7 +83,9 @@
     	<img href ="#" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
         <div id="get_started">
-        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" />    
+        <a href="/site/frontend/www/site/get_started.php" </a>
+        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" />   
+       
         </div>   
 </div>
 
@@ -114,8 +116,8 @@
     <div id="footer_container">
 
 	<div id="nav">
-        Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
-        <br>All Rights Reserved.</br>
+        <p>Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
+        <br>All Rights Reserved.</br></p>
 	<?php echo Yii::powered(); ?>
     	<ul>
             <li><a href="#">HOME</a></li>
