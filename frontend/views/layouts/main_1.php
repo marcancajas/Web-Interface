@@ -156,7 +156,7 @@
     	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
         <div id="welcome_msg">
-    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable worker servers.
+    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable servers.
 The idea is to redesigned how games are hosted online and create an efficient and install-free environment for community users.</h6>
         </div>
         <div class="clear"></div>

@@ -18,137 +18,64 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
 	<![endif]-->
-         
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        
+        <!-- Google CDN -->
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+            
 </head>
 
 <body>
 
  <!----- START OF NAVIGATION BAR ----->  
- <div id="nav_container"
-	<div id="navigation navbar-static-top">
+
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'type' => 'inverse', //i niull or 'inverse'
+	'type' => 'inverse', //'null' or 'inverse'
 	'brand' => '',
-	'brandUrl' => '#',
+        'brandOptions' => '',
 	'collapse' => true, // requires bootstrap-responsive.css
 	'items' => array(
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
-
-				array('label' => 'Home', 'url' => array('/Site/Index', 'view' => 'Index')),
-
-                                array('label' => 'Games', 'url' => array('/Site/Games','viewG' => 'Games')),
-
-				array('label' => 'JAMengine', 'url' => array('/Site/JAMengine', 'view' => 'JAMengine')),
-
-                                array('label' => 'Features', 'url' => array('/Site/Features', 'view' => 'Features')),
-
-				array('label' => 'Community Forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
-
-				array('label' => 'About', 'url' => array('/Site/About', 'view' => 'About')),
-
-                                array('label' => 'Contact Us', 'url' => array('/Site/Contact','view' => 'Contact')),
-  
-                           
-             //Navbar Logout Button
-    
-                               /* array('class' => 'pull-right','label' => 'Logout(' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 
-                                'visible' => !Yii::app()->user->isGuest) */
-                                ),
-    
-                                ), 
-
-     
-            //Navbar Login Button
+                            
+				array('label' => 'home', 'url' => array('/Site/Index', 'view' => 'Index')),
+                                array('label' => 'get started', 'url' => array('/Site/Games','viewG' => 'Games')),
+				array('label' => 'forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
+                                array('label' => 'contact', 'url' => array('/Site/Contact','view' => 'Contact')),
+                            
+                                        ),
+                     ), 
             
-            
-              (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Go to <span><a href="/site/frontend/www/User/index">JAM Account<strong class="caret">
-                       </strong></a></a></span></p>' : '',
-               array(
-                    'class'=>'bootstrap.widgets.TbMenu',
+            //Register | Login Button
+            array(
+                    'class' => 'bootstrap.widgets.TbMenu',
                     'htmlOptions'=>array('class'=>'pull-right'),
-                    'items'=>array(
-
-                    ),
-               ), 
-            
-              (!Yii::app()->user->isGuest) ?:
-              '<ul class="nav pull-right">
-              
-                   <li class="dropdown">
-                   
+                    'items' => array(
+                        
+                        array('label' => 'join', 'url' => array('/Site/Register', 'view' => 'Register')),
+                        array('label' => 'login', 'url' => array('/Site/login', 'view' => 'Login')),
+ 
+                           
+                            
+                                ),
+                            ),
                  
-                    
-                       <a href="/site/frontend/www/Site/login" class="dropdown-toggle">Login<strong class="caret">
-                       </strong></a>
-                       <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                       
-                       <!-- Login form here -->
-                      
-                       <form id="login-form" action="/site/frontend/www/Site/login" method="post">
-                       <fieldset id="body">
-                             <fieldset>
-                             <label for="LoginForm_username">Username or e-mail</label>
-                             <input name="LoginForm[username]" id="LoginForm_username" type="text" maxlength="45">
-                             </fieldset>
-                             <fieldset>
-                             <label for="LoginForm_password">Password</label>
-                             <input name="LoginForm[password]" id="LoginForm_password" type="password" maxlength="50">
-                             </fieldset>
-                             <input type="submit" name="yt0" value="Login" />
-                       </fieldset>
-                       </form>
-                       
-                       <!-- End of Login form here -->
-                    
-                       </ul>
-                   </li>
-               </ul>'
-            ,
             
+    
+            // Navbar Search Box    
+            '<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',  //JOSH WE NEED SOME KIND OF SEARCH.PHP FOR THIS, SEARCHES THE FORUM OR THE WHOLE SITE?
             
-             //Navbar Registration Button
-            (!Yii::app()->user->isGuest) ?:
-		array(
-			'class' => 'bootstrap.widgets.TbMenu',
-			'htmlOptions' => array('class' => 'pull-right'),
-			'items' => array(
-                          	array('label' => 'Register', 'url' => array('/Site/Register'), 'visible' => Yii::app()->user->isGuest),
-                            
-			),
-		),
-           
-           /* Old Login Button
-            
-		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
-		array(
-			'class' => 'bootstrap.widgets.TbMenu',
-			'htmlOptions' => array('class' => 'pull-right'),
-			'items' => array(                          
-                          	array('label' => 'Login', 'url' => array('/Site/Login'), 
-                                    
-                                    'items'=>array(
-                                    array('label'=>'Username or e-mail', 'url'=>'#'),
-                                    array('label'=>'Password', 'url' =>'#'),
-                                    array('label'=>'Login'),
-                                    'visible' => Yii::app()->user->isGuest),
-                                )
-                            
-			),
-		),
-            
-            End of Old login button*/
-
+     
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
         
         ?>
                    
-        </div>
-</div>
 
+ <!----- END OF NAVIGATION BAR ----->  
+ 
+ 
+ 
 <!----- START OF HEADER ----->
 <div id="Head_container">
     <div id="logo_container">
@@ -156,12 +83,13 @@
     	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
         <div id="welcome_msg">
-    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable worker servers.
+    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable servers.
 The idea is to redesigned how games are hosted online and create an efficient and install-free environment for community users.</h6>
         </div>
         <div class="clear"></div>
     </div>
 </div>
+
 
 <!----- START OF PAGE CONTENT ----->
 
