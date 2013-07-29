@@ -29,7 +29,7 @@
 	<div id="services">
     	<div class="services-block">
         	<img src="http://placehold.it/220x100&text=First+thumbnail" alt="Social marketing" />
-          <h2><a href="#">Project Overview</a></h2>
+          <h3><a href="#">Project Overview</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
         </div>
         <div class="services-block">
@@ -39,12 +39,12 @@
         </div>
         <div class="services-block">
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h4><a href="#">Development Tools</a></h4>
+            <h3><a href="#">Development Tools</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
         </div>
         <div class="services-block">
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h5><a href="#">Any Questions?</a></h5>
+            <h3><a href="#">Any Questions?</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
         </div>
         <div class="clear"></div>

@@ -27,7 +27,7 @@
 <body>
 
  <!----- START OF NAVIGATION BAR ----->  
-
+     
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
 	'brand' => '',
@@ -40,7 +40,7 @@
                             
 				array('label' => 'home', 'url' => array('/Site/Index', 'view' => 'Index')),
                                 array('label' => 'get started', 'url' => array('/Site/Games','viewG' => 'Games')),
-				array('label' => 'forum', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
+				array('label' => 'forums', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
                                 array('label' => 'contact', 'url' => array('/Site/Contact','view' => 'Contact')),
                             
                                         ),
@@ -77,21 +77,19 @@
  
  
 <!----- START OF HEADER ----->
-<div id="Head_container">
-    <div id="logo_container">
+
+<div id="head_container">
 	<div id="logo">
-    	<img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
+    	<img href ="#" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
-        <div id="welcome_msg">
-    	<h6 class ="welcome_text">A research project involving a web-based game engine, an innovative platform that host multiple games via extendable servers.
-The idea is to redesigned how games are hosted online and create an efficient and install-free environment for community users.</h6>
-        </div>
-        <div class="clear"></div>
-    </div>
+        <div id="get_started">
+        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" />    
+        </div>   
 </div>
 
-
 <!----- START OF PAGE CONTENT ----->
+
+<div id="page_wrapper">
 
 
 
@@ -101,7 +99,7 @@ The idea is to redesigned how games are hosted online and create an efficient an
 
 
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
-		<hr/> 
+	
 
                 
                 
@@ -109,27 +107,26 @@ The idea is to redesigned how games are hosted online and create an efficient an
                 
                 
                 
-                
+</div>                
 
 <!----------------- FOOTER ----------------->                
                 
-<div id="footer_background">
     <div id="footer_container">
 
 	<div id="nav">
-        Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. <br/>
-        All Rights Reserved.<br/>
+        Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
+        <br>All Rights Reserved.</br>
 	<?php echo Yii::powered(); ?>
     	<ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">GAMES</a></li>
-            <li><a href="#">ChaosENGINE</a></li>
+            <li><a href="#">GET STARTED</a></li>
+            <li><a href="#">FORUMS</a></li>
             <li class="last"><a href="#">CONTACT</a></li>
         </ul>
         <div class="clear"></div>
         </div>
     </div>
-</div>
+
 
 <!-- Google Analytics -->
 <script>
@@ -138,5 +135,10 @@ The idea is to redesigned how games are hosted online and create an efficient an
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+
+
+
+
+
 </body>
 </html>
