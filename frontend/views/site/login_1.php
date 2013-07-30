@@ -31,27 +31,38 @@ $this->breadcrumbs = array(
        <div id="login_logo">
     <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
     </div>
-        <div id="login_form">
+        <div id="form">
              <h2>Login</h2>
 
 <p>Please fill out the following form with your login credentials:</p>
 
 
-<?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'login-form',
-    'type'=>'horizontal',
-    'htmlOptions'=>array('class'=>'well'),
+<?php $form = $this->beginWidget('CActiveForm', array(
+	'id' => 'login-form',
+	'enableAjaxValidation' => false,
+	'enableClientValidation' => true,
+	'clientOptions' => array(
+		'validateOnSubmit' => true,
+	),
 )); ?>
-<p><?php echo $form->textFieldRow($model, 'username', array('class'=>'span3')); ?> </p>
-<p><?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?> </p>
-<?php echo $form->checkboxRow($model, 'rememberMe'); ?>
-<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
- 
+	<?php echo $form->label($model, 'username');?>
+	<?php echo $form->textField($model, 'username'); ?>
+	<?php echo $form->error($model, 'username');?>
+	<br/>
+	<?php echo $form->label($model, 'password');?>
+	<?php echo $form->passwordField($model, 'password'); ?>
+	<br/>
+	<!--
+<?php echo $form->checkBox($model, 'rememberMe'); ?>
+	<?php if ($model->requireCaptcha): ?>
+		<p>plain... :)) </p>
+	<?php endif; ?>
+-->
+
+
+				<?php echo CHtml::submitButton('Login'); ?>
+
 <?php $this->endWidget(); ?>
-
-
-		
         </div>
             </div>
     <div class="clear"></div>

@@ -117,7 +117,7 @@
 
 	<div id="nav">
         <p>Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
-        <br>All Rights Reserved.</br></p>
+        <br>All Rights Reserved.</br><p>
 	<?php echo Yii::powered(); ?>
     	<ul>
             <li><a href="#">HOME</a></li>

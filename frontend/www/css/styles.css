@@ -114,12 +114,26 @@ a {
 
 
 
-#services_holder { background:#000000 repeat-x; width:640px; box-shadow: 1px 2px 2px 1px #000000 }
-#services { padding: 20px; width:640px; margin:0 auto;}
+#news_holder { background:#ffffff repeat-x; width:750px; box-shadow: 1px 2px 2px 1px #000000 }
+#news { padding: 20px; width:640px; margin:0 auto;}
 
 
-h3 { color:#509dc9; text-decoration:none; font-weight:bold; font-size:14px; }
-.services-block { width:575px; margin:8px;  } 
+
+h3 a { font-family: 'PT Sans', sans-serif; text-transform: uppercase; color: #0e509e; text-decoration: none; font-weight:bold; font-size:14px; }
+.services-block { width:575px; margin:8px; } 
+
+hr { border: 0; 
+     height: 2px; 
+     background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+     background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+     background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0.75), rgba(0,0,0,0)); 
+     background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+p news_msg {
+    float:right;
+}
+
 
 /*****	FOOTER	*****/
 

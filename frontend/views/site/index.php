@@ -7,7 +7,7 @@
  * Time: 8:30 PM
  */
 ?>
-
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
 	
 <div id="carousel_background">
             <div id="carousel_container">
@@ -15,9 +15,9 @@
     'items'=>array(
         
      
-        array('image'=>'http://192.168.42.254/site/frontend/www/images/carouselsitefinishv2.png', 'label'=>'Website is up!', 'caption'=>'Hey guys, websites finally getting there, keep up the good work everyone!'),
-        array('image'=>'http://192.168.42.254/site/frontend/www/images/carouselarchitecturefinishv2.png', 'label'=>'JAMengine Architecture', 'caption'=>'Just an overview of the JAMengine architecture!'),
-        array('image'=>'http://192.168.42.254/site/frontend/www/images/carouselscrumv2.png', 'label'=>'Mike Robeys Favorite', 'caption'=>'The project is manage through the Scrumbut process, an Agile adjusted scrum process'),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Website is up!', 'caption'=>'Hey guys, websites finally getting there, keep up the good work everyone!'),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'JAMengine Architecture', 'caption'=>'Just an overview of the JAMengine architecture!'),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Mike Robeys Favorite', 'caption'=>'The project is manage through the Scrumbut process, an Agile adjusted scrum process'),
     ),
 )); ?>
             </div>
@@ -26,29 +26,40 @@
 <div id="bottom_background">
     <div id="bottom_container">
 
-<div id="services_holder">
-	<div id="services">
+<div id="news_holder">
+	<div id="news">
+            <!-- @news content -->
+            <h4>NEWS</h4>
     	<div class="services-block">
+                <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" alt="Social marketing" />
           <h3><a href="#">Project Overview</a></h3>
-        	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+          <p class="news_msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+               
         </div>
         <div class="services-block">
+                <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h3><a href="#">ChaosENGINE Overview</a></h3>
+            <h3><a href="#">Second Semester Project Phase</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+             
         </div>
         <div class="services-block">
+                <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h3><a href="#">Development Tools</a></h3>
+            <h3><a href="#">Website Version 2.0</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+       
         </div>
         <div class="services-block">
+                <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
             <h3><a href="#">Any Questions?</a></h3>
         	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            
         </div>
         <div class="clear"></div>
+        More News...
     </div>
 </div>
 
