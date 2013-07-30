@@ -7,14 +7,11 @@
  * Time: 8:30 PM
  */
 ?>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
-	
+
 <div id="carousel_background">
             <div id="carousel_container">
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
-        
-     
         array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Website is up!', 'caption'=>'Hey guys, websites finally getting there, keep up the good work everyone!'),
         array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'JAMengine Architecture', 'caption'=>'Just an overview of the JAMengine architecture!'),
         array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Mike Robeys Favorite', 'caption'=>'The project is manage through the Scrumbut process, an Agile adjusted scrum process'),

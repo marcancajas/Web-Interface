@@ -10,7 +10,18 @@ root {
     display: block;
 }
 
-body { height: 100%; weight: 100%; margin:0 auto; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; background:#000000 url(../images/bg.png) fixed }
+body { 
+       height: 100%; 
+       width: 100%; margin:0 auto; 
+       font-family:Arial, Helvetica, sans-serif; 
+       font-size:12px; 
+       color:#000000;
+       background:#ffffff url(../images/bg.png) fixed ;
+}
+
+p {
+    color: #000000;
+}
 
 /* NAVIGATION CSS */
 
@@ -102,7 +113,7 @@ a {
 #page_wrapper {
     width:1170px;
     margin: 0 auto;
-    background-color: transparent;
+    background:transparent;
 }
 
 
@@ -119,7 +130,7 @@ a {
 
 
 
-h3 a { font-family: 'PT Sans', sans-serif; text-transform: uppercase; color: #0e509e; text-decoration: none; font-weight:bold; font-size:14px; }
+h3 a { font-family: arial; text-transform: uppercase; color: #a9302a; text-decoration: none; font-weight:bold; font-size:14px; }
 .services-block { width:575px; margin:8px; } 
 
 hr { border: 0; 
