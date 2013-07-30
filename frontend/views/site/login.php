@@ -30,8 +30,9 @@ $this->breadcrumbs = array(
     
        <div id="login_logo">
     <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
-    </div>
-        <div id="login_form">
+       </div>
+        
+       <div id="login_form">
              <h2>Login</h2>
 
 <p>Please fill out the following form with your login credentials:</p>
@@ -41,20 +42,17 @@ $this->breadcrumbs = array(
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'login-form',
     'type'=>'horizontal',
+    'inlineErrors'=>'false',
     'htmlOptions'=>array('class'=>'well'),
 )); ?>
-<p><?php echo $form->textFieldRow($model, 'username', array('class'=>'span3')); ?> </p>
-<p><?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?> </p>
+<?php echo $form->textFieldRow($model, 'username', array('class'=>'span3')); ?> 
+<?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?> 
 <?php echo $form->checkboxRow($model, 'rememberMe'); ?>
 <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
- 
 <?php $this->endWidget(); ?>
-
-
 		
         </div>
-            </div>
-    <div class="clear"></div>
+    </div>
        
         
     </body>
