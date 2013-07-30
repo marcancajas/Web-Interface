@@ -1,3 +1,13 @@
+<?php
+/* 
+    Document   : connector.php 
+    Created on : 28/07/2013, 8:40:42 PM
+    Author     : Marc Ancajas
+    Description:
+       Based Layout file for login.php
+*/
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
