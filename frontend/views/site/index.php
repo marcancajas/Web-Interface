@@ -34,7 +34,7 @@
                 <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" alt="Social marketing" />
           <h3><a href="#">Project Overview</a></h3>
-          <p class="news_msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
                
         </div>
         <div class="services-block">
