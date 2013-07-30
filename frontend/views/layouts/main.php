@@ -42,7 +42,7 @@
 			'items' => array(
                             
 				array('label' => 'home', 'url' => array('/Site/Index', 'view' => 'Index')),
-                                array('label' => 'get started', 'url' => array('/Site/Games','view' => 'Get Started')),
+                                array('label' => 'get started', 'url' => array('/Site/Get_Started','view' => 'Get Started')),
 				array('label' => 'forums', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
                                 array('label' => 'contact', 'url' => array('/Site/Contact','view' => 'Contact')),
                             
@@ -83,11 +83,10 @@
 
 <div id="head_container">
 	<div id="logo">
-    	<img href ="#" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/Site/Index"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png"></a> 
         </div>
         <div id="get_started">
-        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" href="/site/frontend/www/site/get_started.php" />   
-       
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/Site/Get_Started"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png"></a>
         </div>   
 </div>
 
