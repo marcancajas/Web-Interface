@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="language" content="en"/>
         <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
 	
+
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
 	      media="screen, projection"/>
@@ -18,6 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
 	<![endif]-->
+        
+        <!-- Modification CSS -->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
         
         <!-- Google CDN -->
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -39,7 +42,7 @@
 			'items' => array(
                             
 				array('label' => 'home', 'url' => array('/Site/Index', 'view' => 'Index')),
-                                array('label' => 'get started', 'url' => array('/Site/Games','viewG' => 'Games')),
+                                array('label' => 'get started', 'url' => array('/Site/Games','view' => 'Get Started')),
 				array('label' => 'forums', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
                                 array('label' => 'contact', 'url' => array('/Site/Contact','view' => 'Contact')),
                             
@@ -83,8 +86,7 @@
     	<img href ="#" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
         </div>
         <div id="get_started">
-        <a href="/site/frontend/www/site/get_started.php" </a>
-        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" />   
+        <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png" alt="get_started!" href="/site/frontend/www/site/get_started.php" />   
        
         </div>   
 </div>

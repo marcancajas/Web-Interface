@@ -37,7 +37,7 @@ class SiteController extends Controller {
 	public function actionIndex() {
 		$this->render('index');
 	}
-
+        
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -56,7 +56,7 @@ class SiteController extends Controller {
 	public function actionLogin()
 	{
 		$model = new LoginForm;
-
+                $this->layout = '//layouts/connector';
 		/*
 			// if it is ajax validation request
 		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
@@ -77,7 +77,7 @@ class SiteController extends Controller {
 			}
 		}
 		// display the login form
-		$this->renderPartial('login', array('model' => $model));
+		$this->render('login', array('model' => $model));
 	}
 
 	/**
