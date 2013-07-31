@@ -16,7 +16,7 @@ body {
        font-family:Arial, Helvetica, sans-serif; 
        font-size:12px; 
        color:#000000;
-       background:#ffffff url(../images/bg.png) fixed ;
+       background:#ffffff url(../images/bg.png) fixed;
 }
 
 p {
@@ -26,7 +26,7 @@ p {
 /* NAVIGATION CSS */
 
 a { 
-    color: #F89406;
+    color: #000000;
     text-decoration:none;
     font-weight: bold;
     font-family: 'PT Sans', sans-serif;
@@ -55,11 +55,6 @@ a {
     background:url(../images/welcome-bg.png) no-repeat; 
     padding:65px 150px 0px 75px; 
     position:static;
-}
-
-#welcome_msg img { 
-    padding:0; 
-    bottom:0; 
 }
 
 #get_started {
@@ -124,16 +119,36 @@ a {
 }
 
 
+#left_bar {
+    float: left; background:#ffffff ; width:700px; box-shadow: 1px 2px 2px 1px #000000;
+}
 
-#news_holder { background:#ffffff repeat-x; width:750px; box-shadow: 1px 2px 2px 1px #000000 }
-#news { padding: 20px; width:640px; margin:0 auto;}
+#main_content { 
+    padding: 20px; margin: 20px auto; position: static;
+    
+}
 
+.content{ 
+}
 
+#right_bar {
+       background: #transparent; box-shadow: 1px 2px 2px 1px #000000; width:460px; margin-left: 710px; 
+}
+ 
+h3 a { font-family: arial; 
+       text-transform: uppercase; 
+       color: #F89406; 
+       text-decoration: none; 
+       font-weight:bold; 
+       font-size:14px; 
+}
 
-h3 a { font-family: arial; text-transform: uppercase; color: #F89406; text-decoration: none; font-weight:bold; font-size:14px; }
-.services-block { width:575px; margin:8px; } 
+.content-block {
+    height: 300px;
+} 
 
-hr { border: 0; 
+hr {
+     border: 0;
      height: 2px; 
      background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
      background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
@@ -141,11 +156,9 @@ hr { border: 0;
      background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
-p news_msg {
-    float:right;
+a.more_news {
+    height: 20px;
 }
-
-
 /*****	FOOTER	*****/
 
 #footer_container { 
