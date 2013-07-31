@@ -3,8 +3,7 @@ $this->pageTitle = Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs = array(
 	'Contact',
 );
-?>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen"/>    
+?> 
 <h1>Contact Us</h1>
 
 <?php if (Yii::app()->user->hasFlash('contact')): ?>
@@ -48,7 +47,7 @@ $this->breadcrumbs = array(
 	<?php endif; ?>
 
 	<div class="form-actions">
-		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary', 'label' => 'Submit', 'icon' => 'ok'));?>
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'warning', 'label' => 'Submit', 'icon' => 'ok'));?>
 		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'reset', 'label' => 'Reset'));?>
 	</div>
 	<?php $this->endWidget(); ?>
