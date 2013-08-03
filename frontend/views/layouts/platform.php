@@ -45,9 +45,9 @@
             'stacked'=>'true',
             'items'=>array(
             array('label'=>'MAIN MENU'),
-            array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
+            array('label'=>'Home', 'icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
             array('label'=>'Messages', 'icon'=>'icon-envelope', 'url'=>'#'),  
-            array('label'=>'Characters', 'icon'=>'book', 'url'=>'#'),
+            array('label'=>'My Games', 'icon'=>'book', 'url'=> array('/user/mygames','view' => 'mygames')),
             array('label'=>'Rankings', 'icon'=>'pencil', 'url'=>'#'),
             array('label'=>'ACCOUNT OPTIONS'),
             array('label'=>'Profile Settings', 'icon'=>'user', 'url'=>'#'),
@@ -61,7 +61,7 @@
             <div class="social_icons_bar">
             
             
-            FACEBOOK , TWITTER, LINKED IN
+            FACEBOOK , TWITTER, YOUTUBE, TWITCH.tv
             
             
             
