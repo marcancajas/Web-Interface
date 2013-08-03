@@ -18,8 +18,8 @@ class UserController extends Controller {
 
 	public function actionIndex()
 	{
-                $this->layout = '//layouts/connector';  //change layoutfile -> connector.php
-		$this->renderPartial('Index');
+                $this->layout = '//layouts/platform';  //change layoutfile -> platform.php
+		$this->render('Index');
               
                 
                 
