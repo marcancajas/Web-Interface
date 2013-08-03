@@ -117,7 +117,7 @@
     <div id="footer_container">
 
 	<div id="nav">
-        <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
+        <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> JAM Group.
         <br>All Rights Reserved.</br><p>
 	<?php echo Yii::powered(); ?>
     	<ul>

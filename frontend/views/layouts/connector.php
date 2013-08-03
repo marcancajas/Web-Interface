@@ -43,21 +43,18 @@
 <div id="page_wrapper">
 
 
-
-
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
                 
-                
+    
+           
 <!----------------- FOOTER ----------------->        	
-<div id="footer">
-        <p>Copyright &copy; <?php echo date('Y'); ?> SEP Group: Josh Giblett, Marc Ancajas, Adam Piggott. 
+ <div id="footer_container">
+        <p>Copyright &copy; <?php echo date('Y'); ?> JAM Group.
         <br>All Rights Reserved.</br><p>
 	<?php echo Yii::powered(); ?>
-        </div>
-                
-                
-</div>                
-
+        </div>               
+  
+</div>   <!-- end of page_wrapper -->      
 
         
                 

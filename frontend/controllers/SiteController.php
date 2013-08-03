@@ -56,7 +56,7 @@ class SiteController extends Controller {
 	public function actionLogin()
 	{
 		$model = new LoginForm;
-                $this->layout = '//layouts/connector';
+                $this->layout = '//layouts/connector'; //change layoutfile -> connector.php
 		/*
 			// if it is ajax validation request
 		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
