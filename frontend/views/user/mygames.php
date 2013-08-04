@@ -15,6 +15,17 @@
     // the table will be 0-padding to the box
     'htmlOptions' => array('class'=>'bootstrap-widget-table')
     ));?>
+
+<?php
+$this->widget('bootstrap.widgets.TbButton',array(
+'label' => 'PLAY NOW (RENDERS EMSCRIPTEN GENERATED FILE)',
+'type' => 'primary',
+'size' => 'large',
+'url' => "http://192.168.42.254/site/frontend/views/user/myhelloworld.html"
+));
+?>
+
+
     <table class="table">
     <thead>
     <tr>
