@@ -33,8 +33,9 @@
      
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
-	'brand' => '',
+	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
         'brandOptions' => '',
+            'fixed' => 'top',
 	'collapse' => true, // requires bootstrap-responsive.css
 	'items' => array(
 		array(
