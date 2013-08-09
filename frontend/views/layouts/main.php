@@ -35,7 +35,6 @@
 	'type' => 'inverse', //'null' or 'inverse'
 	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
         'brandOptions' => '',
-            'fixed' => 'top',
 	'collapse' => true, // requires bootstrap-responsive.css
 	'items' => array(
 		array(
