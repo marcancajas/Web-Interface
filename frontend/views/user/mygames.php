@@ -26,6 +26,35 @@ $this->widget('bootstrap.widgets.TbButton',array(
 ?>
 
 
+<!-- CANVAS? -->
+<?php
+$connection = Yii::app()->db; // if not try $connection= new CDbConnection($dsn,$username,$password);
+
+$sql="SELECT  * FROM user";
+$users=$connection->createCommand($sql)->queryAll();
+
+if ($users) {
+    
+    echo $users[1]['username'];
+}
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <table class="table">
     <thead>
     <tr>
