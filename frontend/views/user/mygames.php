@@ -35,7 +35,7 @@ $users=$connection->createCommand($sql)->queryAll();
 
 if ($users) {
     
-    echo $users[1]['username'];
+    echo $users[0]['username'];
 }
 
 
@@ -77,4 +77,182 @@ if ($users) {
     </tr>
     </tbody>
     </table>
+
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+ <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+
     <?php $this->endWidget();?>
