@@ -30,6 +30,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 array('label'=>'New Character','url' => "#"),
 array('label'=>'View Characters','url' => '#'),
 array('label'=>'Something','url' => '#'),
+    
 ),
 ));
 ?>

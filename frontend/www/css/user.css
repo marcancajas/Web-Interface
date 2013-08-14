@@ -25,7 +25,7 @@ body { margin:0 auto;
     width: 40px;
     position: fixed;
 
-   border-right: .5px solid #ffffff;
+   border-right: .5px solid #ccc;
   
    background: rgba(0,0,0,0.25);
    box-shadow: 0 .5px .5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
@@ -43,8 +43,8 @@ body { margin:0 auto;
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
     background-color: transparent; 
-    width:750px;
-    height: 1000px;
+    width: 100%;
+    height: 800px;
     float: left;
     margin: 10px 50px;
 }
@@ -54,12 +54,13 @@ body { margin:0 auto;
 /*** START OF UTILITY BOX ***/
 
 
-#utility_box_container {
-    float:right;
+#utility-box {
+   
     height: 100%;
     position: fixed;
-    margin-left: 810px;
-    width: 150px;
+    width: 250px;
+    top: 0%;
+    right: 0px;
     
    background: rgba(0,0,0,0.25);
    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
@@ -73,8 +74,6 @@ body { margin:0 auto;
 #window { 
    position: fixed;
 }
-
-
 
 
 

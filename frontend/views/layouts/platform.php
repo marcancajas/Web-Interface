@@ -32,14 +32,18 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
 	<![endif]-->
-        
+       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+       
 
     </head>
    
     <body>
         <div id="container">
             <div id="user_navigation_container"> 
-    
+               <button>hide the div</button>
             <?php $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
@@ -74,17 +78,26 @@
                 <div id="user_contentbox">
      
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
-        
+  
                 </div>
                  
              </div>
         
-            <div id="utility_box_container">
             
-            
-            
-            </div>
-    </div>
+            <script>
+            $( "button" ).click(function() {
+            $( "#utility-box" ).toggle("slide", {
+                direction: "right" },
+                "slow"
+            );
+            });
+            </script>
         
+        
+            <div id="utility-box">
+                @content
+            </div>
+            
+        </div>
     </body>
 </html>
