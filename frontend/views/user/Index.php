@@ -24,7 +24,7 @@ function init() {
 $(function() {
 $( "#window" ).resizable( {
     containment: 'parent',
-    minWidth: '150px'
+    minWidth: '350'
 });
 });
 </script>

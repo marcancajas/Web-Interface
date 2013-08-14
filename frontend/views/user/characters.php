@@ -16,23 +16,23 @@
     'htmlOptions' => array('class'=>'bootstrap-widget-table')
     ));?>
 
-   <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-    'links'=>array('Library'=>'#', 'Data'),
-    ));
-   ?>
+ 
 
 
 
 
-<?php /*
-$this->widget('bootstrap.widgets.TbButton',array(
-'label' => 'PLAY NOW (RENDERS EMSCRIPTEN GENERATED FILE)',
+<?php
+$this->widget('bootstrap.widgets.TbButtonGroup', array(
 'type' => 'primary',
-'size' => 'large',
-'url' => "http://192.168.42.254/site/frontend/views/user/myhelloworld.html"
-)); */
+'toggle' => 'radio',
+'size' => 'small',
+'buttons' => array(
+array('label'=>'New Character','url' => "#"),
+array('label'=>'View Characters','url' => '#'),
+array('label'=>'Something','url' => '#'),
+),
+));
 ?>
-
 
 <!-- IFRAME? -->
 <?php
