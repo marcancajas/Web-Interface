@@ -37,28 +37,28 @@
     </head>
    
     <body>
-     
+        <div id="container">
             <div id="user_navigation_container"> 
     
             <?php $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
             'items'=>array(
-            array('label'=>'MAIN MENU'),
-            array('label'=>'Home', 'icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
-            array('label'=>'Messages', 'icon'=>'icon-envelope', 'url'=>'#'),  
-            array('label'=>'My Games', 'icon'=>'book', 'url'=> array('/user/mygames','view' => 'mygames')),
-            array('label'=>'Rankings', 'icon'=>'pencil', 'url'=>'#'),
-            array('label'=>'ACCOUNT OPTIONS'),
-            array('label'=>'Profile Settings', 'icon'=>'user', 'url'=>'#'),
-            array('label'=>'Account Settings', 'icon'=>'cog', 'url'=>'#'),
-            array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
-            array('label'=>'Logout', 'icon'=>'icon-off', 'url' => array('/site/logout','view' => 'Contact')),
+         /* array('label'=>'MAIN MENU'), */
+            array('icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
+            array('icon'=>'icon-envelope', 'url'=> '#'),  
+            array('icon'=>'book', 'url'=> array('/user/characters','view' => 'characters')),
+            array('icon'=>'pencil', 'url'=>'#'),
+         /* array('label'=>'ACCOUNT OPTIONS'), */
+            array('icon'=>'user', 'url'=>'#'),
+            array('icon'=>'cog', 'url'=>'#'),
+            array('icon'=>'flag', 'url'=>'#'),
+            array('icon'=>'icon-off', 'url' => array('/site/logout','view' => 'Contact')),
             ),
             ));          
           
      ?>  
-            <div class="social_icons_bar">
+           <!-- <div class="social_icons_bar">
             
             
             FACEBOOK , TWITTER, YOUTUBE, TWITCH.tv
@@ -66,7 +66,7 @@
             
             
             
-            </div>
+            </div> -->
             </div>
         
             <div id="user_container">
@@ -84,7 +84,7 @@
             
             
             </div>
-     
+    </div>
         
     </body>
 </html>

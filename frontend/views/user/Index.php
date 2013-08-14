@@ -7,15 +7,56 @@
     stylesheet : user.css
 */
 ?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
-        <?php $box = $this->beginWidget('bootstrap.widgets.TbBox', array(
-    'title' => 'Home',
-    'headerIcon' => 'icon-home',
-    // when displaying a table, if we include bootstra-widget-table class
-    // the table will be 0-padding to the box
-    'htmlOptions' => array('class'=>'bootstrap-widget-table')
-    ));?>
+<script type="text/javascript">
+ 
+$( init );
+ 
+function init() {
+  $('#window').draggable( {
+      containment: '#user_contentbox',
+      cursor: 'move',
+  });
+}
 
-        @content
+$(function() {
+$( "#window" ).resizable( {
+    containment: 'parent',
+    minWidth: '150px'
+});
+});
+</script>
 
-    <?php $this->endWidget();?>
+<div id ="window" class="ui-widget-content">
+     <table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Publisher</th>
+    <th>No. of Characters</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>1</td><td>Mark</td><td>Otto</td><td>CSS</td><td>10</td>
+    </tr>
+    <tr class="even">
+    <td>2</td><td>Jacob</td><td>Thornton</td><td>JavaScript</td><td>20</td>
+    </tr>
+    <tr class="odd">
+    <td>3</td><td>Stu</td><td>Dent</td><td>HTML</td><td>15</td>
+    </tr>
+    </tbody>
+    </table>
+
+ 
+</div>
+    
+
+     
+
+     
