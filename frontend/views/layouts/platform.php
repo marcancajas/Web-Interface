@@ -43,21 +43,26 @@
     <body>
         <div id="container">
             <div id="user_navigation_container"> 
-               <button>hide the div</button>
+                <div id="platform-logo">
+                  <a href="<?php echo Yii::app()->request->baseUrl; ?>/Site/Index"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png"></a> 
+                </div>
+           
             <?php $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
             'items'=>array(
          /* array('label'=>'MAIN MENU'), */
-            array('icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
-            array('icon'=>'icon-envelope', 'url'=> '#'),  
-            array('icon'=>'book', 'url'=> array('/user/characters','view' => 'characters')),
-            array('icon'=>'pencil', 'url'=>'#'),
+                 
+            array('label'=>'Home','icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
+            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),  
+            array('label'=>'Characters','icon'=>'book', 'url'=> array('/user/characters','view' => 'characters')),
+            array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
+           
          /* array('label'=>'ACCOUNT OPTIONS'), */
-            array('icon'=>'user', 'url'=>'#'),
-            array('icon'=>'cog', 'url'=>'#'),
-            array('icon'=>'flag', 'url'=>'#'),
-            array('icon'=>'icon-off', 'url' => array('/site/logout','view' => 'Contact')),
+            array('label'=>'Profile','icon'=>'user', 'url'=>'#'),
+            array('label'=>'Account','icon'=>'cog', 'url'=>'#'),
+            array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
+            array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout','view' => 'Contact')),
             ),
             ));          
           
@@ -76,7 +81,7 @@
             <div id="user_container">
                  
                 <div id="user_contentbox">
-     
+         <button>hide the div</button>
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
   
                 </div>

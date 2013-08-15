@@ -15,21 +15,21 @@
 $( init );
  
 function init() {
-  $('#window').draggable( {
+  $('#box').draggable( {
       containment: '#user_contentbox',
       cursor: 'move',
   });
 }
 
 $(function() {
-$( "#window" ).resizable( {
+$( "#box" ).resizable( {
     containment: 'parent',
     minWidth: '350'  
 });
 });
 </script>
 
-<div id ="window" class="ui-widget-content">
+<div id ="box" class="ui-widget-content">
      <table class="table">
     <thead>
     <tr>

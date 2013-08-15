@@ -28,7 +28,10 @@ class UserController extends Controller {
         {
             $this->layout = '//layouts/platform';
             $this->render('characters');
-        }   
+        } 
+        
+       
+        
         
 	public function actionConnectToWorker()
 	{

@@ -17,12 +17,14 @@ body { margin:0 auto;
        background: #ffffff url(../images/bg2.jpg); 
 }
 
+#platform-logo {
+}
 
 /*** START OF USER_NAVIGATION ***/
 #user_navigation_container {
     float:left;
     height: 100%;
-    width: 40px;
+    width: 100px;
     position: fixed;
 
    border-right: .5px solid #ccc;
@@ -46,7 +48,7 @@ body { margin:0 auto;
     width: 100%;
     height: 800px;
     float: left;
-    margin: 10px 50px;
+    margin: 10px 110px;
 }
 
 
@@ -71,14 +73,19 @@ body { margin:0 auto;
 }
 
 
-#window { 
+#box { 
    position: fixed;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
 }
 
-
-
-
-
+#character-box { 
+   position: fixed;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
 
 
 
