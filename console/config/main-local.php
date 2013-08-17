@@ -9,4 +9,5 @@
  * Date: 7/22/12
  * Time: 6:25 PM
  */
-return array();
+return array(
+);
