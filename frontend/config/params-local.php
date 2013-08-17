@@ -12,5 +12,5 @@
  *
  */
 return array(
-	'env.code' => 'private'
+	'env.code' => 'private',
 );
