@@ -8,6 +8,4 @@
  */
 return array(
 	'env.code' => 'private',
-		'db.connectionString' => 'mysql:host=127.0.0.1;dbname=AfcDB'
-
 );
