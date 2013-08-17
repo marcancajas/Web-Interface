@@ -1,58 +1,51 @@
-<tt><?php $this->getLayoutFile('main'); ?></tt>
 <?php
 /**
  * login.php
  *
  * Example page <given as is, not even checked styles>
- * @author: antonio ramirez <antonio@clevertech.biz>
+ * @author: Front-end: Marc Ancajas, Back-end: Josh Giblett 
  * Date: 7/23/12
  * Time: 12:27 AM
  */
+
 $this->pageTitle = 'Login';
-$this->breadcrumbs = array(
-	'Login',
-);
 ?>
 
-<tt><?php $this->getLayoutFile('main'); ?></tt>
-
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
-
-<div id="login_background">
-            <div id="login_container">
-             <h1>Login</h1>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/user.css" media="screen"/>
+   
+    <div id="login_container">
+    
+       <div id="login_logo">
+    <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png" alt="JAMengine" />
+       </div>
+        
+       <div id="login_form">
+             <h3>Login</h3>
 
 <p>Please fill out the following form with your login credentials:</p>
 
 
-<?php $form = $this->beginWidget('CActiveForm', array(
-	'id' => 'login-form',
-	'enableAjaxValidation' => false,
-	'enableClientValidation' => true,
-	'clientOptions' => array(
-		'validateOnSubmit' => true,
+	<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id'=>'login-form',
+	'enableClientValidation'=>true,
+        'inlineErrors'=>'false',
+	'htmlOptions'=>array('class'=>'well','background-color'=>'transparent'),
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
 	),
 )); ?>
-	<?php echo $form->label($model, 'username');?>
-	<?php echo $form->textField($model, 'username'); ?>
-	<?php echo $form->error($model, 'username');?>
-	<br/>
-	<?php echo $form->label($model, 'password');?>
-	<?php echo $form->passwordField($model, 'password'); ?>
-	<br/>
-	<!--
-<?php echo $form->checkBox($model, 'rememberMe'); ?>
-	<?php if ($model->requireCaptcha): ?>
-		<p>plain... :)) </p>
-	<?php endif; ?>
--->
 
+	<?php echo $form->textFieldRow($model, 'username');?>
+	<?php echo $form->passwordFieldRow($model, 'password');?>
 
-				<?php echo CHtml::submitButton('Login'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit','type'=>'warning','label'=>'Submit', 'icon'=>'ok'));?>
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset','label'=>'Reset'));?>
+	</div>
 
-<?php $this->endWidget(); ?>
-            </div>
+	<?php $this->endWidget(); ?>
+
         </div>
-
-
+                      
+    </div>
+    

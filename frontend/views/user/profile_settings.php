@@ -8,7 +8,7 @@
 */
 ?>
 
-        <?php $box = $this->beginWidget('bootstrap.widgets.TbBox', array(
+    <?php $box = $this->beginWidget('bootstrap.widgets.TbBox', array(
     'title' => 'Home',
     'headerIcon' => 'icon-home',
     // when displaying a table, if we include bootstra-widget-table class
@@ -16,6 +16,6 @@
     'htmlOptions' => array('class'=>'bootstrap-widget-table')
     ));?>
 
-        @content
+    @content
 
     <?php $this->endWidget();?>

@@ -8,7 +8,7 @@ class UserController extends Controller {
 				'users'=>array('*')),
 			// logged in users
 			array('allow',
-				'actions'=>array('Index','connectToWorker'),
+				'actions'=>array('Index','mygames','connectToWorker'),
 				'users' => array('@')),
 			// not logged in users can't do anything except above
 			array('deny',
@@ -18,9 +18,20 @@ class UserController extends Controller {
 
 	public function actionIndex()
 	{
+                $this->layout = '//layouts/platform';  //change layoutfile -> platform.php
 		$this->render('Index');
+                           
 	}
 
+        
+        public function actionMyGames()
+        {
+            $this->layout = '//layouts/platform';
+            $this ->render('mygames');
+        }
+        
+        
+        
 	public function actionConnectToWorker()
 	{
 

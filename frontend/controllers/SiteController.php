@@ -11,7 +11,7 @@ class SiteController extends Controller {
 	public function accessRules() {
 		return array(
 			// not logged in users should be able to login and view captcha images as well as errors
-			array('allow', 'actions' => array('index', 'captcha', 'login', 'error','register','activate')),
+			array('allow', 'actions' => array('index', 'captcha', 'login','contact', 'error','register','activate')),
 			// logged in users can do whatever they want to
 			array('allow', 'users' => array('@')),
 			// not logged in users can't do anything except above
@@ -37,7 +37,7 @@ class SiteController extends Controller {
 	public function actionIndex() {
 		$this->render('index');
 	}
-
+        
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -56,7 +56,7 @@ class SiteController extends Controller {
 	public function actionLogin()
 	{
 		$model = new LoginForm;
-
+                $this->layout = '//layouts/connector'; //change layoutfile -> connector.php
 		/*
 			// if it is ajax validation request
 		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
@@ -191,5 +191,30 @@ class SiteController extends Controller {
 		}
 	}
 
+        
+        public function actionContact()
+	{
+		$model = new ContactForm;
+		if (isset($_POST['ContactForm']))
+		{
+			$model->attributes = $_POST['ContactForm'];
+			if ($model->validate())
+			{
+				/** example code */
+//				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
+//				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
+//				$headers="From: $name <{$model->email}>\r\n".
+//					"Reply-To: {$model->email}\r\n".
+//					"MIME-Version: 1.0\r\n".
+//					"Content-type: text/plain; charset=UTF-8";
+//
+//				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+//				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+//				$this->refresh();
+			}
+		}
+		$this->render('contact', array('model' => $model));
+
+	}
 
 }

@@ -7,78 +7,92 @@
  * Time: 8:30 PM
  */
 ?>
+<!-- @layout: main -> page_wrapper -->
 
-<tt><?php $this->getLayoutFile('main'); ?></tt>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/frontend.css"
-	      media="screen"/>
-
-
-
-
+<!-- Carousel -->
 <div id="carousel_background">
             <div id="carousel_container">
-            <?php
-            /*
-$this->widget('bootstrap.widgets.TbButton',
-						array(
-							'label'=>'Register',
-							'url'=>array('site/Register'),
-							'type'=>'primary',
-							'size'=>'large',
-							)
-						);
-*/
-			?>
-
-
                 <?php $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
-        array('image'=>'http://placehold.it/1150x300&text=First+thumbnail',
-        		'label'=>'First Thumbnail label',
-        		//'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-				),
-        array('image'=>'http://placehold.it/1150x300&text=Second+thumbnail',
-        		'label'=>'Second Thumbnail label',
-       	 		//'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-	   	 		),
-        array('image'=>'http://placehold.it/1150x300&text=Third+thumbnail',
-        		'label'=>'Third Thumbnail label',
-        		//'caption'=>'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-				),
-		),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Website is up!', 'caption'=>'Hey guys, websites finally getting there, keep up the good work everyone!'),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'JAMengine Architecture', 'caption'=>'Just an overview of the JAMengine architecture!'),
+        array('image'=>'http://placehold.it/1170x400&text=First+thumbnail', 'label'=>'Mike Robeys Favorite', 'caption'=>'The project is manage through the Scrumbut process, an Agile adjusted scrum process'),
+    ),
 )); ?>
             </div>
         </div>
 
-<div id="page_background">
-    <div id="page_container">
-
-<div id="services_holder">
-	<div id="services">
-    	<div class="services-block">
-        	<img src="http://placehold.it/220x100&text=First+thumbnail" alt="Social marketing" />
-          <h2><a href="#">Project Overview</a></h2>
-        	<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+<!-- Bottom Container -->
+<div id="bottom_container">
+    <div id="left_bar">
+        <div id="main_content">
+            <!-- @news content -->
+            <h4>NEWS</h4>
+            
+            
+            <!-- START OF CONTENTS @contents maybe generated in the forums or news.php for now, just hard coded-->
+            
+    	<div class="content">
+                <hr>
+            <?php $this->beginWidget('bootstrap.widgets.TbHeroUnit', array(
+             'heading'=>'Hello, world!',
+              )); ?>
+     
+           <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <p>
+            <?php $this->widget('bootstrap.widgets.TbButton', array(
+             'type'=>'primary',
+             'size'=>'large',
+             'label'=>'Learn more',
+             )); ?>
+            </p> 
+          <?php $this->endWidget(); ?>
         </div>
-        <div class="services-block">
+            
+        <div class="content">
+                <hr>
+                    <div class="page-header">
+                <img src="http://placehold.it/220x100&text=First+thumbnail" />
+                <h1>Example page header <small>Subtext for header</small></h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+        </div>
+            
+        <div class="content">
+                <hr>
+                <div class ="well">
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h3><a href="#">ChaosENGINE Overview</a></h3>
-        	<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+                <h3><a href="#">Website Version 2.0</a></h3>
+        	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
         </div>
-        <div class="services-block">
+            
+        <div class="content">
+                <hr>
         	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h4><a href="#">Development Tools</a></h4>
-        	<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+                <h3><a href="#">Any Questions?</a></h3>
+        	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        </div> 
+            
+        <a class="more_news" href="<?php echo Yii::app()->request->baseUrl; ?>/Site/News">More News...</a>  
         </div>
-        <div class="services-block">
-        	<img src="http://placehold.it/220x100&text=First+thumbnail" />
-            <h5><a href="#">Any Questions?</a></h5>
-        	<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
         </div>
-        <div class="clear"></div>
+    
+    <!-- RIGHT BAR SECTION -->
+    
+     <div id="right_bar">
+         
+    	<div class="content-block">
+              <h4>RANKINGS</h4>
+        </div>
+         
+       	<div class="content-block">
+              <h4>SERVER STATISTICS</h4>
+        </div>
     </div>
-</div>
+    
+  
+      <div class="clear"></div>
+ </div>
 
 
-    </div>
-</div>
