@@ -68,16 +68,6 @@ return CMap::mergeArray(
 				'class' => 'common.extensions.bootstrap.components.Bootstrap',
 				'responsiveCss' => true,
 			),
-			'yiinstalk' => array(
-      			'class' => 'common.extensions.Yiinstalk',
-      			'pheanstalkPath'=>'common.vendors.Pheanstalk',
-      			'connections' => array(
-        			'default' => array(
-          				'host' => '192.168.42.254',
-          				'port' => 11300,
-        			),
-      			),
-    		),
 			'errorHandler' => array(
 				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
 				'errorAction'=>'site/error'
