@@ -72,15 +72,28 @@ return CMap::mergeArray(
 				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
 				'errorAction'=>'site/error'
 			),
-			'db' => array(
-				'connectionString' => $params['db.connectionString'],
-				'username' => $params['db.username'],
-				'password' => $params['db.password'],
+			//Connection Details for JAMAccount
+			'dbAccount'=> array(
+				'connectionString' => $params['JAMAccount.db.connectionString'],
+				'username' => $params['JAMAccount.db.username'],
+				'password' => $params['JAMAccount.db.password'],
 				'schemaCachingDuration' => YII_DEBUG ? 0 : 86400000, // 1000 days
 				'enableParamLogging' => YII_DEBUG,
-				'charset' => 'utf8'
+				'charset' => 'utf8',
+				'class'=>'CDbConnection',
 			),
-			'session' => array (
+			//Connection Details for JAMGame
+			'dbGame'=> array(
+				'connectionString' => $params['JAMGame.db.connectionString'],
+				'username' => $params['JAMGame.db.username'],
+				'password' => $params['JAMGame.db.password'],
+				'schemaCachingDuration' => YII_DEBUG ? 0 : 86400000, // 1000 days
+				'enableParamLogging' => YII_DEBUG,
+				'charset' => 'utf8',
+				'class'=>'CDbConnection'
+			),
+			/*
+'session' => array (
 				'class'=> 'CDbHttpSession',
 				'autoCreateSessionTable'=> false,
 				'connectionID' => 'db',
@@ -88,6 +101,7 @@ return CMap::mergeArray(
 				'autoStart' => true,
 				'timeout' => 600
 			),
+*/
 			'urlManager' => array(
 				'urlFormat' => 'path',
 				'showScriptName' => false,
