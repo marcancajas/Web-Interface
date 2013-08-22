@@ -73,13 +73,25 @@ return CMap::mergeArray(
 					)
 				)
 			),
-			'db' => array(
-				'connectionString' => $params['db.connectionString'],
-				'username' => $params['db.username'],
-				'password' => $params['db.password'],
+			//Connection Details for JAMAccount
+			'dbAccount'=> array(
+				'connectionString' => $params['JAMAccount.db.connectionString'],
+				'username' => $params['JAMAccount.db.username'],
+				'password' => $params['JAMAccount.db.password'],
 				'schemaCachingDuration' => YII_DEBUG ? 0 : 86400000, // 1000 days
 				'enableParamLogging' => YII_DEBUG,
-				'charset' => 'utf8'
+				'charset' => 'utf8',
+				'class' => 'CDbConnection',
+			),
+			//Connection Details for JAMGame
+			'dbGame'=> array(
+				'connectionString' => $params['JAMGame.db.connectionString'],
+				'username' => $params['JAMGame.db.username'],
+				'password' => $params['JAMGame.db.password'],
+				'schemaCachingDuration' => YII_DEBUG ? 0 : 86400000, // 1000 days
+				'enableParamLogging' => YII_DEBUG,
+				'charset' => 'utf8',
+				'class' => 'CDbConnection',
 			),
 			/* uncomment if we require to run commands against test database */
 			/*
