@@ -10,4 +10,15 @@
  * related to your development machine. You can also use main-local.php
  */
 return array(
+    'modules' => array(
+		'gii' => array(
+			'class' => 'system.gii.GiiModule',
+			'password' => 'MakeMe',
+			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths' => array(
+				'bootstrap.gii',
+				'common.extensions.giix.giix-core',
+			)
+		)
+	),
 );
