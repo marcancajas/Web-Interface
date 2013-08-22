@@ -36,7 +36,7 @@
  *
  * @property Country $country0
  */
-abstract class BaseUser extends GxActiveRecord {
+abstract class BaseUser extends JAMAccountActiveRecord {
 
 	public static function model($className=__CLASS__)
 	{
