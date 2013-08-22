@@ -22,6 +22,11 @@ abstract class BaseCountry extends JAMAccountActiveRecord {
 		return parent::model($className);
 	}
 
+	public function getDbConnection()
+    {
+        return self::getAccountDbConnection();
+    }
+
 	public function tableName() {
 		return 'country';
 	}
