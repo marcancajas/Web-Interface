@@ -63,15 +63,6 @@ return CMap::mergeArray(
 		),
 		'components' => array(
 			#Beanstalk queue extension
-			'yiinstalk' => array(
-      			'class' => 'common.extensions.yiinstalk',
-      			'connections' => array(
-        			'default' => array(
-          				'host' => '127.0.0.1',
-          				'port' => 11300,
-        			),
-      			),
-    		),
 			'log' => array(
 				'class' => 'CLogRouter',
 				'routes' => array(
