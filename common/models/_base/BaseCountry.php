@@ -16,7 +16,7 @@
  *
  * @property User[] $users
  */
-abstract class BaseCountry extends GxActiveRecord {
+abstract class BaseCountry extends JAMAccountActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
