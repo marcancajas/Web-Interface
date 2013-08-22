@@ -65,19 +65,10 @@ return CMap::mergeArray(
 		/* uncomment and set if required */
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		'modules' => array(
-			'gii' => array(
-				'class' => 'system.gii.GiiModule',
-				'password' => '4dm1n1st3r',
-				'generatorPaths' => array(
-				'bootstrap.gii',
-				'common.extensions.giix.giix-core',
-				),
-				'ipFilters' => array('127.0.0.1', '192.168.*', '*.*.*.*'),   // EDIT TO TASTE
-			)
 		),
 		'components' => array(
 			'user' => array(
-				'allowAutoLogin'=>true,
+				'allowAutoLogin'=>false,
 			),
 			/* load bootstrap components */
 			'bootstrap' => array(
