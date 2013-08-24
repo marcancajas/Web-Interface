@@ -66,6 +66,11 @@ return CMap::mergeArray(
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		'modules' => array(
 		),
+		'behaviors' => array(
+			'onBeginRequest' => array(
+       			'class' => 'application.extensions.behaviors.RequireLogin',
+    		),
+		),
 		'components' => array(
 			'user' => array(
 				'allowAutoLogin'=>false,
