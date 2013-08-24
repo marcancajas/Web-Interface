@@ -78,6 +78,28 @@ class User extends BaseUser
 		);
 	}
 
+	public function scopes()
+    {
+        return array(
+            'active'=>array(
+                'condition'=>'status='.self::STATUS_ACTIVE,
+            ),
+            'inactive'=>array(
+                'condition'=>'status='.self::STATUS_INACTIVE,
+            ),
+            'banned'=>array(
+                'condition'=>'status='.self::STATUS_BANNED,
+            ),
+            'pending'=>array(
+            	'condition'=>'status='.self::STATUS_PENDING,
+            ),
+            'superuser'=>array(
+                'condition'=>'superuser=1',
+            ),
+          );
+    }
+
+
 	public function regenerateValidationKey()
 	{
 		$this->saveAttributes(array(
