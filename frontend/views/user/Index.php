@@ -8,14 +8,4 @@
 */
 ?>
 
-        <?php $box = $this->beginWidget('bootstrap.widgets.TbBox', array(
-    'title' => 'Home',
-    'headerIcon' => 'icon-home',
-    // when displaying a table, if we include bootstra-widget-table class
-    // the table will be 0-padding to the box
-    'htmlOptions' => array('class'=>'bootstrap-widget-table')
-    ));?>
-
-        @content
-
-    <?php $this->endWidget();?>
+ 

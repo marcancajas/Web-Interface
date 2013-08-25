@@ -41,10 +41,10 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
                             
-				array('label' => 'home', 'url' => array('/Site/Index', 'view' => 'Index')),
-                                array('label' => 'get started', 'url' => array('/Site/Get_Started','view' => 'Get Started')),
-				array('label' => 'forums', 'url' => array('/Site/Forum', 'view' => 'Community Forum')),
-                                array('label' => 'contact', 'url' => array('/Site/Contact','view' => 'Contact')),
+				array('label' => 'home', 'url' => array('/site/index', 'view' => 'Index')),
+                                array('label' => 'get started', 'url' => array('/site/get_started','view' => 'Get Started')),
+				array('label' => 'forums', 'url' => array('/site/forum', 'view' => 'Community Forum')),
+                                array('label' => 'contact', 'url' => array('/site/contact','view' => 'Contact')),
                             
                                         ),
                      ), 
@@ -55,8 +55,8 @@
                     'htmlOptions'=>array('class'=>'pull-right'),
                     'items' => array(
                         
-                        array('label' => 'join', 'url' => array('/Site/Register', 'view' => 'Register')),
-                        array('label' => 'login', 'url' => array('/Site/login', 'view' => 'Login')),
+                        array('label' => 'join', 'url' => array('/site/register', 'view' => 'Register')),
+                        array('label' => 'login', 'url' => array('/site/login', 'view' => 'Login')),
  
                            
                             

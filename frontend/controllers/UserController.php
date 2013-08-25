@@ -1,5 +1,5 @@
 <?php
-class UserController extends Controller {
+class UserController extends CharacterController {
 
 	public function accessRules() {
 		return array(
@@ -8,7 +8,7 @@ class UserController extends Controller {
 				'users'=>array('*')),
 			// logged in users
 			array('allow',
-				'actions'=>array('Index','mygames','connectToWorker'),
+				'actions'=>array('Index','characters','connectToWorker'),
 				'users' => array('@')),
 			// not logged in users can't do anything except above
 			array('deny',
@@ -24,10 +24,10 @@ class UserController extends Controller {
 	}
 
         
-        public function actionMyGames()
+        public function actionCharacters()
         {
-            $this->layout = '//layouts/platform';
-            $this ->render('mygames');
+            $this->layout = '//layouts/platform';           
+            $this ->render('characters');
         }
         
         

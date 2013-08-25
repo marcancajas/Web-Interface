@@ -8,25 +8,35 @@
 
 root { 
     display: block;
-}
+} 
 
-body { margin:0 auto; 
-       padding:0; 
-       font-family:Arial, Helvetica, sans-serif; 
-       font-size:12px; color:#959595; 
-       background:#ffffff; /*url(../images/bg.png) fixed center ; */ 
+body { margin:0 auto;
+       background:#ffffff url(../images/bg.png) fixed center repeat-x; 
 }
-
+ 
 
 /*** START OF USER_NAVIGATION ***/
 
+#platform_container {
+    margin: 50px auto;
+    width: 1180px;
+    height: 100%;
+}
+
 #user_navigation_container {
     float:left;
-    background-color: #444444;
     height: 100%;
-    width: 300px;
+    width: 150px;
     position: fixed;
-    box-shadow: 1px 1px 1px 1px #000000;
+    border-left: .5px solid #262626;
+    border-radius: 5px;
+    
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 .5px .5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+
 }
 
 .social_icons_bar {
@@ -36,26 +46,33 @@ body { margin:0 auto;
 
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
-    background-color: transparent; 
-    width:1180px;
+    background-color: #ccc; 
+    width:1025px;
     height: 100%;
     float: left;
-    margin: 10px 310px;
+    margin: 0 160px;
+    border-radius: 5px;
 }
 
 
 /*** START OF UTILITY BOX ***/
-
-
-#utility_box_container {
-    float:right;
-    background-color: #444444;
+#utility-box {
     height: 100%;
     position: fixed;
-    margin-left: 1500px;
-    width: 430px;
-    box-shadow: 1px 1px 1px 1px #000000;
+    width: 250px;
+    top: 50px;
+    right: 0px;
+    border-radius: 5px;
+    
+   background: rgba(0,0,0,0.25);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+
 }
+
+
 
 
 
@@ -108,10 +125,3 @@ body { margin:0 auto;
     box-shadow: none;
 }
 
-
-div.editable {
-    width: 300px;
-    height: 200px;
-    border: 1px solid #ccc;
-    padding: 5px;
-}
