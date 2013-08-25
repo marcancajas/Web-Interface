@@ -31,18 +31,3 @@ index
 /console/runtime
 
 # configuration files created locally by post deployment script or by a developer
-/backend/config/*-env.php
-/backend/config/*-local.php
-
-/frontend/config/*-env.php
-/frontend/config/*-local.php
-
-/common/config/*-env.php
-/common/config/*-local.php
-
-/console/config/*-env.php
-/console/config/*-local.php
-
-
-
-/site/frontend/config/params-local.php
