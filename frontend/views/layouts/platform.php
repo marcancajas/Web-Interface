@@ -82,14 +82,14 @@
             'stacked'=>'true',
             'items'=>array(
                 
-            /*array('label'=>'MAIN MENU'),*/
+            array('label'=>'MAIN MENU'),
         
             array('label'=>'Home','icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
             array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),  
             array('label'=>'Characters','icon'=>'book', 'url'=> array('/user/characters','view' => 'characters')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
            
-            /*array('label'=>'ACCOUNT OPTIONS'),*/
+            array('label'=>'ACCOUNT OPTIONS'),
               
             array('label'=>'Profile','icon'=>'user', 'url'=>'#'),
             array('label'=>'Account','icon'=>'cog', 'url'=>'#'),
