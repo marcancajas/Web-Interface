@@ -39,12 +39,13 @@
     
 </head>
    
-<body> 
+
    
  <!----- START OF NAVIGATION BAR ----->  
      
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
+        'fixed' => 'false',
 	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
         'brandOptions' => '',
 	'collapse' => true, // requires bootstrap-responsive.css
@@ -75,7 +76,7 @@
  <div id="platform_container">
  
             <div id="user_navigation_container">
-       
+          <button>hide the div</button>
             &nbsp 
             <?php $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
@@ -102,30 +103,35 @@
            
             </div>
         
-     
+    
                  
             <div id="user_contentbox">
-              <button>hide the div</button>
+            
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
         
-            </div>
+                
+            
      
-            <script>
+                
+            </div>
+ 
+       <div id="utility-box">
+            
+            </div>
+                
+ 
+    <script>
             $( "button" ).click(function() {
             $( "#utility-box" ).toggle("slide", {
                 direction: "right" },
                 "slow"
             );
             });
-            </script>
-        
-             <div id="utility-box">
-                @content
-            </div>
-            
+            </script>        
+                   
+           
      
-</div>  
+
  
- 
-</body>
+</div>
 </html>

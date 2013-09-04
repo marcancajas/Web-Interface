@@ -6,33 +6,31 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
-} 
+
 
 body { margin:0 auto;
-       background:#ffffff url(../images/bg.png) fixed center repeat-x; 
+       background:#414141 url(../images/bg.png) fixed center repeat-x; 
 }
- 
 
 /*** START OF USER_NAVIGATION ***/
 
 #platform_container {
-    margin: 50px auto;
-    width: 1180px;
+    width: 100%;
     height: 100%;
+    margin-top: -20px;
 }
 
 #user_navigation_container {
     float:left;
-    height: 100%;
+    height: 900px;
     width: 150px;
-    position: fixed;
-    border-left: .5px solid #262626;
-    border-radius: 5px;
+  
     
+ 
+    border-bottom-right-radius: 2px;
+     box-shadow: #000000 2px 2px 2px;
     background: rgba(0,0,0,0.25);
-    box-shadow: 0 .5px .5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   
     -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
@@ -46,26 +44,29 @@ body { margin:0 auto;
 
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
-    background-color: #ccc; 
-    width:1025px;
-    height: 100%;
+    position: fixed;
+    background-color: #5b9909; 
+    width: 800px;
+    height: 650px;
     float: left;
-    margin: 0 160px;
-    border-radius: 5px;
+    margin: 10px 160px;
+    border-radius: 2px;
 }
 
 
 /*** START OF UTILITY BOX ***/
 #utility-box {
-    height: 100%;
-    position: fixed;
+    position: relative;
+    float: right;
+    height: 900px;
+
     width: 250px;
-    top: 50px;
-    right: 0px;
-    border-radius: 5px;
+
+    border-bottom-left-radius: 2px;
+
     
-   background: rgba(0,0,0,0.25);
-   box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.25);
+    box-shadow: #000000 1px 1px 1px;
    -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
