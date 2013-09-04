@@ -1,5 +1,12 @@
 <?php
+/* ORIGINAL AUTHOR: JOSH GIBLETT
+ * FRONTEND MODIFICATION : MARC ANCAJAS
+ */
+?>
 
+
+
+<?php     
 $this->breadcrumbs = array(
 	Character::label(2),
 	Yii::t('app', 'Index'),
@@ -13,7 +20,15 @@ $this->menu = array(
 
 <h1><?php echo GxHtml::encode(Character::label(2)); ?></h1>
 
+
+
+     
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-)); 
+)); ?>
+
+
+
+
+

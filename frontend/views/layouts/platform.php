@@ -85,9 +85,9 @@
                 
             array('label'=>'MAIN MENU'),
         
-            array('label'=>'Home','icon'=>'home', 'url'=> array('/user/Index','view' => 'Index')),
+            array('label'=>'Home','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
             array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),  
-            array('label'=>'Characters','icon'=>'book', 'url'=> array('/user/characters','view' => 'characters')),
+            array('label'=>'Characters','icon'=>'book', 'url'=> array('/character/index','view' => 'index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
            
             array('label'=>'ACCOUNT OPTIONS'),
@@ -106,6 +106,11 @@
     
                  
             <div id="user_contentbox">
+                <?php if (isset($this->breadcrumbs)): ?>
+			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+			'links' => $this->breadcrumbs,
+		)); ?><!-- breadcrumbs -->
+		<?php endif?>
             
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
         
@@ -116,7 +121,16 @@
             </div>
  
        <div id="utility-box">
-            
+            <?php
+			$this->beginWidget('zii.widgets.CPortlet', array(
+				'title'=>'Operations',
+			));
+			$this->widget('zii.widgets.CMenu', array(
+				'items'=>$this->menu,
+				'htmlOptions'=>array('class'=>'operations'),
+			));
+			$this->endWidget();
+		?>
             </div>
                 
  

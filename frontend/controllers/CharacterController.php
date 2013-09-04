@@ -2,6 +2,8 @@
 
 class CharacterController extends GxController {
 
+public $layout='//layouts/platform'; // Change Character Controller's Default Layout to platform.php
+    
 public function filters() {
 	return array(
 			//'accessControl',
@@ -66,11 +68,15 @@ public function accessRules() {
 	}
 
 	public function actionIndex() {
+            
+                $this->layout = '//layouts/platform';       
 		$dataProvider = new CActiveDataProvider('Character');
-		print_r("Made it character controller");
+		/*print_r("JOSH: Made it character controller \n MARC: -___- THANKS JOSH"); */
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
+                
+                
 	}
 
 	public function actionAdmin() {
@@ -86,3 +92,4 @@ public function accessRules() {
 	}
 
 }
+

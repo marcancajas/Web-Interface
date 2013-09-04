@@ -22,15 +22,6 @@ class UserController extends CharacterController {
 		$this->render('Index');
                            
 	}
-
-        
-        public function actionCharacters()
-        {
-            $this->layout = '//layouts/platform';           
-            $this ->render('characters');
-        }
-        
-        
         
 	public function actionConnectToWorker()
 	{
