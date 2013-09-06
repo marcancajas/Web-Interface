@@ -33,7 +33,7 @@
  * @property Armor $armor
  * @property Weapon $weapon
  */
-abstract class BaseCharacter extends JAMGameActiveRecord {
+abstract class BaseCharacter extends gxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
@@ -41,7 +41,7 @@ abstract class BaseCharacter extends JAMGameActiveRecord {
 
 	public function getDbConnection()
     {
-        return self::getGameDbConnection();
+        return Yii::app()->dbGame;
     }
 
 	public function tableName() {

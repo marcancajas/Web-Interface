@@ -17,7 +17,7 @@
  *
  * @property Character[] $characters
  */
-abstract class BaseGame extends JAMGameActiveRecord {
+abstract class BaseGame extends gxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
@@ -25,7 +25,7 @@ abstract class BaseGame extends JAMGameActiveRecord {
 
 	public function getDbConnection()
     {
-        return self::getGameDbConnection();
+        return Yii::app()->dbGame;
     }
 
 	public function tableName() {

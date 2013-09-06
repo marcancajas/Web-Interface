@@ -16,16 +16,11 @@
  *
  * @property User[] $users
  */
-abstract class BaseCountry extends JAMAccountActiveRecord {
+abstract class BaseCountry extends gxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
 	}
-
-	public function getDbConnection()
-    {
-        return self::getAccountDbConnection();
-    }
 
 	public function tableName() {
 		return 'country';

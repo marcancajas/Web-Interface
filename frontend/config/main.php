@@ -73,7 +73,7 @@ return CMap::mergeArray(
 				'errorAction'=>'site/error'
 			),
 			//Connection Details for JAMAccount
-			'dbAccount'=> array(
+			'db'=> array(
 				'connectionString' => $params['JAMAccount.db.connectionString'],
 				'username' => $params['JAMAccount.db.username'],
 				'password' => $params['JAMAccount.db.password'],
