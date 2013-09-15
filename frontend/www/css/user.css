@@ -9,7 +9,11 @@
 
 
 body { margin:0 auto;
-       background:#414141 url(../images/bg3.jpg) fixed center repeat-y; 
+       background: url(../images/bg3.jpg) no-repeat center center fixed; 
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
 }
 
 /*** START OF USER_NAVIGATION ***/
@@ -45,12 +49,12 @@ body { margin:0 auto;
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
     position: absolute;
-    background-color: #5b9909; 
-    width: 800px;
-    height: 100%;
+    background-color: transparent; 
+    width: 100%;
+    height: 600px;
     float: left;
     margin: 10px 160px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 
