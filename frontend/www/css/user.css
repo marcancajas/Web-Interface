@@ -50,7 +50,7 @@ body { margin:0 auto;
 #user_contentbox {
     position: absolute;
     background-color: transparent; 
-    width: 100%;
+    width: 800px;
     height: 600px;
     float: left;
     margin: 10px 160px;
