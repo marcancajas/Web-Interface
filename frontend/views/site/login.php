@@ -31,7 +31,7 @@ $this->pageTitle = 'Login';
         'inlineErrors'=>'false',
 	'htmlOptions'=>array('class'=>'well','background-color'=>'transparent'),
 	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
+		
 	),
 )); ?>
 

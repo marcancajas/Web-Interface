@@ -106,6 +106,7 @@
     
                  
             <div id="user_contentbox">
+                
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,
