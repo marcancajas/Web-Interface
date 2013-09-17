@@ -31,7 +31,7 @@ $mainEnvConfiguration = file_exists($mainEnvFile) ? require($mainEnvFile) : arra
 
 return CMap::mergeArray(
 	array(
-		'name' => 'Clevertech Backend Boilerplate',
+		'name' => 'JAMEngine Backend',
 		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#basePath-detail
 		'basePath' => 'backend',
 		// set parameters
@@ -48,7 +48,8 @@ return CMap::mergeArray(
 		'import' => array(
 			'common.components.*',
 			'common.extensions.*',
-			'common.extensions.giix.giix-components.*',
+
+			'common.extensions.giix.components.*',
 			/* uncomment if required */
 			/* 'common.extensions.behaviors.*', */
 			/* 'common.extensions.validators.*', */
