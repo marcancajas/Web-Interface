@@ -45,7 +45,8 @@ return CMap::mergeArray(
 			'common.components.*',
 			'common.components.tubes.*',
 			'common.extensions.*',
-			'common.extensions.giix.giix-components.*',
+			'common.extensions.giix.components.*',
+			'common.extensions.yii-mail.*',
 			'common.models.*',
 			// uncomment if behaviors are required
 			// you can also import a specific one
@@ -101,7 +102,17 @@ return CMap::mergeArray(
 				'autoStart' => true,
 				'timeout' => 600
 			),
-*/
+*/			'mail' => array(
+                'class'=>'common.extensions.yii-mail.YiiMail',
+                'transportType'=>'smtp',
+                'transportOptions'=>array(
+                	'host'=>'smtp.gmail.com',
+					'username'=>'joshgiblett@gmail.com',
+					'password'=>'1F3rrarri1',
+					'port'=>465,
+					'encryption'=>'ssl',
+				),
+			),
 			'urlManager' => array(
 				'urlFormat' => 'path',
 				'showScriptName' => false,

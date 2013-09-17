@@ -37,7 +37,7 @@ class SiteController extends Controller {
 	public function actionIndex() {
 		$this->render('index');
 	}
-        
+
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -117,7 +117,6 @@ class SiteController extends Controller {
 
 				$message = 'Thankyou for registering on JAMEngine! Please click on the link below to complete the activation process '.$link;
 				$this->sendEmail($model->email, $message);
-
 				$this->redirect(array('/site/Index'));
 			}
 		}
@@ -175,13 +174,13 @@ class SiteController extends Controller {
 
 	protected function sendEmail($email, $body)
 	{
-		//This function is responsible for sending emails to users.
 		$message = new YiiMailMessage;
-        $message->subject    = 'Email Registration';
-        $message->setBody($body, 'text/html');
-        $message->addTo($email);
-        $message->from = 'joshgiblett@gmail.com';
-        Yii::app()->mail->send($message);
+		$message->subject = 'Registration Confirmation';
+		$message->setBody($body, 'text/html');
+		$message->addTo($email);
+		$message->from = 'joshgiblett@gmail.com';
+		Yii::app()->mail->send($message);
+
 	}
 
 	protected function performAjaxValidation($model, $form = null) {
@@ -191,7 +190,7 @@ class SiteController extends Controller {
 		}
 	}
 
-        
+
         public function actionContact()
 	{
 		$model = new ContactForm;
