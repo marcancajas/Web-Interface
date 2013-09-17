@@ -17,7 +17,7 @@
  *
  * @property Character[] $characters
  */
-abstract class BaseGame extends gxActiveRecord {
+abstract class BaseGame extends GxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

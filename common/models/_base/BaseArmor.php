@@ -20,7 +20,7 @@
  *
  * @property Character[] $characters
  */
-abstract class BaseArmor extends gxActiveRecord {
+abstract class BaseArmor extends GxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

@@ -15,7 +15,7 @@
  * @property Character[] $characters
  * @property Character[] $characters1
  */
-abstract class BaseColour extends gxActiveRecord {
+abstract class BaseColour extends GxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

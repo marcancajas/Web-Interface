@@ -33,7 +33,7 @@
  * @property Armor $armor
  * @property Weapon $weapon
  */
-abstract class BaseCharacter extends gxActiveRecord {
+abstract class BaseCharacter extends GxActiveRecord {
 
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
