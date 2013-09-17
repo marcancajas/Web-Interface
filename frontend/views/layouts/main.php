@@ -83,10 +83,10 @@
 
 <div id="head_container">
 	<div id="logo">
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/Site/Index"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png"></a> 
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png"></a> 
         </div>
         <div id="get_started">
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/Site/Get_Started"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png"></a>
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/get_started"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png"></a>
         </div>   
 </div>
 

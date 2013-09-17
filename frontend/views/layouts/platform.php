@@ -74,18 +74,45 @@
  <!----- END OF NAVIGATION BAR ----->  
  
  <div id="platform_container">
- 
+
             <div id="user_navigation_container">
-          <button>hide the div</button>
             &nbsp 
-            <?php $this->widget('bootstrap.widgets.TbMenu', array(
+            <ul class="nav">
+                <li class="nav-icons">                
+                    <a title="Dashboard" href="<?php echo Yii::app()->request->baseUrl; ?>/user/index"><span class="dashboard-icon"></span></a>
+                </li>
+                <li class="nav-icons">
+                    <a title="Messages" href="#"><span class="messages-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Characters" href="<?php echo Yii::app()->request->baseUrl; ?>/character/index"><span class="characters-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Rankings" href="#"><span class="rankings-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Profile Settings" href="#"><span class="profile-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Account Settings" href="#"><span class="account-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Help" href="#"><span class="help-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Logout" href="#"><span class="logout-icon"></span></a>
+                </li>
+             
+            </ul>
+                
+        <?php /* $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
             'items'=>array(
                 
             array('label'=>'MAIN MENU'),
         
-            array('label'=>'Home','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
+            array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
             array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),  
             array('label'=>'Characters','icon'=>'book', 'url'=> array('/character/index','view' => 'index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
@@ -98,7 +125,7 @@
             array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout','view' => 'logout')),
             ),
             ));          
-          
+            */
             ?>  
            
             </div>
@@ -106,6 +133,7 @@
     
                  
             <div id="user_contentbox">
+                
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,

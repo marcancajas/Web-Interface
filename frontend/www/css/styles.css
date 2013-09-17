@@ -10,11 +10,20 @@
     display: block;
 }*/
 
-body { 
-       font-family:Arial, Helvetica, sans-serif; 
+/* body { 
+      font-family:Arial, Helvetica, sans-serif; 
        font-size:12px; 
        color:#000000;
-       background: #ffffff url(../images/bg.png) fixed;
+       background: #ffffff url(../images/bg3.jpg) fixed center repeat-y; 
+     
+} */
+
+body { margin:0 auto;
+       background: url(../images/bg3.jpg) no-repeat center center fixed; 
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
 }
 
 p {

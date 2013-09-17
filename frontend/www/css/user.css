@@ -9,7 +9,11 @@
 
 
 body { margin:0 auto;
-       background:#414141 url(../images/bg.png) fixed center repeat-x; 
+       background: url(../images/bg3.jpg) no-repeat center center fixed; 
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
 }
 
 /*** START OF USER_NAVIGATION ***/
@@ -24,18 +28,36 @@ body { margin:0 auto;
     float:left;
     height: 900px;
     width: 150px;
-  
-    
- 
     border-bottom-right-radius: 2px;
      box-shadow: #000000 2px 2px 2px;
-    background: rgba(0,0,0,0.25);
-   
+    background: rgba(0,0,0,0.25);   
     -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-
 }
+
+li.nav-icons {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+li.nav-icons a {
+    margin-left: 40px;
+    width: 70px;
+    height: 65px;
+}
+
+li.nav-icons a span.dashboard-icon { display: block; width: 70px; height: 65px; background: url(../images/jamengine-icons.png) -12px -25px; }
+li.nav-icons a span.messages-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -102px -28px; }
+li.nav-icons a span.characters-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -353px -25px; }
+li.nav-icons a span.rankings-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -12px -115px; }
+li.nav-icons a span.profile-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -188px -25px; }
+li.nav-icons a span.account-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -98px -112px; }
+li.nav-icons a span.help-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -190px -112px; }
+li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;background: url(../images/jamengine-icons.png) -269px -25px; }
+
+
+/*.dashboard-icon { background: url(../images/jamengine-icons.png) 10px 10px } */
 
 .social_icons_bar {
     margin: 20% auto;
@@ -44,13 +66,13 @@ body { margin:0 auto;
 
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
-    position: fixed;
-    background-color: #5b9909; 
+    position: absolute;
+    background-color: transparent; 
     width: 800px;
-    height: 650px;
+    height: 600px;
     float: left;
     margin: 10px 160px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 
@@ -119,7 +141,7 @@ body { margin:0 auto;
 #footer_container { 
     background-color: transparent; 
     width: 300px;
-    margin:-260px 570px;
+    margin:-230px 570px;
     box-shadow: none;
 }
 
