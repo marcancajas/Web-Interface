@@ -2,6 +2,8 @@
 
 class ArmorController extends GxController {
 
+public $layout = 'column1';
+
 public function filters() {
 	return array(
 			//'accessControl',
