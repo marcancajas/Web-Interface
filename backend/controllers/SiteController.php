@@ -120,7 +120,8 @@ class SiteController extends Controller
 		{
 			$model->attributes = $_POST['LoginForm'];
 			if ($model->validate(array('username', 'password', 'verifyCode')) && $model->login())
-				$this->redirect(user()->returnUrl);
+				Yii::app()->user->setReturnUrl(array('/User'));
+				$this->redirect(array('/User'));
 		}
 
 		$sent = r()->getParam('sent', 0);
