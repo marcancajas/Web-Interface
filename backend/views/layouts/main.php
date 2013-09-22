@@ -11,6 +11,8 @@
 	      media="screen, projection"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
 	      media="print"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css"
+	      media="main"/>
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
 	      media="screen, projection"/>
@@ -22,59 +24,57 @@
 <body>
 
 <div class="container" id="page">
-	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'type' => 'inverse', // null or 'inverse'
-	'brand' => 'Project name',
-	'brandUrl' => '#',
-	'collapse' => true, // requires bootstrap-responsive.css
-	'items' => array(
-		array(
-			'class' => 'bootstrap.widgets.TbMenu',
-			'items' => array(
-				array('label' => 'Home', 'url' => array('/Site/Index')),
-				array('label' => 'About', 'url' => array('/Site/Page', 'view' => 'about')),
-				array('label' => 'Contact', 'url' => array('/Site/Contact')),
-				array('label' => 'Login', 'url' => array('/Site/Login'), 'visible' => Yii::app()->user->isGuest),
-				array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-			),
-		),
-		'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
-		(!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
-		array(
-			'class' => 'bootstrap.widgets.TbMenu',
-			'htmlOptions' => array('class' => 'pull-right'),
-			'items' => array(
-				array('label' => 'Link', 'url' => '#'),
-				'---',
-				array('label' => 'Dropdown', 'url' => '#', 'items' => array(
-					array('label' => 'Action', 'url' => '#'),
-					array('label' => 'Another action', 'url' => '#'),
-					array('label' => 'Something else here', 'url' => '#'),
-					'---',
-					array('label' => 'Separated link', 'url' => '#'),
-				)),
-			),
-		),
-	),
-)); ?>
-	<!-- mainmenu -->
-	<div class="container" style="margin-top:80px">
-		<?php if (isset($this->breadcrumbs)): ?>
-			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-			'links' => $this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-		<?php endif?>
+	<?php
+	if(!Yii::app()->user->isGuest)
+	{
+		?>
+		<!--MAIN MENU-->
+		<div id="mainmenu" style="margin-bottom:0px;">
+			<?php
+				$this->widget('bootstrap.widgets.TbAlert', array(
+					'block'=>true, // display a larger alert block?
+					'fade'=>true, // use transitions?
+					'closeText'=>'×', // close link text - if set to false, no close link is displayed
+				));
 
-		<?php echo $content; ?>
-		<hr/>
-		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+				$this->widget('bootstrap.widgets.TbNavbar', array(
+					'type' => 'inverse', // null or 'inverse'
+					'brand' => '',
+					'brandUrl' => '',
+					'fixed'=>false,
+					'collapse' => true, // requires bootstrap-responsive.css
+					'items' => array(
+						array(
+							'class' => 'bootstrap.widgets.TbMenu',
+							'htmlOptions' => array('class' => 'pull-right'),
+							'items' => array(
+								array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'))
+								),
+						),
+					),
+				));
+			?>
+		</div>
+		<!--END MAIN MENU-->
+		<?php
+		}
+		?>
+		<!--BODY-->
+		<div id="body">
+			<div id="content">
+				<?php echo $content; ?>
+			</div>
+		</div>
+	<!--END BODY-->
+	<hr/>
+	<!--FOOTER-->
+	<div id="footer" align=center>
+		Copyright &copy; <?php echo date('Y'); ?> JAM Group.<br/>
 			All Rights Reserved.<br/>
 			<?php echo Yii::powered(); ?>
-		</div>
-		<!-- footer -->
 	</div>
+	<!--END FOOTER-->
 </div>
-<!-- page -->
+<!--END PAGE-->
 </body>
 </html>
