@@ -40,7 +40,7 @@ abstract class BaseArmor extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'class';
+		return 'name';
 	}
 
 	public function rules() {
