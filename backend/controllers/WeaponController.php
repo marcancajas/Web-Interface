@@ -2,23 +2,25 @@
 
 class WeaponController extends GxController {
 
+public $layout = 'column1';
+
 public function filters() {
 	return array(
-			'accessControl', 
+			'accessControl',
 			);
 }
 
 public function accessRules() {
 	return array(
-			array('allow', 
+			array('allow',
 				'actions'=>array('index', 'view'),
 				'users'=>array('@'),
 				),
-			array('allow', 
+			array('allow',
 				'actions'=>array('minicreate', 'create', 'update', 'admin', 'delete'),
 				'users'=>array('admin'),
 				),
-			array('deny', 
+			array('deny',
 				'users'=>array('*'),
 				),
 			);
