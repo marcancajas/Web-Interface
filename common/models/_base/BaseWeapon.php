@@ -40,7 +40,7 @@ abstract class BaseWeapon extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'class';
+		return 'name';
 	}
 
 	public function rules() {
