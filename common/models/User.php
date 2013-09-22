@@ -99,6 +99,24 @@ class User extends BaseUser
           );
     }
 
+	 public static function itemAlias($type,$code=NULL) {
+		$_items = array(
+			'UserStatus' => array(
+				self::STATUS_INACTIVE => t('Inactive','app'),
+				self::STATUS_ACTIVE => t('Active','app'),
+				self::STATUS_BANNED => t('Banned','app'),
+				self::STATUS_PENDING => t('Pending','app'),
+			),
+			'AdminStatus' => array(
+				'0' => t('No','app'),
+				'1' => t('Yes','app'),
+			),
+		);
+		if (isset($code))
+        return isset($_items[$type][$code]) ? $_items[$type][$code] : false;
+    else
+        return isset($_items[$type]) ? $_items[$type] : false;
+	}
 
 	public function regenerateValidationKey()
 	{
