@@ -34,7 +34,7 @@ return CMap::mergeArray(
 		'params' => $params,
 		// preload components required before running applications
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#preload-detail
-		'preload' => array('bootstrap','log'),
+		'preload' => array('bootstrap','log','fontawesome'),
 		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#language-detail
 		'language' => 'en',
 		// uncomment if a theme is used
@@ -61,6 +61,10 @@ return CMap::mergeArray(
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		/* 'modules' => array(), */
 		'components' => array(
+			'fontawesome' => array(
+				'class'=>'common.extensions.fontawesome.components.FontAwesome',
+				'publishAwesome'=>FALSE
+			),
 			'user' => array(
 				'returnUrl' => '/user',
 			),
