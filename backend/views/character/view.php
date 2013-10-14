@@ -1,64 +1,84 @@
+<!--Written by Josh Giblett-->
+<!--Character Detail View-->
+
+<h1><?php echo $model->name?></h1>
+<!--Detail View Widget-->
 <?php
-
-$this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	GxHtml::valueEx($model),
-);
-
-$this->menu=array(
-	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
-	array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
-	array('label'=>Yii::t('app', 'Update') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
-	array('label'=>Yii::t('app', 'Delete') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url'=>array('admin')),
-);
+	$this->widget('bootstrap.widgets.TbDetailView', array(
+		'data'=>$model,
+        'attributes' => array(
+            //name field
+            array(
+            	'name' => 'name',
+            	'label' => 'Name'
+            ),
+            //type field
+            array(
+            	'name' => 'type_id',
+            	'label' => 'Type',
+            	'value' => $model->type,
+            ),
+            //game field
+            array(
+            	'name' => 'game_id',
+            	'label' => 'Game',
+            	'value' => $model->game,
+            ),
+            //hair_colour field
+            array(
+            	'name' => 'hair_colour_id',
+            	'label' => 'Hair Colour',
+            	'value' => $model->hairColour,
+            ),
+            //body_colour field
+            array(
+            	'name' => 'body_colour_id',
+            	'label' => 'body Colour',
+            	'value' => $model->bodyColour,
+            ),
+            //strength field
+            array(
+            	'name' => 'strength',
+            	'label' => 'Strength',
+            ),
+            //height field
+            array(
+            	'name' => 'height',
+            	'label' => 'Height(cm)',
+            ),
+            //weight field
+            array(
+            	'name' => 'weight',
+            	'label' => 'Weight(Kg)',
+            ),
+            //speed field
+            array(
+            	'name' => 'speed',
+            	'label' => 'Speed',
+            ),
+            //armor field
+            array(
+            	'name' => 'armor_id',
+            	'label' => 'Armor',
+				'value' => $model->armor,
+            ),
+           //weapon field
+            array(
+            	'name' => 'weapon_id',
+            	'label' => 'Weapon',
+				'value' => $model->weapon,
+            ),
+            //position_x field
+            array(
+            	'name' => 'position_x',
+            	'label' => 'Initial Position(X)',
+            ),
+            //position_y field
+            array(
+            	'name' => 'position_y',
+            	'label' => 'Initial Position(Y)',
+            ),
+        ),
+    ));
 ?>
-
-<h1><?php echo Yii::t('app', 'View') . ' ' . GxHtml::encode($model->label()) . ' ' . GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data' => $model,
-	'attributes' => array(
-'id',
-'name',
-array(
-			'name' => 'type',
-			'type' => 'raw',
-			'value' => $model->type !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->type)), array('type/view', 'id' => GxActiveRecord::extractPkValue($model->type, true))) : null,
-			),
-array(
-			'name' => 'game',
-			'type' => 'raw',
-			'value' => $model->game !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->game)), array('game/view', 'id' => GxActiveRecord::extractPkValue($model->game, true))) : null,
-			),
-array(
-			'name' => 'bodyColour',
-			'type' => 'raw',
-			'value' => $model->bodyColour !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->bodyColour)), array('colour/view', 'id' => GxActiveRecord::extractPkValue($model->bodyColour, true))) : null,
-			),
-array(
-			'name' => 'hairColour',
-			'type' => 'raw',
-			'value' => $model->hairColour !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->hairColour)), array('colour/view', 'id' => GxActiveRecord::extractPkValue($model->hairColour, true))) : null,
-			),
-'strength',
-'height',
-'weight',
-'speed',
-'health',
-'armor_health',
-array(
-			'name' => 'armor',
-			'type' => 'raw',
-			'value' => $model->armor !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->armor)), array('armor/view', 'id' => GxActiveRecord::extractPkValue($model->armor, true))) : null,
-			),
-array(
-			'name' => 'weapon',
-			'type' => 'raw',
-			'value' => $model->weapon !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->weapon)), array('weapon/view', 'id' => GxActiveRecord::extractPkValue($model->weapon, true))) : null,
-			),
-'position_x',
-'position_y',
-	),
-)); ?>
 
