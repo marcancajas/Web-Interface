@@ -5,12 +5,12 @@
 			<?php $this->widget('bootstrap.widgets.TbMenu', array(
 					'type'=>'list',
 					'items'=>array(
-						array('label'=>'Users', 'url'=>'/User'),
-						array('label'=>'Game', 'url'=>'/Game'),
-						array('label'=>'Characters', 'url'=>'/Character'),
-						array('label'=>'Weapons', 'url'=>'/Weapon'),
-						array('label'=>'Armor', 'url'=>'/Armor'),
-						array('label'=>'Character Types', 'url'=>'/Type'),
+						array('label'=>'Users', 'url'=>Yii::app()->getBaseUrl().'/User'),
+						array('label'=>'Game', 'url'=>Yii::app()->getBaseUrl().'/Game'),
+						array('label'=>'Characters', 'url'=>Yii::app()->getBaseUrl().'/Character'),
+						array('label'=>'Weapons', 'url'=>Yii::app()->getBaseUrl().'/Weapon'),
+						array('label'=>'Armor', 'url'=>Yii::app()->getBaseUrl().'/Armor'),
+						array('label'=>'Character Types', 'url'=>Yii::app()->getBaseUrl().'/Type'),
 
 
 					),
