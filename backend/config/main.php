@@ -72,6 +72,7 @@ return CMap::mergeArray(
        			'class' => 'application.extensions.behaviors.RequireLogin',
     		),
 		),
+		'homeUrl'=>array('User'),
 		'components' => array(
 			'fontawesome' => array(
 				'class'=>'common.extensions.fontawesome.components.FontAwesome',
