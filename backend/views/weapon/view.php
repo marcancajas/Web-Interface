@@ -1,42 +1,48 @@
+<!--Written by Josh Giblett-->
+<!--Weapon Detail View-->
+<h1><?php echo $model->name?></h1>
+
+<!--Detail View Widget-->
 <?php
-
-$this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	GxHtml::valueEx($model),
-);
-
-$this->menu=array(
-	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
-	array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
-	array('label'=>Yii::t('app', 'Update') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
-	array('label'=>Yii::t('app', 'Delete') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url'=>array('admin')),
-);
+	$this->widget('bootstrap.widgets.TbDetailView', array(
+		'data'=>$model,
+        'attributes' => array(
+            //class field
+            array(
+            	'name' => 'class',
+            	'label' => 'Class'
+            ),
+            //name field
+            array(
+            	'name' => 'name',
+            	'label' => 'Name'
+            ),
+            //description field
+            array(
+            	'name' => 'description',
+            	'label' => 'Description',
+            ),
+            //buy field
+            array(
+            	'name' => 'buy',
+            	'label' => 'Buy',
+            ),
+            //sell field
+            array(
+            	'name' => 'sell',
+            	'label' => 'Sell',
+            ),
+            //damage field
+            array(
+            	'name' => 'damage',
+            	'label' => 'Damage',
+            ),
+            //weight field
+            array(
+            	'name' => 'weight',
+            	'label' => 'Weight',
+            ),
+        ),
+    ));
 ?>
 
-<h1><?php echo Yii::t('app', 'View') . ' ' . GxHtml::encode($model->label()) . ' ' . GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data' => $model,
-	'attributes' => array(
-'id',
-'class',
-'name',
-'description',
-'buy',
-'sell',
-'damage',
-'weight',
-	),
-)); ?>
-
-<h2><?php echo GxHtml::encode($model->getRelationLabel('characters')); ?></h2>
-<?php
-	echo GxHtml::openTag('ul');
-	foreach($model->characters as $relatedModel) {
-		echo GxHtml::openTag('li');
-		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('character/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
-		echo GxHtml::closeTag('li');
-	}
-	echo GxHtml::closeTag('ul');
-?>
