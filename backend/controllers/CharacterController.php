@@ -2,6 +2,9 @@
 
 class CharacterController extends GxController {
 
+public $layout = 'column1';
+public $sectionName = 'Characters';
+
 public function filters() {
 	return array(
 			//'accessControl',
@@ -10,7 +13,6 @@ public function filters() {
 
 public function accessRules() {
 	return array(
-			d
 			);
 }
 
@@ -38,15 +40,16 @@ public function accessRules() {
 		$this->render('create', array( 'model' => $model));
 	}
 
-	public function actionUpdate($id) {
+	public function actionUpdate($id)
+	{
+		//This method is responsible for updating the infomration for a character.
 		$model = $this->loadModel($id, 'Character');
-
 
 		if (isset($_POST['Character'])) {
 			$model->setAttributes($_POST['Character']);
 
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('/Character'));
 			}
 		}
 
@@ -55,7 +58,9 @@ public function accessRules() {
 				));
 	}
 
-	public function actionDelete($id) {
+	public function actionDelete($id)
+	{
+		//This method is responsible for removing a character from the database
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
 			$this->loadModel($id, 'Character')->delete();
 
@@ -67,7 +72,6 @@ public function accessRules() {
 
 	public function actionIndex() {
 		$dataProvider = new CActiveDataProvider('Character');
-		print_r("Made it character controller");
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
