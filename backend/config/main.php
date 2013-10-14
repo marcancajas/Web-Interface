@@ -79,7 +79,7 @@ return CMap::mergeArray(
 				'publishAwesome'=>FALSE
 			),
 			'user' => array(
-				'returnurl' =>array("/User/Index"),
+				'class'=>'backend.components.WebUser',
 				'allowAutoLogin'=>false,
 			),
 			'session' => array (
