@@ -3,7 +3,7 @@
 class WeaponController extends GxController {
 
 public $layout = 'column1';
-
+public $sectionName = 'Weapons';
 public function filters() {
 	return array(
 			'accessControl',
@@ -58,7 +58,7 @@ public function accessRules() {
 			$model->setAttributes($_POST['Weapon']);
 
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('/Weapon'));
 			}
 		}
 
