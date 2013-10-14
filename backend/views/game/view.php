@@ -1,39 +1,32 @@
+<!--Written by Josh Giblett-->
+<!--Game Detail View-->
+<h1><?php echo $model->name?></h1>
+<!--Detail View Widget-->
 <?php
-
-$this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	GxHtml::valueEx($model),
-);
-
-$this->menu=array(
-	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
-	array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
-	array('label'=>Yii::t('app', 'Update') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
-	array('label'=>Yii::t('app', 'Delete') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url'=>array('admin')),
-);
+	$this->widget('bootstrap.widgets.TbDetailView', array(
+		'data'=>$model,
+        'attributes' => array(
+            //name field
+            array(
+            	'name' => 'name',
+            	'label' => 'Name'
+            ),
+            //description field
+            array(
+            	'name' => 'description',
+            	'label' => 'Description',
+            ),
+            //map_size_x field
+            array(
+            	'name' => 'map_size_x',
+            	'label' => 'Map Size X',
+            ),
+            //map_size_y field
+            array(
+            	'name' => 'map_size_y',
+            	'label' => 'Map Size Y',
+            ),
+		),
+    ));
 ?>
 
-<h1><?php echo Yii::t('app', 'View') . ' ' . GxHtml::encode($model->label()) . ' ' . GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data' => $model,
-	'attributes' => array(
-'id',
-'name',
-'description',
-'map_size_x',
-'map_size_y',
-	),
-)); ?>
-
-<h2><?php echo GxHtml::encode($model->getRelationLabel('characters')); ?></h2>
-<?php
-	echo GxHtml::openTag('ul');
-	foreach($model->characters as $relatedModel) {
-		echo GxHtml::openTag('li');
-		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('character/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
-		echo GxHtml::closeTag('li');
-	}
-	echo GxHtml::closeTag('ul');
-?>
