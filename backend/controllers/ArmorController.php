@@ -3,7 +3,7 @@
 class ArmorController extends GxController {
 
 public $layout = 'column1';
-
+public $sectionName = 'Armor';
 public function filters() {
 	return array(
 			//'accessControl',
@@ -61,7 +61,7 @@ array('allow',
 			$model->setAttributes($_POST['Armor']);
 
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('/Armor'));
 			}
 		}
 
