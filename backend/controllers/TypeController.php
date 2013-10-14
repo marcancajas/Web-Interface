@@ -3,7 +3,7 @@
 class TypeController extends GxController {
 
 public $layout = 'column1';
-
+public $sectionName = 'Character Types';
 public function filters() {
 	return array(
 			'accessControl',
@@ -58,7 +58,7 @@ public function accessRules() {
 			$model->setAttributes($_POST['Type']);
 
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('/Type'));
 			}
 		}
 
