@@ -1,30 +1,38 @@
+<!--Written by Josh Giblett-->
+<!--User Index View-->
 <?php
+    //Grid view widget
     $this->widget('bootstrap.widgets.TbGridView', array(
 		'type'=>'striped bordered',
 		'dataProvider'=>$dataProvider,
 		'template'=>"{items}",
 		'columns'=>array(
+			//username field
 			array(
 				'name'=>'username',
 				'header'=>'Username',
 			),
+			//firstname field
 			array(
 				'name'=>'firstname',
 				'header'=>'First Name',
 			),
+			//lastname field
 			array(
 				'name'=>'lastname',
 				'header'=>'Last Name',
 			),
+			//email field
 			array(
 				'name'=>'email',
 				'header'=>'Email',
 			),
+			//superuser field
 			array(
-				//'name'=>'admin',
 				'header'=>'Administrator',
 				'value'=>'$data->itemAlias("AdminStatus",$data->superuser)'
 			),
+			//View, Update Delete buttons
 			array(
 				'class'=>'bootstrap.widgets.TbButtonColumn',
 				'template'=>'{view}&nbsp;{update}&nbsp;{delete}',
@@ -50,3 +58,4 @@
 		),
 
     ));
+?>
