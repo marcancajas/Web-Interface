@@ -3,7 +3,7 @@
 class GameController extends GxController {
 
 public $layout = 'column1';
-
+public $sectionName = 'Game';
 public function filters() {
 	return array(
 			'accessControl',
@@ -58,7 +58,7 @@ public function accessRules() {
 			$model->setAttributes($_POST['Game']);
 
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('/Game'));
 			}
 		}
 
