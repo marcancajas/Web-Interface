@@ -81,6 +81,11 @@ return CMap::mergeArray(
 				'returnurl' =>array("/User/Index"),
 				'allowAutoLogin'=>false,
 			),
+			'session' => array (
+            	'autoStart' => true,
+				'timeout'=>30,
+				//'cookieMode' => 'none',
+			),
 			/* load bootstrap components */
 			'bootstrap' => array(
 				'class' => 'common.extensions.bootstrap.components.Bootstrap',
