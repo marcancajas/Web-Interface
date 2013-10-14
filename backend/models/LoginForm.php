@@ -15,7 +15,6 @@ class LoginForm extends CFormModel {
 	public $username;
 	public $password;
 	public $email;
-	public $rememberMe;
 	public $verifyCode;
 	private $_identity;
 	private $_user = null;
@@ -31,7 +30,6 @@ class LoginForm extends CFormModel {
 			array('password', 'length', 'max' => 50, 'min' => 6),
 			array('verifyCode', 'validateCaptcha'),
 			array('password', 'authenticate'),
-			array('rememberMe', 'boolean'),
 			array('email', 'email'),
 			array('email', 'length', 'max' => 125),
 			array('email', 'exist', 'className' => 'Customer'),
@@ -60,8 +58,18 @@ class LoginForm extends CFormModel {
 			if (!$this->_identity->authenticate()) {
 				if (($user = $this->user) !== null && $user->login_attempts < 100)
 					$user->saveAttributes(array('login_attempts' => $user->login_attempts + 1));
-				$this->addError('username', Yii::t('errors', 'Incorrect username and/or password.'));
-				$this->addError('password', Yii::t('errors', 'Incorrect username and/or password.'));
+				switch($identity->errorCode)
+				{
+					case UserIdentity::ERROR_NONE:
+						Yii::app()->user->login($identity);
+						break;
+					case UserIdentity::ERROR_USERNAME_INVALID:
+						$this->addError('username','Username/Email is incorrect.');
+						break;
+					default: // UserIdentity::ERROR_PASSWORD_INVALID
+						$this->addError('password','Password is incorrect.');
+						break;
+				}
 			}
 		}
 	}
@@ -86,7 +94,7 @@ class LoginForm extends CFormModel {
 			$this->_identity->authenticate();
 		}
 		if ($this->_identity->errorCode === UserIdentity::ERROR_NONE) {
-			$duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
+			$duration = 0; //set login duration to session
 			Yii::app()->user->login($this->_identity, $duration);
 			return true;
 		}
