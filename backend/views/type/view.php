@@ -1,5 +1,5 @@
 <!--Written by Josh Giblett-->
-<!--Character Type Detail View-->
+<!--Hero Type Detail View-->
 <h1><?php echo $model->name?></h1>
 <!--Detail View Widget-->
 <?php

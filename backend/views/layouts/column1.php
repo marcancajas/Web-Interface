@@ -7,7 +7,7 @@
 					'items'=>array(
 						array('label'=>'Users', 'url'=>Yii::app()->getBaseUrl().'/User'),
 						array('label'=>'Game', 'url'=>Yii::app()->getBaseUrl().'/Game'),
-						array('label'=>'Characters', 'url'=>Yii::app()->getBaseUrl().'/Character'),
+						array('label'=>'Heros', 'url'=>Yii::app()->getBaseUrl().'/Hero'),
 						array('label'=>'Weapons', 'url'=>Yii::app()->getBaseUrl().'/Weapon'),
 						array('label'=>'Armor', 'url'=>Yii::app()->getBaseUrl().'/Armor'),
 						array('label'=>'Character Types', 'url'=>Yii::app()->getBaseUrl().'/Type'),

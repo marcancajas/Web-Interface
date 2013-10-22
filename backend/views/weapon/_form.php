@@ -49,8 +49,8 @@
 		<?php echo $form->error($model,'weight'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('characters')); ?></label>
-		<?php echo $form->checkBoxList($model, 'characters', GxHtml::encodeEx(GxHtml::listDataEx(Character::model()->findAllAttributes(null, true)), false, true)); ?>
+		<label><?php echo GxHtml::encode($model->getRelationLabel('heros')); ?></label>
+		<?php echo $form->checkBoxList($model, 'heros', GxHtml::encodeEx(GxHtml::listDataEx(Hero::model()->findAllAttributes(null, true)), false, true)); ?>
 
 <?php
 echo GxHtml::submitButton(Yii::t('app', 'Save'));

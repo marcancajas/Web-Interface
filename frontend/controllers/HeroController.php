@@ -1,9 +1,9 @@
 <?php
 
-class CharacterController extends GxController {
+class HeroController extends GxController {
 
 public $layout='//layouts/platform'; // Change Character Controller's Default Layout to platform.php
-    
+
 public function filters() {
 	return array(
 			//'accessControl',
@@ -18,16 +18,16 @@ public function accessRules() {
 
 	public function actionView($id) {
 		$this->render('view', array(
-			'model' => $this->loadModel($id, 'Character'),
+			'model' => $this->loadModel($id, 'Hero'),
 		));
 	}
 
 	public function actionCreate() {
-		$model = new Character;
+		$model = new Hero;
 
 
-		if (isset($_POST['Character'])) {
-			$model->setAttributes($_POST['Character']);
+		if (isset($_POST['Hero'])) {
+			$model->setAttributes($_POST['Hero']);
 
 			if ($model->save()) {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
@@ -41,11 +41,11 @@ public function accessRules() {
 	}
 
 	public function actionUpdate($id) {
-		$model = $this->loadModel($id, 'Character');
+		$model = $this->loadModel($id, 'Hero');
 
 
-		if (isset($_POST['Character'])) {
-			$model->setAttributes($_POST['Character']);
+		if (isset($_POST['Hero'])) {
+			$model->setAttributes($_POST['Hero']);
 
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));
@@ -59,7 +59,7 @@ public function accessRules() {
 
 	public function actionDelete($id) {
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
-			$this->loadModel($id, 'Character')->delete();
+			$this->loadModel($id, 'Hero')->delete();
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())
 				$this->redirect(array('admin'));
@@ -68,23 +68,23 @@ public function accessRules() {
 	}
 
 	public function actionIndex() {
-            
-                $this->layout = '//layouts/platform';       
-		$dataProvider = new CActiveDataProvider('Character');
+
+                $this->layout = '//layouts/platform';
+		$dataProvider = new CActiveDataProvider('Hero');
 		/*print_r("JOSH: Made it character controller \n MARC: -___- THANKS JOSH"); */
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
-                
-                
+
+
 	}
 
 	public function actionAdmin() {
-		$model = new Character('search');
+		$model = new Hero('search');
 		$model->unsetAttributes();
 
-		if (isset($_GET['Character']))
-			$model->setAttributes($_GET['Character']);
+		if (isset($_GET['Hero']))
+			$model->setAttributes($_GET['Hero']);
 
 		$this->render('admin', array(
 			'model' => $model,

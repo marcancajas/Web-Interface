@@ -2,7 +2,7 @@
 
 
 <?php $form = $this->beginWidget('GxActiveForm', array(
-	'id' => 'character-form',
+	'id' => 'hero-form',
 	'enableAjaxValidation' => false,
 ));
 ?>

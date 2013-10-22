@@ -15,7 +15,7 @@
  * @property double $map_size_x
  * @property double $map_size_y
  *
- * @property Character[] $characters
+ * @property Hero[] $heros
  */
 abstract class BaseGame extends GxActiveRecord {
 
@@ -52,7 +52,7 @@ abstract class BaseGame extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'characters' => array(self::HAS_MANY, 'Character', 'game_id'),
+			'heros' => array(self::HAS_MANY, 'Hero', 'game_id'),
 		);
 	}
 
@@ -68,7 +68,7 @@ abstract class BaseGame extends GxActiveRecord {
 			'description' => Yii::t('app', 'Description'),
 			'map_size_x' => Yii::t('app', 'Map Size X'),
 			'map_size_y' => Yii::t('app', 'Map Size Y'),
-			'characters' => null,
+			'heros' => null,
 		);
 	}
 

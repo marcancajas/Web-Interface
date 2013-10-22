@@ -1,5 +1,5 @@
 <!--Written by Josh Giblett-->
-<!--Character Index View-->
+<!--Hero Index View-->
 <!--Grid View Widget-->
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
 		'type'=>'striped bordered',
@@ -104,11 +104,11 @@
 						'options'=>array('style'=>'text-decoration:none;'),
 					),
 				),
-				'viewButtonUrl'=>'app()->createUrl("Character/View",array("id"=>$data["id"]))',
+				'viewButtonUrl'=>'app()->createUrl("Hero/View",array("id"=>$data["id"]))',
 				'viewButtonIcon'=>'icon-tasks icon-large',
-				'updateButtonUrl'=>'app()->createUrl("Character/Update",array("id"=>$data["id"]))',
+				'updateButtonUrl'=>'app()->createUrl("Hero/Update",array("id"=>$data["id"]))',
 				'updateButtonIcon'=>'icon-edit icon-large',
-				'deleteButtonUrl'=>'app()->createUrl("Character/Delete",array("id"=>$data["id"]))',
+				'deleteButtonUrl'=>'app()->createUrl("Hero/Delete",array("id"=>$data["id"]))',
 				'deleteButtonIcon'=>'icon-remove icon-large',
 				'htmlOptions'=>array('style'=>'width: 40px; text-align:center'),
 			),

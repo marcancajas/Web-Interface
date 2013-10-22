@@ -18,7 +18,7 @@
  * @property integer $damage
  * @property integer $weight
  *
- * @property Character[] $characters
+ * @property Hero[] $heros
  */
 abstract class BaseWeapon extends GxActiveRecord {
 
@@ -57,7 +57,7 @@ abstract class BaseWeapon extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'characters' => array(self::HAS_MANY, 'Character', 'weapon_id'),
+			'heros' => array(self::HAS_MANY, 'Hero', 'weapon_id'),
 		);
 	}
 
@@ -76,7 +76,7 @@ abstract class BaseWeapon extends GxActiveRecord {
 			'sell' => Yii::t('app', 'Sell'),
 			'damage' => Yii::t('app', 'Damage'),
 			'weight' => Yii::t('app', 'Weight'),
-			'characters' => null,
+			'heros' => null,
 		);
 	}
 

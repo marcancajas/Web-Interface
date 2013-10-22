@@ -13,7 +13,7 @@
  * @property string $name
  * @property string $description
  *
- * @property Character[] $characters
+ * @property Hero[] $heros
  */
 abstract class BaseType extends GxActiveRecord {
 
@@ -49,7 +49,7 @@ abstract class BaseType extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'characters' => array(self::HAS_MANY, 'Character', 'type_id'),
+			'heros' => array(self::HAS_MANY, 'Hero', 'type_id'),
 		);
 	}
 
@@ -63,7 +63,7 @@ abstract class BaseType extends GxActiveRecord {
 			'id' => Yii::t('app', 'ID'),
 			'name' => Yii::t('app', 'Name'),
 			'description' => Yii::t('app', 'Description'),
-			'characters' => null,
+			'heros' => null,
 		);
 	}
 

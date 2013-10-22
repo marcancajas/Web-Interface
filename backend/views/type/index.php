@@ -1,5 +1,5 @@
 <!--Written by Josh Giblett-->
-<!--Character Type Index View-->
+<!--Hero Type Index View-->
 
 <!--Grid View Widget-->
 <?php $this->widget('bootstrap.widgets.TbGridView', array(

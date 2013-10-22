@@ -12,8 +12,8 @@
  * @property string $id
  * @property string $name
  *
- * @property Character[] $characters
- * @property Character[] $characters1
+ * @property Hero[] $heros
+ * @property Hero[] $heros1
  */
 abstract class BaseColour extends GxActiveRecord {
 
@@ -48,8 +48,8 @@ abstract class BaseColour extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'characters' => array(self::HAS_MANY, 'Character', 'body_colour_id'),
-			'characters1' => array(self::HAS_MANY, 'Character', 'hair_colour_id'),
+			'heros' => array(self::HAS_MANY, 'Hero', 'body_colour_id'),
+			'heros1' => array(self::HAS_MANY, 'Hero', 'hair_colour_id'),
 		);
 	}
 

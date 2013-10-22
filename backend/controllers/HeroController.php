@@ -1,9 +1,9 @@
 <?php
 
-class CharacterController extends GxController {
+class HeroController extends GxController {
 
 public $layout = 'column1';
-public $sectionName = 'Characters';
+public $sectionName = 'Hero';
 
 public function filters() {
 	return array(
@@ -18,16 +18,16 @@ public function accessRules() {
 
 	public function actionView($id) {
 		$this->render('view', array(
-			'model' => $this->loadModel($id, 'Character'),
+			'model' => $this->loadModel($id, 'Hero'),
 		));
 	}
 
 	public function actionCreate() {
-		$model = new Character;
+		$model = new Hero;
 
 
-		if (isset($_POST['Character'])) {
-			$model->setAttributes($_POST['Character']);
+		if (isset($_POST['Hero'])) {
+			$model->setAttributes($_POST['Hero']);
 
 			if ($model->save()) {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
@@ -42,14 +42,14 @@ public function accessRules() {
 
 	public function actionUpdate($id)
 	{
-		//This method is responsible for updating the infomration for a character.
-		$model = $this->loadModel($id, 'Character');
+		//This method is responsible for updating the infomration for a hero.
+		$model = $this->loadModel($id, 'Hero');
 
-		if (isset($_POST['Character'])) {
-			$model->setAttributes($_POST['Character']);
+		if (isset($_POST['Hero'])) {
+			$model->setAttributes($_POST['hero']);
 
 			if ($model->save()) {
-				$this->redirect(array('/Character'));
+				$this->redirect(array('/Hero'));
 			}
 		}
 
@@ -60,9 +60,9 @@ public function accessRules() {
 
 	public function actionDelete($id)
 	{
-		//This method is responsible for removing a character from the database
+		//This method is responsible for removing a hero from the database
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
-			$this->loadModel($id, 'Character')->delete();
+			$this->loadModel($id, 'Hero')->delete();
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())
 				$this->redirect(array('admin'));
@@ -71,18 +71,18 @@ public function accessRules() {
 	}
 
 	public function actionIndex() {
-		$dataProvider = new CActiveDataProvider('Character');
+		$dataProvider = new CActiveDataProvider('Hero');
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
 	}
 
 	public function actionAdmin() {
-		$model = new Character('search');
+		$model = new Hero('search');
 		$model->unsetAttributes();
 
-		if (isset($_GET['Character']))
-			$model->setAttributes($_GET['Character']);
+		if (isset($_GET['Hero']))
+			$model->setAttributes($_GET['Hero']);
 
 		$this->render('admin', array(
 			'model' => $model,

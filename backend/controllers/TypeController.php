@@ -3,7 +3,7 @@
 class TypeController extends GxController {
 
 public $layout = 'column1';
-public $sectionName = 'Character Types';
+public $sectionName = 'Hero Types';
 public function filters() {
 	return array(
 			'accessControl',

@@ -6,15 +6,15 @@
 
 
 
-<?php     
+<?php
 $this->breadcrumbs = array(
-	Character::label(2),
+	Hero::label(2),
 	Yii::t('app', 'Index'),
 );
 
 $this->menu = array(
-	array('label'=>Yii::t('app', 'Create') . ' ' . Character::label(), 'url' => array('create')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . Character::label(2), 'url' => array('admin')),
+	array('label'=>Yii::t('app', 'Create') . ' ' . Hero::label(), 'url' => array('create')),
+	array('label'=>Yii::t('app', 'Manage') . ' ' . Hero::label(2), 'url' => array('admin')),
 );
 ?>
 
@@ -22,7 +22,7 @@ $this->menu = array(
 
 
 
-     
+
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',

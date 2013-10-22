@@ -1,5 +1,5 @@
 <!--Written by Josh Giblett-->
-<!--Character Type Update View-->
+<!--Hero Type Update View-->
 <h1><?php echo 'Update' . ' ' .$model->name?></h1>
 
 <!--Active Form Widget-->
