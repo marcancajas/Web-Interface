@@ -31,7 +31,8 @@
             //gender field
             array(
             	'name' => 'gender',
-            	'label' => 'Gender'
+            	'label' => 'Gender',
+            	'value'=> ($model->gender == 'M') ? 'Male' : 'Female',
             ),
 			//country field
             array(
@@ -65,3 +66,19 @@
         ),
     ));
 ?>
+    <!--Form Buttons-->
+    <div class="form-actions">
+			<!--Update Button-->
+			<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'link','type'=>'primary','label'=>'Update','url'=>yii::app()->createUrl('/User/Update',array('id'=>$model->id))));?>
+			<!--Reset Password Button-->
+			<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'link','type'=>'primary','label'=>'Reset Password','url'=>yii::app()->createUrl('/User/PasswordReset',array('id'=>$model->id))));?>
+			<!--Resend Activation Button-->
+			<?php
+				//Check if the users account is still pending
+				if($model->status == User::STATUS_PENDING)
+				{
+					//If so, display the resend activation button
+					$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'link','type'=>'primary','label'=>'Resend Activation','url'=>yii::app()->createUrl('/User/ActivationReset',array('id'=>$model->id))));
+				}
+			?>
+		</div>
