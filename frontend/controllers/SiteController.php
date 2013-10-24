@@ -155,20 +155,20 @@ class SiteController extends Controller {
 					'id=:id', array(':id'=>$userId));
 					//->bindParam(":id",$userId,PDO::PARAM_INT);
 					//->bindParam(':status',user::STATUS_ACTIVE,PDO::PARAM_INT);
-					user()->setFlash('success', '<strong>Registration Successful</strong> - You can now login');
-					$this->render('registerSuccess');
-					//$this->redirect(array('/site/Index'));
+					user()->setFlash('success', '<strong>Your account has been successfully activated');
+					$this->redirect(array('/site/Index'));
 			}
 			else
 			{
-				//The registration period(24 Hours) has expired, ask the user if they want a new registration email sent
-				$this->render('registerFailure');
+				user()->setFlash('error', '<strong>This activation link has expired. Please contact the site administrator.</strong>');
+				$this->redirect(array('site/Index'));
 			}
 		}
 		else
 		{
 			//The information supplied was invalid
-			$this->render('registerFailure');
+			user()->setFlash('error', '<strong>This activation link is invalid. Please contact the site administrator.</strong>');
+			$this->redirect(array('site/Index'));
 		}
 	}
 
