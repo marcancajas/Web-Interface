@@ -15,6 +15,7 @@ $root = $backendConfigDir . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 $params = require_once($backendConfigDir . DIRECTORY_SEPARATOR . 'params.php');
 
 // Setup some default path aliases. These alias may vary from projects.
+Yii::setPathOfAlias('frontendBaseUrl', 'localhost/Curtin-Webinterface/backend/www');
 Yii::setPathOfAlias('root', $root);
 Yii::setPathOfAlias('common', $root . DIRECTORY_SEPARATOR . 'common');
 Yii::setPathOfAlias('backend', $root . DIRECTORY_SEPARATOR . 'backend');
@@ -46,6 +47,7 @@ return CMap::mergeArray(
 		// setup import paths aliases
 		// @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
 		'import' => array(
+			'common.extensions.yii-mail.YiiMailMessage',
 			'common.components.*',
 			'common.extensions.*',
 			'common.extensions.giix.components.*', // giix components
@@ -115,6 +117,17 @@ return CMap::mergeArray(
 				'enableParamLogging' => YII_DEBUG,
 				'charset' => 'utf8',
 				'class' => 'CDbConnection',
+			),
+			'mail' => array(
+                'class'=>'common.extensions.yii-mail.YiiMail',
+                'transportType'=>'smtp',
+                'transportOptions'=>array(
+                	'host'=>'smtp.gmail.com',
+					'username'=>'joshgiblett@gmail.com',
+					'password'=>'1F3rrarri1',
+					'port'=>465,
+					'encryption'=>'ssl',
+				),
 			),
 			'urlManager' => array(
 				'urlFormat' => 'path',
