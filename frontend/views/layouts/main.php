@@ -46,20 +46,37 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
                             
-				array('label' => 'home', 'url' => array('/site/index')),
+				array('label' => 'home', 'url' => array('/')),
                                 array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
 				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
                                 array('label' => 'contact', 'url' => array('/site/contact','view' => 'Contact')),
                             
                                         ),
                      ), 
-                             
-                   '<form class="navbar-form pull-right" action="user/index">
-                    <input type="text" class="span2" placeholder="Username">                 
-                    <input type="password" class="span2" placeholder="Password">
+                    
+             (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Go to <span><a href="/jamengine/frontend/www/user/index">JAM Account<strong class="caret">
+                       </strong></a></a></span></p>' : '',
+               array(
+                    'class'=>'bootstrap.widgets.TbMenu',
+                    'htmlOptions'=>array('class'=>'pull-right'),
+                    'items'=>array(
+
+                    ),
+               ), 
+            
+             (!Yii::app()->user->isGuest) ?:
+       
+              
+                   '<form id="login-form" class="navbar-form pull-right" method="post" action="http://localhost:8080/jamengine/frontend/www/site/login"> 
+                    <input type="text" name="username]" id="username" maxlength="45" class="span2" placeholder="Username">                 
+                    <input type="password" name="password]" id="password" maxlength="50" class="span2" placeholder="Password">
                     <button type="submit" class="btn btn-medium btn-primary">Log in</button>
-                    <br><a class="nav_font" rel="nofollow" href="#">Forgotten your password?</a>
-                    </form>',
+                    <br><a class="nav_font" rel="nofollow" href="#">Forgotten your password?</a>             
+                    <a class="nav_font" rel="nofollow" href="http://localhost:8080/jamengine/frontend/www/site/register">or sign up here</a>
+                    </form>'
+               
+        
+      
                                             
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY

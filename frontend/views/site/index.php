@@ -2,7 +2,7 @@
 /**
  * index.php
  *
- * @author: antonio ramirez <antonio@clevertech.biz>
+ * @author: Marc Ancajas <janmarc.ancajas@student.curtin.edu.au>
  * Date: 7/22/12
  * Time: 8:30 PM
  */
@@ -49,7 +49,6 @@
     </div><!-- /.carousel -->
 
 
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -73,6 +72,7 @@
         <div class="span4" style="margin-top:-50px;">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2 style="color:#004099;"><b>Sign up here</b></h2>
+          <h4>Under Construction</h4>
          <?php
 //Form
 $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(

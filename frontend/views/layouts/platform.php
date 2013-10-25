@@ -100,7 +100,7 @@
                     <a title="Help" href="#"><span class="help-icon"></span></a>
                 </li>
                   <li class="nav-icons">
-                    <a title="Logout" href="#"><span class="logout-icon"></span></a>
+                    <a title="Logout" href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout"><span class="logout-icon"></span></a>
                 </li>
 
             </ul>
