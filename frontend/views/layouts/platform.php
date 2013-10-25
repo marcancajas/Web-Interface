@@ -56,7 +56,7 @@
 				array('label' => 'home', 'url' => array('/')),
                                 array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
 				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
-                                array('label' => 'contact', 'url' => array('/site/contact','view' => 'Contact')),
+                                array('label' => 'support', 'url' => array('/site/contact','view' => 'Contact')),
                             ),
                     ),
                              
@@ -67,12 +67,12 @@
                             'htmlOptions' => array('class' => 'pull-right'),
                             'items' => array(
                             '---',
-                            array('label' => 'Dropdown','url' => '#','items' => array(
-                                    array('label' => 'Action', 'url' => '#'),
-                                    array('label' => 'Another action', 'url' => '#'),
-                                    array('label' => 'Something else here','url' => '#'),
+                            array('label' => 'username','url' => '#','items' => array(
+                                    array('label'=>'Account','icon'=>'user', 'url'=>'#'),
+                                    array('label'=>'Privacy','icon'=>'cog', 'url'=>'#'),
+                                    array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
                                     '---',
-                                    array('label' => 'Separated link', 'url' => '#'),
+                                    array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout')),
                                     ),
                                 ),
                              ),
@@ -81,8 +81,6 @@
 
                                 
             
-                 (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',   
-   
 
       
                                             
@@ -172,13 +170,6 @@
             array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),
             array('label'=>'Characters','icon'=>'book', 'url'=> array('/Hero/index','view' => 'index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
-
-            array('label'=>'PROFILE'),
-
-            array('label'=>'Account','icon'=>'user', 'url'=>'#'),
-            array('label'=>'Privacy','icon'=>'cog', 'url'=>'#'),
-            array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
-            array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout','view' => 'logout')),
             ),
             ));
             
