@@ -1,13 +1,17 @@
-<!--Registration form-->
+<?php
+$this->pageTitle = Yii::app()->name . ' - Signing up';
+$this->breadcrumbs = array(
+	'Sign up',
+);
+?> 
 
-<tt><?php $this->getLayoutFile('main'); ?></tt>
 
-<div id="content_background">
-            <div id="content_container">
+
+<div class="container" style="margin-top:100px;">
+
                 <h1>Register</h1>
-
-
-
+                
+<div class="form well">
 <?php
 //Form
 $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
@@ -18,14 +22,16 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 ?>
 
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+        <br>
 	<?php
+       
 	echo $form->errorSummary($model);
 	//Firstname Textfield
 	echo $form->textFieldRow($model,'firstname',array('class'=>'span5', 'maxlength'=>50));
 	//Lastname Textfield
 	echo $form->textFieldRow($model,'lastname',array('class'=>'span5', 'maxlength'=>50));
 	//Country dropdown box
-	echo $form->dropDownListRow($model, 'country', GxHtml::listDataEx(country::model()->findAllAttributes(null, true)));
+	//echo $form->dropDownListRow($model, 'country', GxHtml::listDataEx(country::model()->findAllAttributes(null, true)));
 	//Gender dropdown box
 	echo $form->dropDownListRow($model, 'gender', array('M'=>'Male', 'F'=>'Female'));
 	//Birthdate datePicker
@@ -52,7 +58,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	</div>
 
 <?php $this->endWidget(); ?>
-
-
-            </div>
 </div>
+</div> 
+      
+
