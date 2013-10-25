@@ -71,7 +71,7 @@
                             'htmlOptions' => array('class' => 'pull-right'),
                             'items' => array(
                             '---',
-                            array('label' => 'username','url' => '#','items' => array(
+                            array('label' => Yii::app()->user->name,'url' => '#','items' => array(
                                     array('label'=>'Account','icon'=>'user', 'url'=>'#'),
                                     array('label'=>'Privacy','icon'=>'cog', 'url'=>'#'),
                                     array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
