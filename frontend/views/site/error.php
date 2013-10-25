@@ -13,9 +13,11 @@
  */
 $this->pageTitle .= ' - Error';
 ?>
-
+<div class="container" style="margin-top:100px;">
 <div class="error_page">
+    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/underconstruction.png">
 	<div><?php echo CHtml::encode($message) ?></div>
 
 	<small>(Error <?php echo $code ?>)</small>
 </div><!-- .error_page -->
+</div>

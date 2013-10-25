@@ -27,8 +27,8 @@
           <img src="http://placehold.it/1170x400&text=Second+thumbnail" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Jam Game ready for demo!</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+               <h1>Jam Engine</h1>
+              <p class="lead">We believe that there should be a place to have fun, compete and spend time with the people in your life easily anywhere anytime. So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <img src="http://placehold.it/1170x400&text=Third+thumbnail" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Jam Engine</h1>
+              <h1>Try our demo game now</h1>
               <p class="lead">We believe that there should be a place to have fun, compete and spend time with the people in your life easily anywhere anytime. So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
@@ -140,11 +140,11 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 
       <!-- /END THE FEATURETTES -->
 
-
-      <!-- FOOTER -->
+  <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
+      
 
     </div><!-- /.container -->

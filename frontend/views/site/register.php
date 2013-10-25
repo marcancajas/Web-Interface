@@ -59,6 +59,12 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 
 <?php $this->endWidget(); ?>
 </div>
+                
+                <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
 </div> 
       
 

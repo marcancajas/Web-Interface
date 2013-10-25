@@ -14,7 +14,7 @@
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
     
     <!-- MODIFIED TEMPLATE CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mainv2.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
    
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -91,6 +91,8 @@
     <?php echo $content; ?> <!--Call to content .php file of the page-->
    
  <!----- END OF PAGE CONTENT CALL ----->
+ 
+
     
     <!-- Le javascript
     ================================================== -->
