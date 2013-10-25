@@ -42,8 +42,60 @@
 
 
  <!----- START OF NAVIGATION BAR ----->
+ <?php $this->widget('bootstrap.widgets.TbNavbar', array(
+	'type' => 'inverse', //'null' or 'inverse'
+	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamnavbarlogo.png'),
+        'brandOptions' => array('style' => 'width:105px;height:50px;margin-left:0px;'),
+        'htmlOptions' => array('style' => ''),
+	'collapse' => true, // requires bootstrap-responsive.css
+	'items' => array(
+		array(
+			'class' => 'bootstrap.widgets.TbMenu',
+			'items' => array(
+                            
+				array('label' => 'home', 'url' => array('/')),
+                                array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
+				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
+                                array('label' => 'contact', 'url' => array('/site/contact','view' => 'Contact')),
+                            ),
+                    ),
+                             
+                            //PROFILE DROPDOWN
+                            
+                         array(
+                            'class' => 'bootstrap.widgets.TbMenu',
+                            'htmlOptions' => array('class' => 'pull-right'),
+                            'items' => array(
+                            '---',
+                            array('label' => 'Dropdown','url' => '#','items' => array(
+                                    array('label' => 'Action', 'url' => '#'),
+                                    array('label' => 'Another action', 'url' => '#'),
+                                    array('label' => 'Something else here','url' => '#'),
+                                    '---',
+                                    array('label' => 'Separated link', 'url' => '#'),
+                                    ),
+                                ),
+                             ),
+                          ),
+                      
 
-	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+                                
+            
+                 (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',   
+   
+
+      
+                                            
+            ), // MAIN ARRAY INCLUSION
+        )); //TB NAVBAR AND ITS ARRAY
+        
+        ?>
+                   
+ 
+ <!-------------------------------------------------------->
+ 
+ 
+	<?php /* $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
         'fixed' => 'false',
 	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
@@ -60,6 +112,7 @@
 
 
 
+
             (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
             // Navbar Search Box
 
@@ -68,12 +121,12 @@
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
 
-        ?>
+     */   ?> 
 
 
  <!----- END OF NAVIGATION BAR ----->
 
- <div id="platform_container">
+<!-- <div id="platform_container">
 
             <div id="user_navigation_container">
             &nbsp
@@ -103,11 +156,14 @@
                     <a title="Logout" href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout"><span class="logout-icon"></span></a>
                 </li>
 
-            </ul>
+            </ul> 
+-->
 
-        <?php /* $this->widget('bootstrap.widgets.TbMenu', array(
+<div id="user-menu">
+        <?php  $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
+            'htmlOptions'=>array('style' => 'margin-top:100px; padding:10px;'),       
             'items'=>array(
 
             array('label'=>'MAIN MENU'),
@@ -117,19 +173,19 @@
             array('label'=>'Characters','icon'=>'book', 'url'=> array('/Hero/index','view' => 'index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
 
-            array('label'=>'ACCOUNT OPTIONS'),
+            array('label'=>'PROFILE'),
 
-            array('label'=>'Profile','icon'=>'user', 'url'=>'#'),
-            array('label'=>'Account','icon'=>'cog', 'url'=>'#'),
+            array('label'=>'Account','icon'=>'user', 'url'=>'#'),
+            array('label'=>'Privacy','icon'=>'cog', 'url'=>'#'),
             array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
             array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout','view' => 'logout')),
             ),
             ));
-            */
+            
             ?>
+</div>
 
-            </div>
-
+    
 
 
             <div id="user_contentbox">
