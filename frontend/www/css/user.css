@@ -19,9 +19,9 @@ body { margin:0 auto;
 /*** START OF USER_NAVIGATION ***/
 
 #platform_container {
-    width: 100%;
+    margin: 0 auto;
     height: 100%;
-    margin-top: -20px;
+    width: 1180px;
 }
 
 #user-menu {
@@ -43,6 +43,7 @@ li.nav-icons a {
     margin-left: 40px;
     width: 70px;
     height: 65px;
+    border-radius: 5px;
 }
 
 li.nav-icons a span.dashboard-icon { display: block; width: 70px; height: 65px; background: url(../images/jamengine-icons.png) -12px -25px; }
@@ -64,26 +65,28 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
 
 /*** START OF CONTENT BOX ***/
 #user_contentbox {
-    position: absolute;
     background-color: transparent; 
-    width: 800px;
-    height: 600px;
-    float: left;
-    margin: 10px 160px;
+    width: 980px;
+    margin-top: 75px;
+    margin-right: 40px;
+    float:right;
+    border: 1px solid;
+    border-color: #B7B7B7;
     border-radius: 5px;
 }
 
 
 /*** START OF UTILITY BOX ***/
 #utility-box {
-    position: relative;
-    float: right;
-    height: 400px;
-    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1000px;
+    width: 150px;
+    z-index: 9999;
+    border-left: 1px solid;
+    border-color: #B7B7B7;
  
-   -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
 
 }
 

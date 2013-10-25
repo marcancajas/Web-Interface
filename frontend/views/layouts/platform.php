@@ -39,6 +39,10 @@
 
 </head>
 
+<body>
+    
+
+     
 
 
  <!----- START OF NAVIGATION BAR ----->
@@ -124,9 +128,9 @@
 
  <!----- END OF NAVIGATION BAR ----->
 
-<!-- <div id="platform_container">
+<div id="platform_container">
 
-            <div id="user_navigation_container">
+      <!--  <div id="user_navigation_container">
             &nbsp
             <ul class="nav">
                 <li class="nav-icons">
@@ -161,7 +165,7 @@
         <?php  $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
-            'htmlOptions'=>array('style' => 'margin-top:100px; padding:10px;'),       
+            'htmlOptions'=>array('style' => 'margin-top:75px; padding:10px;'),       
             'items'=>array(
 
             array('label'=>'MAIN MENU'),
@@ -175,12 +179,8 @@
             
             ?>
 </div>
-
-    
-
-
-            <div id="user_contentbox">
-
+        <div id="user_contentbox">
+                         
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,
@@ -189,13 +189,10 @@
 
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 
-
-
-
-
-            </div>
-
-       <div id="utility-box">
+        </div>
+</div>
+ 
+ <div id="utility-box">
             <?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>'Operations',
@@ -206,21 +203,42 @@
 			));
 			$this->endWidget();
 		?>
-            </div>
-
-
-    <script>
+    
+<!-- This side bar is a prototype idea for Jam Engine, The purpose is to provide different utilities for the users, on-click pops a new window specific for that utility. -->
+            <ul class="nav" style="margin-top:150px;">
+                <li class="nav-icons">
+                    <a title="Dashboard" href="<?php echo Yii::app()->request->baseUrl; ?>/user/index"><span class="dashboard-icon"></span></a>
+                </li>
+                <li class="nav-icons">
+                    <a title="Chat" href="#"><span class="messages-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Friends" href="<?php echo Yii::app()->request->baseUrl; ?>/Hero/index"><span class="characters-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Rankings" href="#"><span class="rankings-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Profile Settings" href="#"><span class="profile-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Account Settings" href="#"><span class="account-icon"></span></a>
+                </li>
+                  <li class="nav-icons">
+                    <a title="Help" href="#"><span class="help-icon"></span></a>
+                </li>
+       
+            </ul> 
+</div>
+ 
+<script>
             $( "button" ).click(function() {
             $( "#utility-box" ).toggle("slide", {
                 direction: "right" },
                 "slow"
             );
             });
-            </script>
+</script>
 
-
-
-
-
-</div>
+</body>
 </html>
