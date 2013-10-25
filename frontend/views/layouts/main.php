@@ -1,163 +1,104 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JAM Online</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-responsive.css" media="screen,projection"/>
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    
+    <!-- MODIFIED TEMPLATE CSS -->
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mainv2.css" media="screen,projection"/>
+   
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="language" content="en"/>
-        <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon"/>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
 
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
-	      media="screen, projection"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
-	      media="print"/>
-
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
-	      media="screen, projection"/>
-	<![endif]-->
-
-        <!-- Modification CSS -->
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" media="screen,projection"/>
-
-        <!-- Google CDN -->
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-
-</head>
-
-<body>
-
- <!----- START OF NAVIGATION BAR ----->
-
-
-	<?php
-		$this->widget('bootstrap.widgets.TbAlert', array(
-			'block'=>true, // display a larger alert block?
-			'fade'=>true, // use transitions?
-			'closeText'=>'×', // close link text - if set to false, no close link is displayed
-			));
-
-	$this->widget('bootstrap.widgets.TbNavbar', array(
+   <!----- START OF NAVIGATION BAR ----->  
+     
+	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
-	'fixed' => false,
-	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
-        'brandOptions' => '',
+	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamnavbarlogo.png'),
+        'brandOptions' => array('style' => 'width:105px;height:50px;margin-left:0px;'),
+        'htmlOptions' => array('style' => ''),
 	'collapse' => true, // requires bootstrap-responsive.css
 	'items' => array(
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
-
-				array('label' => 'home', 'url' => array('/site/index', 'view' => 'Index')),
-                                array('label' => 'get started', 'url' => array('/site/get_started','view' => 'Get Started')),
-				array('label' => 'forums', 'url' => array('/site/forum', 'view' => 'Community Forum')),
+                            
+				array('label' => 'home', 'url' => array('/site/index')),
+                                array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
+				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
                                 array('label' => 'contact', 'url' => array('/site/contact','view' => 'Contact')),
-
+                            
                                         ),
-                     ),
-
-            //Register | Login Button
-            array(
-                    'class' => 'bootstrap.widgets.TbMenu',
-                    'htmlOptions'=>array('class'=>'pull-right'),
-                    'items' => array(
-
-                        array('label' => 'join', 'url' => array('/site/register', 'view' => 'Register')),
-                        array('label' => 'login', 'url' => array('/site/login', 'view' => 'Login')),
-
-
-
-                                ),
-                            ),
-
-
-
-            // Navbar Search Box
-            '<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',  //JOSH WE NEED SOME KIND OF SEARCH.PHP FOR THIS, SEARCHES THE FORUM OR THE WHOLE SITE?
-
-
+                     ), 
+                             
+                   '<form class="navbar-form pull-right" action="user/index">
+                    <input type="text" class="span2" placeholder="Username">                 
+                    <input type="password" class="span2" placeholder="Password">
+                    <button type="submit" class="btn btn-medium btn-primary">Log in</button>
+                    <br><a class="nav_font" rel="nofollow" href="#">Forgotten your password?</a>
+                    </form>',
+                                            
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
-
+        
         ?>
-		<?php $this->widget('bootstrap.widgets.TbAlert', array(
-    	'block'=>true, // display a larger alert block?
-    	'fade'=>true, // use transitions?
-    	'closeText'=>'×', // close link text - if set to false, no close link is displayed
-    	//'alerts'=>array( // configurations per alert type
-    		//'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'×'), // success, info, warning, error or danger
-    	//),
-    	));
-?>
- <!----- END OF NAVIGATION BAR ----->
+                   
 
+ <!----- END OF NAVIGATION BAR ----->  
+ 
+ <!----- PAGE CONTENT CALL ----->
 
-
-<!----- START OF HEADER ----->
-
-<div id="head_container">
-	<div id="logo">
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamEngineLogov5.png"></a>
-        </div>
-        <div id="get_started">
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/get_started"><img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/get_started_button.png"></a>
-        </div>
-</div>
-
-<!----- START OF PAGE CONTENT ----->
-
-<div id="page_wrapper">
-
-
-
-
-
-
-
-
-		<?php echo $content; ?> <!--Call to content .php file of the page-->
-
-
-
-
-
-
-
-
-     </div>
-
-<!----------------- FOOTER ----------------->
-
-    <div id="footer_container">
-
-	<div id="nav">
-        <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> JAM Group.
-        <br>All Rights Reserved.</br><p>
-	<?php echo Yii::powered(); ?>
-    	<ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">GET STARTED</a></li>
-            <li><a href="#">FORUMS</a></li>
-            <li class="last"><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="clear"></div>
-        </div>
-    </div>
-
-
-<!-- Google Analytics -->
-<script>
-	var _gaq=[['_setAccount','<?php echo param('google.analytics.account'); // check global.php shortcut file at "common/lib/" ?>'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-
-
-
-
-
-</body>
+    <?php echo $content; ?> <!--Call to content .php file of the page-->
+   
+ <!----- END OF PAGE CONTENT CALL ----->
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="../assets/js/holder/holder.js"></script>
+  </body>
 </html>

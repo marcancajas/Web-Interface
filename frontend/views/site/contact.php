@@ -4,6 +4,8 @@ $this->breadcrumbs = array(
 	'Contact',
 );
 ?> 
+
+<div class="container" style='margin-top:100px;'>
 <h1>Contact Us</h1>
 
 <?php if (Yii::app()->user->hasFlash('contact')): ?>
@@ -54,3 +56,4 @@ $this->breadcrumbs = array(
 
 </div><!-- form -->
 <?php  endif; ?>
+</div>
