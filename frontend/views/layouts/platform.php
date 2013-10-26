@@ -170,9 +170,9 @@
 
             array('label'=>'MAIN MENU'),
 
-            array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
-            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),
-            array('label'=>'Characters','icon'=>'book', 'url'=> array('/Hero/index','view' => 'index')),
+            array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/Index')),
+            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> array('/User/Messages')),
+            array('label'=>'Characters','icon'=>'book', 'url'=> array('/hero/Index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
             ),
             ));
@@ -180,17 +180,26 @@
             ?>
 </div>
         <div id="user_contentbox">
+      <?php $box = $this->beginWidget(
+    'bootstrap.widgets.TbBox',
+    array(
+        'title' => $this->getAction()->getId(), //Needs to be change to game->name in the future
+        'htmlOptions' => array('class' => 'bootstrap-widget-table')
+    )
+);?>
            
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 		<?php endif?>
-            <div class="user-content" style="margin: 0 50px 0 50px;">   
+            <div class="user-content" style="margin: 0 50px 25px 50px;">   
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 
             </div>
 </div>
+
+     <?php $this->endWidget(); ?>
  
  <div id="utility-box">
             <?php
@@ -203,6 +212,8 @@
 			));
 			$this->endWidget();
 		?>
+     
+
     
 <!-- This side bar is a prototype idea for Jam Engine, The purpose is to provide different utilities for the users, on-click pops a new window specific for that utility. -->
             <ul class="nav" style="margin-top:150px;">

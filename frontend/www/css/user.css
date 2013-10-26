@@ -68,9 +68,9 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     margin-top: 75px;
     margin-right: 40px;
     float:right;
-    border: 1px solid;
+  /*  border: 1px solid;
     border-color: #B7B7B7;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 
 /*** START OF UTILITY BOX ***/

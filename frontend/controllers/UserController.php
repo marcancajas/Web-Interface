@@ -23,6 +23,13 @@ class UserController extends GxController {
 		$this->render('Index');
 
 	}
+        
+        public function actionMessages()
+	{
+                $this->layout = '//layouts/platform';  //change layoutfile -> platform.php
+		$this->render('Messages');
+
+	}
 
 	public function actionConnectToWorker()
 	{
