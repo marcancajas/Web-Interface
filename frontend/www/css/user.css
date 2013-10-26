@@ -6,8 +6,6 @@
         Purpose of the stylesheet follows.
 */
 
-
-
 body { margin:0 auto;
        background: #ffffff;
        -webkit-background-size: cover;
@@ -75,7 +73,6 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     border-radius: 5px;
 }
 
-
 /*** START OF UTILITY BOX ***/
 #utility-box {
     position: absolute;
@@ -86,8 +83,6 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     z-index: 9999;
     border-left: 1px solid;
     border-color: #B7B7B7;
- 
-
 }
 
 

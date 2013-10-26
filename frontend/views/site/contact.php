@@ -32,7 +32,7 @@ $this->breadcrumbs = array(
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+        <iframe style="float:right;" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Curtin+University,+Bentley,+Western+Australia,+Australia&amp;daddr=&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=Cutin&amp;sll=-32.014517,115.921941&amp;sspn=0.045413,0.093513&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=-32.004,115.893574&amp;spn=0.051095,0.072956&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=Curtin+University,+Bentley,+Western+Australia,+Australia&amp;daddr=&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=Cutin&amp;sll=-32.014517,115.921941&amp;sspn=0.045413,0.093513&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=-32.004,115.893574&amp;spn=0.051095,0.072956&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 
 	<?php echo $form->errorSummary($model); ?>
 
