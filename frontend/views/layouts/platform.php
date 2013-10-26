@@ -180,16 +180,16 @@
             ?>
 </div>
         <div id="user_contentbox">
-                         
+           
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 		<?php endif?>
-
+            <div class="user-content" style="margin: 0 50px 0 50px;">   
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 
-        </div>
+            </div>
 </div>
  
  <div id="utility-box">

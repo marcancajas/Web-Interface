@@ -11,6 +11,9 @@ $this->breadcrumbs = array(
 	Hero::label(2),
 	Yii::t('app', 'Index'),
 );
+?>
+
+<?php
 
 $this->menu = array(
 	array('label'=>Yii::t('app', 'Create') . ' ' . Hero::label(), 'url' => array('create')),

@@ -75,18 +75,33 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
 
 /*** START OF UTILITY BOX ***/
 #utility-box {
-    position: absolute;
+    position:absolute;
     top: 0;
     right: 0;
-    height: 1000px;
+    height: 100%;
     width: 150px;
     z-index: 9999;
     border-left: 1px solid;
     border-color: #B7B7B7;
 }
 
-
-
+@media (max-width: 979px) {
+    
+    #utility-box {
+        display:none;
+    }
+    
+    #user-menu {
+    position:fixed;
+    float:left;
+    z-index: 9999;
+    height: 100%;
+    width: 150px;
+    border-right: 1px solid;
+    border-color: #B7B7B7;
+    }
+    
+}
 
 
 
