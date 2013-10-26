@@ -184,7 +184,34 @@
     'bootstrap.widgets.TbBox',
     array(
         'title' => $this->getAction()->getId(), //Needs to be change to game->name in the future
-        'htmlOptions' => array('class' => 'bootstrap-widget-table')
+        'headerActions' => array(
+            array(
+                'class' => 'bootstrap.widgets.TbButtonGroup',
+                'type' => 'primary',
+                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+                'buttons' => array(
+                    array('label' => 'Action', 'url' => '#'),
+                    // this makes it split :)
+                    array(
+                        'items' => array(
+                            array('label' => 'Action', 'url' => '#'),
+                            array('label' => 'Another action', 'url' => '#'),
+                            array('label' => 'Something else', 'url' => '#'),
+                            '---',
+                            array('label' => 'Separate link', 'url' => '#'),
+                        )
+                    ),
+                )
+            ),
+            array(
+                'class' => 'bootstrap.widgets.TbButtonGroup',
+                'buttons' => array(
+                    array('label' => 'Left', 'url' => '#'),
+                    array('label' => 'Middle', 'url' => '#'),
+                    array('label' => 'Right', 'url' => '#')
+                ),
+            ),
+        )
     )
 );?>
            
