@@ -7,7 +7,7 @@
 */
 
 body { margin:0 auto;
-       background: #ffffff;
+       background: #ffffff; /*Add background image here*/
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
@@ -80,12 +80,11 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     right: 0;
     height: 100%;
     width: 150px;
-    z-index: 9999;
     border-left: 1px solid;
     border-color: #B7B7B7;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1400px) {
     
     #utility-box {
         display:none;
@@ -94,7 +93,6 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     #user-menu {
     position:fixed;
     float:left;
-    z-index: 9999;
     height: 100%;
     width: 150px;
     border-right: 1px solid;
@@ -121,23 +119,29 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
 
 
 #login_container {
-    width:1170px;
-    height: 500px;
-    margin: 15% auto;
+    top: 0%;
+    left: 50%;
+    width:980px;
+    height:600px;
+    margin-left: -490px; /*set to a negative number 1/2 of your width*/
+    margin-top: -300px; /*set to a negative number 1/2 of your height*/
+    position:fixed;
+    z-index: 15;
+
 }
 
+
 #login_form {
-    margin-right: 300px;
+    margin-right: 180px;
     width: 300px;
     height: 200px;
     float:right;
-    position: static;
 }
     
 
 #login_logo {
     margin-top: 30px;
-    margin-left: 250px;
+    margin-left: 180px;
     width: 300px;
     height: 136px;
     float: left;

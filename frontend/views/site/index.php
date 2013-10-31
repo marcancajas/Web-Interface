@@ -38,7 +38,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Try our demo game now</h1>
-              <p class="lead">We believe that there should be a place to have fun, compete and spend time with the people in your life easily anywhere anytime. So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
+              <p class="lead">Try our first trial demo game with features like no installation or plugin needed. Just login, connect and play.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
@@ -60,59 +60,22 @@
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Latest News</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <p>This is where community users keep track with the latest updates and events on Jam.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Rankings</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>A ranking of users depending on the games they play, areas and specialities.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
-        <div class="span4" style="margin-top:-50px;">
+        <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
-          <h2 style="color:#004099;"><b>Sign up here</b></h2>
-          <h4>Under Construction</h4>
-         <?php
-//Form
-$form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
-	'id'=>'user-form',
-	'type'=>'inline',
-        'htmlOptions'=>array('class'=>'well'),
-	'enableAjaxValidation'=>true,
-));
-?>
-
-        <br>
-	<?php    
-	echo $form->errorSummary($model);
-	//Username Textfield
-	echo $form->textFieldRow($model,'username',array('class'=>'span3','maxlength'=>45));
-	//Email Textfield
-	echo $form->textFieldRow($model,'email',array('class'=>'span3','maxlength'=>255));
-	//Password Textfield
-	echo $form->passwordFieldRow($model,'newPassword',array('class'=>'span3','maxlength'=>50));
-	?>
-	<div class="form-actions">
-		<?php
-		//Submit Button
-		$this->widget('bootstrap.widgets.TbButton', array(
-			'buttonType'=>'submit',
-			'type'=>'success',
-			'label'=>'Register',
-		));
-		?>
-	</div>
-
-<?php $this->endWidget(); ?>
+          <img src="images/repair.png" height="100" width="100"> 
+          <p>This is a beta version, A quick sign up form will be provided here in the future.</p>
+       
           
         </div><!-- /.span4 -->
       </div><!-- /.row -->
-
-  <!-- FOOTER -->
-      <footer>
-        <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-      
 
     </div><!-- /.container -->

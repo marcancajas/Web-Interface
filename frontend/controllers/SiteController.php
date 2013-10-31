@@ -35,36 +35,7 @@ class SiteController extends Controller {
 
 	/* open on startup */
 	public function actionIndex() {
-		  $model=new User();
-		$this->performAjaxValidation($model);
-		if(isset($_POST['User']))
-		{
-			//dd($_POST['User']);
-			//If a user object is passed in, set the attributes in the user database
-			$model->setAttributes($_POST['User']);			//print_r($_POST['User']);
-
-			$model->password = $_POST['User']['newPassword'];
-			$model->creationDate = time();
-			$model->birthdate = strtotime($_POST['User']['birthdate']);
-			$model->status = User::STATUS_PENDING;
-			$model->registrationKey = sha1(mt_rand(10000, 99999).time().$model->email);
-
-			if($model->save())
-			{
-				$link = app()->createAbsoluteUrl('site/activate',array(
-																	'u'=>$model->id,
-																	'k'=>$model->registrationKey,
-																	't'=>$model->creationDate,
-																)
-								);
-
-				$message = 'Thankyou for registering on JAMEngine! Please click on the link below to complete the activation process '.$link;
-				$this->sendEmail($model->email, $message);
-
-				$this->redirect(array('/site/Index'));
-			}
-		}
-		$this->render('index', array('model'=>$model));
+		$this->render('index');
 	}
 
 	/**
@@ -85,7 +56,7 @@ class SiteController extends Controller {
 	public function actionLogin()
 	{
 		$model = new LoginForm;
-                $this->layout = '//layouts/connector'; //change layoutfile -> connector.php
+                $this->layout = '//layouts/blank'; //change layoutfile -> connector.php
 		/*
 			// if it is ajax validation request
 		if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {

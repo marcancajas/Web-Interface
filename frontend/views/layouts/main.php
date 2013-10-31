@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>JAM Online</title>
+    <title>Welcome to Jam Online</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -32,8 +32,7 @@
 
   <body>
 
-
-   <!----- START OF NAVIGATION BAR ----->
+  <div id="navigation_bar"> <!----- START OF NAVIGATION BAR ----->
 
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 		'type' => 'inverse', //'null' or 'inverse'
@@ -55,40 +54,36 @@
 			 	'class'=>'bootstrap.widgets.TbMenu',
 			 	'htmlOptions'=>array('class'=>'pull-right'),
 			 	'items' => array(
-					array('label' => 'Logout '.Yii::app()->user->name, 'url' => array('Site/Logout'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label' => 'Login', 'url' => array('/Site/Login'), 'visible'=>Yii::app()->user->isGuest),
-					array('label' => 'Register', 'url' => array('/Site/Register'), 'visible'=>Yii::app()->user->isGuest),
+					array('label' => 'Logout '.Yii::app()->user->name, 'url' => array('site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label' => 'Login', 'url' => array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label' => 'Register', 'url' => array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
 				),
 			),
           ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
         ?>
 
-
- <!----- END OF NAVIGATION BAR ----->
+ </div> <!----- END OF NAVIGATION BAR ----->
 
  <!----- PAGE CONTENT CALL ----->
-
+ 
     <?php echo $content; ?> <!--Call to content .php file of the page-->
 
  <!----- END OF PAGE CONTENT CALL ----->
+ 
+<div class="container"
+     
+  <!-- FOOTER -->
+  <hr class="content-divider">
+      <footer>
+        <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer> 
 
-
-
+ </div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
+
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
     <script>

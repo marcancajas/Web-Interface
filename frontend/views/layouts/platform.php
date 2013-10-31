@@ -12,7 +12,7 @@
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="language" content="en"/>
-        <title>Welcome to JAM v1.0 Beta</title>
+        <title>Jam Online</title>
 
 	<!-- Links -->
 
@@ -57,10 +57,10 @@
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
                             
-				array('label' => 'home', 'url' => array('/')),
-                                array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
-				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
-                                array('label' => 'support', 'url' => array('/site/contact','view' => 'Contact')),
+				array('label' => 'Home', 'url' => array('/')),
+                                array('label' => 'Forums', 'url' => array('/site/get_started','view' => 'Forums')),
+				array('label' => 'About', 'url' => array('/site/forum', 'view' => 'About')),
+                                array('label' => 'Support', 'url' => array('/site/contact','view' => 'Contact')),
                             ),
                     ),
                              

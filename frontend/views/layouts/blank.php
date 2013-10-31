@@ -1,10 +1,10 @@
 <?php
 /* 
-    Document   : connector.php 
+    Document   : blank.php 
     Created on : 28/07/2013, 8:40:42 PM
     Author     : Marc Ancajas
     Description:
-       Based Layout file for login.php
+       Blank Layout file for login.php
 */
 ?>
 
@@ -38,28 +38,20 @@
 </head>
 
 <body>
-<!----- START OF PAGE CONTENT ----->
-
-<div id="page_wrapper">
 
 
-		<?php echo $content; ?> <!--Call to content .php file of the page-->
+<div id="page_wrapper"> <!-- Start of page_wrapper -->
+
+
+		
+    
+    <?php echo $content; ?> <!--Call to content .php file of the page-->
                 
     
            
-<!----------------- FOOTER ----------------->        	
- <div id="footer_container">
-        <p>Copyright &copy; <?php echo date('Y'); ?> JAM Group.
-        <br>All Rights Reserved.</br><p>
-	<?php echo Yii::powered(); ?>
-        </div>               
-  
+     	
 </div>   <!-- end of page_wrapper -->      
 
-        
-                
-
-	
  
 <!-- Google Analytics -->
 <script>
@@ -68,10 +60,6 @@
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-
-
-
-
 
 </body>
 </html>
