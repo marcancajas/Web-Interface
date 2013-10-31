@@ -17,9 +17,10 @@ body { margin:0 auto;
 /*** START OF USER_NAVIGATION ***/
 
 #platform_container {
-    margin: 0 auto;
+    margin: 70px auto;
     height: 100%;
     width: 1180px;
+
 }
 
 #user-menu {
@@ -65,7 +66,7 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
 #user_contentbox {
     background-color: transparent; 
     width: 980px;
-    margin-top: 75px;
+    margin-top: 25px;
     margin-right: 40px;
     float:right;
   /*  border: 1px solid;
@@ -84,73 +85,71 @@ li.nav-icons a span.logout-icon { display: block;width: 70px;height: 65px;backgr
     border-color: #B7B7B7;
 }
 
+.footer-container {
+    position: absolute;
+    bottom: 0;
+}
+
+
 @media (max-width: 1400px) {
     
     #utility-box {
         display:none;
     }
+
+  
+    
+}
+
+ @media (max-width: 979px) {
+
+    #platform_container {
+    margin: -20px auto;
+    height: 1024px;
+    width: 1180px;
+  
+    }
+
+    #user_contentbox {
+    width: 750px;
+    float: left;
+    margin-left: 10px;
+    }
     
     #user-menu {
-    position:fixed;
+    position:relative;
     float:left;
     height: 100%;
     width: 150px;
     border-right: 1px solid;
     border-color: #B7B7B7;
+    
     }
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#login_container {
-    top: 0%;
-    left: 50%;
-    width:980px;
-    height:600px;
-    margin-left: -490px; /*set to a negative number 1/2 of your width*/
-    margin-top: -300px; /*set to a negative number 1/2 of your height*/
-    position:fixed;
-    z-index: 15;
-
-}
-
-
-#login_form {
-    margin-right: 180px;
-    width: 300px;
-    height: 200px;
-    float:right;
-}
     
+    
+ }
+ 
+ @media (max-width: 767px) {
 
-#login_logo {
-    margin-top: 30px;
-    margin-left: 180px;
-    width: 300px;
-    height: 136px;
+    #platform_container {
+    margin: -20px auto 0 -20px;
+    height: 1024px;
+    width: 1180px;
+  
+    }
+    
+    #user_contentbox {
+    width: 450px;
     float: left;
+    margin-left: 10px;
+    }
+
+
+
 }
 
-#footer_container { 
-    background-color: transparent; 
-    width: 300px;
-    margin:-230px 570px;
-    box-shadow: none;
-}
+
+
+
 

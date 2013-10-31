@@ -12,7 +12,7 @@
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="language" content="en"/>
-        <title>Jam Online</title>
+        <title>Jam</title>
 
 	<!-- Links -->
 
@@ -38,13 +38,7 @@
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 </head>
-
 <body>
-    
-
-     
-
-
  <!----- START OF NAVIGATION BAR ----->
  <?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', //'null' or 'inverse'
@@ -81,91 +75,26 @@
                                 ),
                              ),
                           ),
-                      
-
-                                
-            
-
-      
-                                            
+                                          
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
         
         ?>
-                   
- 
- <!-------------------------------------------------------->
- 
- 
-	<?php /* $this->widget('bootstrap.widgets.TbNavbar', array(
-	'type' => 'inverse', //'null' or 'inverse'
-        'fixed' => 'false',
-	'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamEngineLogov5nav.png'),
-        'brandOptions' => '',
-	'collapse' => true, // requires bootstrap-responsive.css
-	'items' => array(
-		array(
-			'class' => 'bootstrap.widgets.TbMenu',
-			'items' => array(
-
-
-                                        ),
-                     ),
-
-
-
-
-            (!Yii::app()->user->isGuest) ? '<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>' : '',
-            // Navbar Search Box
-
-
-
-            ), // MAIN ARRAY INCLUSION
-        )); //TB NAVBAR AND ITS ARRAY
-
-     */   ?> 
 
 
  <!----- END OF NAVIGATION BAR ----->
+ 
 
-<div id="platform_container">
+    
 
-      <!--  <div id="user_navigation_container">
-            &nbsp
-            <ul class="nav">
-                <li class="nav-icons">
-                    <a title="Dashboard" href="<?php echo Yii::app()->request->baseUrl; ?>/user/index"><span class="dashboard-icon"></span></a>
-                </li>
-                <li class="nav-icons">
-                    <a title="Messages" href="#"><span class="messages-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Heros" href="<?php echo Yii::app()->request->baseUrl; ?>/Hero/index"><span class="characters-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Rankings" href="#"><span class="rankings-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Profile Settings" href="#"><span class="profile-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Account Settings" href="#"><span class="account-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Help" href="#"><span class="help-icon"></span></a>
-                </li>
-                  <li class="nav-icons">
-                    <a title="Logout" href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout"><span class="logout-icon"></span></a>
-                </li>
+<div id="platform_container"> <!-- start of platform-container -->
 
-            </ul> 
--->
 
 <div id="user-menu">
         <?php  $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
             'stacked'=>'true',
-            'htmlOptions'=>array('style' => 'margin-top:75px; padding:10px;'),       
+            'htmlOptions'=>array('style' => 'margin-top:15px; padding:10px;'),       
             'items'=>array(
 
             array('label'=>'MAIN MENU'),
@@ -179,6 +108,7 @@
             
             ?>
 </div>
+    
         <div id="user_contentbox">
       <?php $box = $this->beginWidget(
     'bootstrap.widgets.TbBox',
@@ -269,6 +199,18 @@
             </ul> 
 </div>
  
+
+<!-- FOOTER -->
+<!-- <div class="footer-container">
+  <hr class="content-divider">
+      <footer>
+        <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer> 
+  
+</div>  -->
+
+</div> <!-- end of platform-container -->
+
 <script>
             $( "button" ).click(function() {
             $( "#utility-box" ).toggle("slide", {
@@ -277,6 +219,7 @@
             );
             });
 </script>
+
 
 </body>
 </html>
