@@ -19,7 +19,7 @@ class UserController extends GxController {
 
 	public function actionIndex()
 	{
-                $this->layout = '//layouts/platform';  //change layoutfile -> platform.php
+                $this->layout = '/layouts/platform';  //change layoutfile -> platform.php
 		$this->render('Index');
 
 	}
