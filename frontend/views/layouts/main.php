@@ -38,17 +38,17 @@
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 		'type' => 'inverse', //'null' or 'inverse'
 		'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamnavbarlogo.png'),
-		'brandOptions' => array('style' => 'width:105px;height:50px;margin-left:0px;'),
+		'brandOptions' => array('style' => 'width:110px;height:50px;margin-left:0px;'),
 		'htmlOptions' => array('style' => ''),
 		'collapse' => true, // requires bootstrap-responsive.css
 		'items' => array(
 			array(
 				'class' => 'bootstrap.widgets.TbMenu',
 				'items' => array(
-					array('label' => 'home', 'url' => array('/')),
-					array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
-					array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
-					array('label' => 'contact', 'url' => array('/site/contact')),
+					array('label' => 'Home', 'url' => array('/')),
+					array('label' => 'Forums', 'url' => array('/site/get_started','view' => 'Forums')),
+					array('label' => 'About', 'url' => array('/site/forum', 'view' => 'About')),
+					array('label' => 'Contact', 'url' => array('/site/contact')),
 				),
 			),
 			array(
