@@ -45,7 +45,7 @@
 				'class' => 'bootstrap.widgets.TbMenu',
 				'items' => array(
 					array('label' => 'Home', 'url' => array('/')),
-					array('label' => 'Forums', 'url' => array('/site/get_started','view' => 'Forums')),
+					array('label' => 'JAM Engine ®', 'url' => array('/site/get_started','view' => 'Jam engine')),
 					array('label' => 'About', 'url' => array('/site/forum', 'view' => 'About')),
 					array('label' => 'Contact', 'url' => array('/site/contact')),
 				),
@@ -65,21 +65,25 @@
 
  </div> <!----- END OF NAVIGATION BAR ----->
 
+ <div id="page-wrapper">
  <!----- PAGE CONTENT CALL ----->
  
     <?php echo $content; ?> <!--Call to content .php file of the page-->
 
  <!----- END OF PAGE CONTENT CALL ----->
+ </div>
  
-<div class="container"
+ 
+ <div class="container"
      
   <!-- FOOTER -->
-  <hr class="content-divider">
+ <hr class="content-divider">
       <footer>
         <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer> 
 
  </div>
+ 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

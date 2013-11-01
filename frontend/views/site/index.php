@@ -27,18 +27,18 @@
           <img src="http://placehold.it/1170x400&text=Second+thumbnail" alt="">
           <div class="container">
             <div class="carousel-caption">
-               <h1>Jam Engine</h1>
-              <p class="lead">We believe that there should be a place to have fun, compete and spend time with the people in your life easily anywhere anytime. So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
+             <h1>Try our demo game now</h1>
+              <p class="lead">Our first trial demo game with features like no installation or plugin needed. Just login, connect and play.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="http://placehold.it/1170x400&text=Third+thumbnail" alt="">
+          <img src="images/computingdep.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Try our demo game now</h1>
-              <p class="lead">Try our first trial demo game with features like no installation or plugin needed. Just login, connect and play.</p>
+              <h1 style="color:blue;">Curtin computing expo 2013</h1>
+              <p class="lead">Hope you guys are enjoying the expo!</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
@@ -58,21 +58,29 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Latest News</h2>
-          <p>This is where community users keep track with the latest updates and events on Jam.</p>
+          <h2>the story</h2>
+          <h5>why we built jam engine.</h5>
+          <p>We wanted something, a place.</p>
+          <p>Something that enhances life.</p>
+          <p>To have fun, compete and spend time with the people in your life easily, anywhere, anytime.</p>
+          <p>So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Rankings</h2>
-          <p>A ranking of users depending on the games they play, areas and specialities.</p>
+         
+          <h2>latest technologies</h2>
+          <h5>our backbone.</h5>
+          <p> - Responsive Web Design. Mobile | Tablet | Desktop</p>
+          <p> - Extendable and distributed system architecture which is easily manage through a GUI in the system monitor.</p>
+          <p> - Requires no plugin or installation to run games or applications.</p>
+          <p> - Cross-platform and cross-browser compatibility, just have the latest popular browsers and your set.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <img src="images/repair.png" height="100" width="100"> 
-          <p>This is a beta version, A quick sign up form will be provided here in the future.</p>
+        
+   
+          <img src="images/jamenginelogo.png" style="margin-top:90px;" height="200" width="200"> 
+      
        
           
         </div><!-- /.span4 -->
