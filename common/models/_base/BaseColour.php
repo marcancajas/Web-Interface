@@ -62,8 +62,8 @@ abstract class BaseColour extends GxActiveRecord {
 		return array(
 			'id' => Yii::t('app', 'ID'),
 			'name' => Yii::t('app', 'Name'),
-			'characters' => null,
-			'characters1' => null,
+			'heros' => null,
+			'heros1' => null,
 		);
 	}
 

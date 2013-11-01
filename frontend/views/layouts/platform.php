@@ -50,16 +50,15 @@
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
-                            
-				array('label' => 'Home', 'url' => array('/')),
-                                array('label' => 'Forums', 'url' => array('/site/get_started','view' => 'Forums')),
-				array('label' => 'About', 'url' => array('/site/forum', 'view' => 'About')),
-                                array('label' => 'Support', 'url' => array('/site/contact','view' => 'Contact')),
-                            ),
+				array('label' => 'home', 'url' => array('/')),
+                array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
+				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
+                array('label' => 'support', 'url' => array('/site/contact','view' => 'Contact')),
+             ),
                     ),
-                             
+
                             //PROFILE DROPDOWN
-                            
+
                          array(
                             'class' => 'bootstrap.widgets.TbMenu',
                             'htmlOptions' => array('class' => 'pull-right'),
@@ -78,7 +77,7 @@
                                           
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
-        
+
         ?>
 
 
@@ -99,65 +98,29 @@
 
             array('label'=>'MAIN MENU'),
 
-            array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/Index')),
-            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> array('/User/Messages')),
-            array('label'=>'Characters','icon'=>'book', 'url'=> array('/hero/Index')),
+            array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
+            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),
+            array('label'=>'Characters','icon'=>'book', 'url'=> array('/ModifiedHero/index')),
             array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
             ),
             ));
-            
+
             ?>
 </div>
     
         <div id="user_contentbox">
-      <?php $box = $this->beginWidget(
-    'bootstrap.widgets.TbBox',
-    array(
-        'title' => $this->getAction()->getId(), //Needs to be change to game->name in the future
-        'headerActions' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbButtonGroup',
-                'type' => 'primary',
-                // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'buttons' => array(
-                    array('label' => 'Action', 'url' => '#'),
-                    // this makes it split :)
-                    array(
-                        'items' => array(
-                            array('label' => 'Action', 'url' => '#'),
-                            array('label' => 'Another action', 'url' => '#'),
-                            array('label' => 'Something else', 'url' => '#'),
-                            '---',
-                            array('label' => 'Separate link', 'url' => '#'),
-                        )
-                    ),
-                )
-            ),
-            array(
-                'class' => 'bootstrap.widgets.TbButtonGroup',
-                'buttons' => array(
-                    array('label' => 'Left', 'url' => '#'),
-                    array('label' => 'Middle', 'url' => '#'),
-                    array('label' => 'Right', 'url' => '#')
-                ),
-            ),
-        )
-    )
-);?>
-           
+
                 <?php if (isset($this->breadcrumbs)): ?>
 			<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 			'links' => $this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 		<?php endif?>
-            <div class="user-content" style="margin: 0 50px 25px 50px;">   
+
 		<?php echo $content; ?> <!--Call to content .php file of the page-->
 
-            </div>
+        </div>
 </div>
 
-     <?php $this->endWidget(); ?>
- 
  <div id="utility-box">
             <?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
@@ -169,9 +132,7 @@
 			));
 			$this->endWidget();
 		?>
-     
 
-    
 <!-- This side bar is a prototype idea for Jam Engine, The purpose is to provide different utilities for the users, on-click pops a new window specific for that utility. -->
             <ul class="nav" style="margin-top:150px;">
                 <li class="nav-icons">
@@ -195,21 +156,9 @@
                   <li class="nav-icons">
                     <a title="Help" href="#"><span class="help-icon"></span></a>
                 </li>
-       
-            </ul> 
+
+            </ul>
 </div>
- 
-
-<!-- FOOTER -->
-<!-- <div class="footer-container">
-  <hr class="content-divider">
-      <footer>
-        <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer> 
-  
-</div>  -->
-
-</div> <!-- end of platform-container -->
 
 <script>
             $( "button" ).click(function() {
