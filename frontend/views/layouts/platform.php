@@ -65,9 +65,7 @@
                             'items' => array(
                             '---',
                             array('label' => Yii::app()->user->name,'url' => '#','items' => array(
-                                    array('label'=>'Account','icon'=>'user', 'url'=>'#'),
-                                    array('label'=>'Privacy','icon'=>'cog', 'url'=>'#'),
-                                    array('label'=>'Help','icon'=>'flag', 'url'=>'#'),
+                                    array('label'=>'Profile Settings','icon'=>'user', 'url'=>'#'),                      
                                     '---',
                                     array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout')),
                                     ),
@@ -99,9 +97,7 @@
             array('label'=>'MAIN MENU'),
 
             array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
-            array('label'=>'Messages','icon'=>'icon-envelope', 'url'=> '#'),
             array('label'=>'Characters','icon'=>'book', 'url'=> array('/ModifiedHero/index')),
-            array('label'=>'Rankings','icon'=>'pencil', 'url'=>'#'),
             ),
             ));
 
