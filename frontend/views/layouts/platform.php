@@ -97,7 +97,7 @@
             array('label'=>'MAIN MENU'),
 
             array('label'=>'Dashboard','icon'=>'home', 'url'=> array('/user/index','view' => 'index')),
-            array('label'=>'Characters','icon'=>'book', 'url'=> array('/ModifiedHero/index')),
+            array('label'=>'Heroes','icon'=>'book', 'url'=> array('/ModifiedHero/index')),
             ),
             ));
 
@@ -128,9 +128,22 @@
 			));
 			$this->endWidget();
 		?>
-
+     <div class="container" style="margin-top:100px; padding: 5px;">
+         <p>To play the game</p>
+         <p>create a new hero,</p> 
+         <p>click on the</p>
+         <p>heroes button</p>
+         <br>
+         <br>
+         <br>
+         <p>This sidebar</p>
+         <p>disappears below</p>
+         <p>1400 width resolution</p>
+     </div>
+     
+     
 <!-- This side bar is a prototype idea for Jam Engine, The purpose is to provide different utilities for the users, on-click pops a new window specific for that utility. -->
-            <ul class="nav" style="margin-top:150px;">
+           <!-- <ul class="nav" style="margin-top:150px;">
                 <li class="nav-icons">
                     <a title="Dashboard" href="<?php echo Yii::app()->request->baseUrl; ?>/user/index"><span class="dashboard-icon"></span></a>
                 </li>
@@ -152,6 +165,7 @@
                   <li class="nav-icons">
                     <a title="Help" href="#"><span class="help-icon"></span></a>
                 </li>
+           -->
 
             </ul>
 </div>
