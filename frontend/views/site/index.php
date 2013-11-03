@@ -14,7 +14,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="http://placehold.it/1170x400&text=First+thumbnail" alt="">
+          <img src="images/carouselthumb-1.png" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Welcome to Jam</h1>
@@ -38,7 +38,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:blue;">Curtin computing expo 2013</h1>
-              <p class="lead">Hope you guys are enjoying the expo!</p>
+              <p class="lead">Welcome to the exciting tech software expo annually held at Curtin University, Hope you guys are enjoying the demonstrations!</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
@@ -61,8 +61,9 @@
           <h2>the story</h2>
           <h5>why we built jam engine.</h5>
           <p>We wanted something, a place.</p>
-          <p>Something that enhances life.</p>
-          <p>To have fun, compete and spend time with the people in your life easily, anywhere, anytime.</p>
+          <p>Something that enhances life in an engaging experience.</p>
+          <p>To have fun, compete and spend time with the people in your life.</p>
+          <p>Easily, anywhere, anytime.</p>
           <p>So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
@@ -74,12 +75,13 @@
           <p> - Extendable and distributed system architecture which is easily manage through a GUI in the system monitor.</p>
           <p> - Requires no plugin or installation to run games or applications.</p>
           <p> - Cross-platform and cross-browser compatibility, just have the latest popular browsers and your set.</p>
+          <p> - HTML5, CSS3, PHP, MYSQL, JAVASCRIPT, WEBGL, C++, SOCKET.IO, NODEJS , APACHE, UBUNTU, YII FRAMEWORK, EASELJS
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
         
    
-          <img src="images/jamenginelogo.png" style="margin-top:90px;" height="200" width="200"> 
+          <img src="images/jamenginelogo.png" style="margin-top:90px;" height="230" width="230"> 
       
        
           

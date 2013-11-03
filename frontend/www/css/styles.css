@@ -24,6 +24,9 @@
         font-size: 10px;
     }
     
+    #page-wrapper {
+        margin-top: 70px;
+    }
 
     /* CUSTOMIZE THE CAROUSEL
     -------------------------------------------------- */
@@ -31,6 +34,7 @@
     /* Carousel base class */
     .carousel {
       margin-bottom: 60px;
+      border-bottom: 5px solid #0e509e;   
     }
 
     .carousel .container {
