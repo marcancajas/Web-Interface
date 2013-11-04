@@ -65,14 +65,14 @@
                             'items' => array(
                             '---',
                             array('label' => Yii::app()->user->name,'url' => '#','items' => array(
-                                    array('label'=>'Profile Settings','icon'=>'user', 'url'=>'#'),                      
+                                    array('label'=>'Edit Profile','icon'=>'user', 'url'=> array('user/profile')),                      
                                     '---',
                                     array('label'=>'Logout','icon'=>'icon-off', 'url' => array('/site/logout')),
                                     ),
                                 ),
                              ),
                           ),
-                                          
+                         
             ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
 

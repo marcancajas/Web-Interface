@@ -1,6 +1,8 @@
 <?php
 class UserController extends GxController {
-
+    
+    public $layout = '/layouts/platform'; //Sets the layout file of this controller
+    
 	public function accessRules() {
 		return array(
 			// not logged in users
@@ -9,7 +11,7 @@ class UserController extends GxController {
 				'users'=>array('*')),
 			// logged in users
 			array('allow',
-				'actions'=>array('Index','heros','connectToWorker'),
+				'actions'=>array('Index','connectToWorker','profile'),
 				'users' => array('@')),
 			// not logged in users can't do anything except above
 			array('deny',
@@ -21,13 +23,6 @@ class UserController extends GxController {
 	{
                 $this->layout = '/layouts/platform';  //change layoutfile -> platform.php
 		$this->render('Index');
-
-	}
-
-        public function actionMessages()
-	{
-                $this->layout = '//layouts/platform';  //change layoutfile -> platform.php
-		$this->render('Messages');
 
 	}
 
@@ -89,6 +84,28 @@ class UserController extends GxController {
 			user()->setFlash('error', '<strong>Your password could not be reset. Please contact the site administrator user not exist</strong>');
 			$this->redirect(array('site'));
 		}
+	}
+        
+        public function actionProfile() {
+	
+            $userid = Yii::app()->user->id;
+            $model = $this->loadModel($userid, 'user');  
+            
+            //Check to see if there is information to update
+		if (isset($_POST['User'])) {
+			//If there is infomration to update
+			$model->setAttributes($_POST['User']);
+			//Try to save the model
+			if ($model->saveAttributes($_POST['User'])) {
+				//If the information could be saved, notify the user and return to the user index
+				user()->setFlash('Success', $model->username.' information was successfully updated');
+				$this->redirect(array('/User'));
+			}
+			//If the information could not be saved, notify the user
+			user()->setFlash('Failure', $model->username.' information could not be updated');
+		}
+       
+            $this->render('editprofile',array('model'=>$model));
 	}
 }
 ?>
