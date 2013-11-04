@@ -12,13 +12,24 @@ class ModifiedHeroController extends GxController
 
 	public function accessRules() {
 		return array(
+			array('allow',
+				'actions'=>array('index','view','create','delete','connectToGame'),
+				'users'=>array('@'),
+				),
+			array('allow',
+				'actions'=>array(),
+				'users'=>array('admin'),
+				),
+			array('deny',
+				'users'=>array('*'),
+				),
 			);
 	}
 
 	public function actionView($id)
 	{
 		//Render the Modified hero detail view
-		$this->render('view', array(
+		$this->render('/modifiedhero/view', array(
 			'model' => $this->loadModel($id, 'ModifiedHero'),
 		));
 	}
@@ -68,7 +79,7 @@ class ModifiedHeroController extends GxController
 			//Else, Load the create hero view
 			$hero = Hero::model()->find();
 			$heroDataProvider=new CActiveDataProvider($hero);
-			$this->render('create', array( 'model' => $model, 'heroDataProvider' => $heroDataProvider));
+			$this->render('/modifiedhero/create', array( 'model' => $model, 'heroDataProvider' => $heroDataProvider));
 		}
 	}
 
@@ -77,7 +88,7 @@ class ModifiedHeroController extends GxController
 		//Render the ModifiedHero index view
 		$dataProvider = new CActiveDataProvider('ModifiedHero', array('criteria'=>array('condition'=>'user_id = '.Yii::app()->user->id)));
 
-		$this->render('index', array(
+		$this->render('/modifiedhero/index', array(
 			'dataProvider' => $dataProvider,
 		));
 	}
