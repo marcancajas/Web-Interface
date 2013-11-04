@@ -167,9 +167,9 @@
 #login_container {
     top: 0%;
     left: 50%;
-    width:980px;
+    width:500px;
     height:600px;
-    margin-left: -490px; /*set to a negative number 1/2 of your width*/
+    margin-left: -250px; /*set to a negative number 1/2 of your width*/
     margin-top: -300px; /*set to a negative number 1/2 of your height*/
     position:fixed;
     z-index: 15;
@@ -178,18 +178,19 @@
 
 
 #login_form {
-    margin-right: 180px;
+   
+    margin-left: 100px;
     width: 300px;
     height: 200px;
-    float:right;
+    float:left;
 }
     
 
 #login_logo {
     margin-top: 30px;
-    margin-left: 180px;
-    width: 300px;
-    height: 136px;
+    margin-left: 100px;
+    width: 150px;
+    height: 80px;
     float: left;
 }
 

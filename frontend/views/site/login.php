@@ -14,7 +14,7 @@ $this->pageTitle = 'Login';
     <div id="login_container" style="margin-top:20px;">
     
        <div id="login_logo">
-       <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamnavbarlogo.png" alt="JAMengine" width="250" height="250" />
+       <img src="<?php echo Yii::app()->getBaseUrl(); ?>/images/jamnavbarlogo.png" alt="JAMengine" width="150" height="150" />
        </div>
         
        <div id="login_form">
