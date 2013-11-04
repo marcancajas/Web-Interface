@@ -18,7 +18,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Welcome to Jam</h1>
-              <p class="lead">Connect, play and interact with friends and the world around you on Jam. Its free! </p>
+              <p style="color: #2e6ab1;" class="lead">Connect, play and interact with friends and the world around you on Jam. Its free! </p>
               <a class="btn btn-large btn-danger" href="<?php echo Yii::app()->request->baseUrl; ?>/site/register">Sign up today</a>
             </div>
           </div>
@@ -61,8 +61,8 @@
           <h2>the story</h2>
           <h5>why we built jam engine.</h5>
           <p>We wanted something, a place.</p>
-          <p>Something that enhances life in an engaging experience.</p>
-          <p>To have fun, compete and spend time with the people in your life.</p>
+          <p>Something engaging,</p>
+          <p>To have fun, compete and spend time with the people in your life,</p>
           <p>Easily, anywhere, anytime.</p>
           <p>So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
@@ -75,7 +75,6 @@
           <p> - Extendable and distributed system architecture which is easily manage through a GUI in the system monitor.</p>
           <p> - Requires no plugin or installation to run games or applications.</p>
           <p> - Cross-platform and cross-browser compatibility, just have the latest popular browsers and your set.</p>
-          <p> - HTML5, CSS3, PHP, MYSQL, JAVASCRIPT, WEBGL, C++, SOCKET.IO, NODEJS , APACHE, UBUNTU, YII FRAMEWORK, EASELJS
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
