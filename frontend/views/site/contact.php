@@ -16,9 +16,9 @@ $this->breadcrumbs = array(
 
 <?php else: ?>
 
-<p>
+<h5>
 	Let us know what you think
-</p>
+</h5>
 
 <div class="form">
 
