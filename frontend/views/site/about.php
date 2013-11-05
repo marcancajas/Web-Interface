@@ -19,7 +19,7 @@ $this->breadcrumbs = array(
           <p>So we created just that, a place where you can seamlessly connect and play together without having to worry about anything.</p>
           
           <h5>a new kind of social media.</h5>
-          <p>A community where users can invite friends to play, be engage in a new kind of interaction in a persistent community.</p>
+          <p>A community where users can invite friends to play, stay connected, and be engage in a new kind of interaction with the world around you.</p>
           <p>A place to invite friends in a game of billiards or play the scheduled soccer match of your team easily anywhere,anytime.</p> 
 
         </div><!-- /.span4 -->
