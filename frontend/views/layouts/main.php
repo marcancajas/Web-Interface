@@ -45,9 +45,9 @@
 				'class' => 'bootstrap.widgets.TbMenu',
 				'items' => array(
 					array('label' => 'Home', 'url' => array('/')),
-					array('label' => 'JAM Engine ®', 'url' => array('/site/get_started','view' => 'Jam engine')),
-					array('label' => 'About', 'url' => array('/site/forum', 'view' => 'About')),
-					array('label' => 'Contact', 'url' => array('/site/contact')),
+					array('label' => 'JAM Engine ®', 'url' => array('/site/jamengine','view' => 'Jam engine')),
+					array('label' => 'About', 'url' => array('/site/about', 'view' => 'About')),
+					array('label' => 'Contact', 'url' => array('/site/contact', 'view' => 'Contact')),
 				),
 			),
 			array(

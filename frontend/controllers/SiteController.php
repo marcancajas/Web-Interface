@@ -11,7 +11,7 @@ class SiteController extends Controller {
 	public function accessRules() {
 		return array(
 			// not logged in users should be able to login and view captcha images as well as errors
-			array('allow', 'actions' => array('index', 'captcha', 'login','contact', 'error','register','activate')),
+			array('allow', 'actions' => array('index', 'captcha', 'login','contact', 'error','register','activate','jamengine','about')),
 			// logged in users can do whatever they want to
 			array('allow', 'users' => array('@')),
 			// not logged in users can't do anything except above
@@ -215,6 +215,16 @@ class SiteController extends Controller {
 		$this->render('contact', array('model' => $model));
 
 	}
+        
+        public function actionJamengine()
+        {
+            $this->render('jamengine');
+        }
+        
+        public function actionAbout()
+        {
+            $this->render('About');
+        }
          
 
 }

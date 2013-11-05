@@ -51,10 +51,10 @@
 		array(
 			'class' => 'bootstrap.widgets.TbMenu',
 			'items' => array(
-				array('label' => 'home', 'url' => array('/')),
-                array('label' => 'forums', 'url' => array('/site/get_started','view' => 'Forums')),
-				array('label' => 'about', 'url' => array('/site/forum', 'view' => 'About')),
-                array('label' => 'support', 'url' => array('/site/contact','view' => 'Contact')),
+				array('label' => 'Home', 'url' => array('/')),
+                array('label' => 'JAM Engine ®', 'url' => array('/site/jamengine','view' => 'Jam engine')),
+				array('label' => 'About', 'url' => array('/site/about', 'view' => 'About')),
+                array('label' => 'Contact', 'url' => array('/site/contact','view' => 'Contact')),
              ),
                     ),
 
