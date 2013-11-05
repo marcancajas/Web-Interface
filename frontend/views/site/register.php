@@ -35,7 +35,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	//Gender dropdown box
 	echo $form->dropDownListRow($model, 'gender', array('M'=>'Male', 'F'=>'Female'));
 	//Birthdate datePicker
-	echo $form->datepickerRow($model, 'birthdate', array('prepend'=>'<i class="icon-calendar"></i>','options'=>array('format' => 'dd-mm-yyyy')));
+	//echo $form->datepickerRow($model, 'birthdate', array('prepend'=>'<i class="icon-calendar"></i>','options'=>array('format' => 'dd-mm-yyyy')));
 
 	//Username Textfield
 	echo $form->textFieldRow($model,'username',array('class'=>'span5','maxlength'=>45));

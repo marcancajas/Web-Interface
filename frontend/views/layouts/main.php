@@ -37,7 +37,7 @@
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 		'type' => 'inverse', //'null' or 'inverse'
 		'brand' => CHtml::image(Yii::app()->getBaseUrl().'/images/jamnavbarlogo.png'),
-		'brandOptions' => array('style' => 'width:110px;height:50px;margin-left:0px;'),
+		'brandOptions' => array('style' => 'width:110px; height:50px;'),
 		'htmlOptions' => array('style' => ''),
 		'collapse' => true, // requires bootstrap-responsive.css
 		'items' => array(
@@ -52,12 +52,13 @@
 			),
 			array(
 			 	'class'=>'bootstrap.widgets.TbMenu',
-			 	'htmlOptions'=>array('class'=>'pull-right'),
+			 	'htmlOptions'=>array('class'=>'pull-right', 'style' => 'margin-right: 10px;'),
 			 	'items' => array(
 					array('label' => 'Logout '.Yii::app()->user->name, 'url' => array('site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label' => 'Login', 'url' => array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					array('label' => 'Register', 'url' => array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
+					array('label' => 'Sign in', 'url' => array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label' => 'Create an account', 'url' => array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
 				),
+                            
 			),
           ), // MAIN ARRAY INCLUSION
         )); //TB NAVBAR AND ITS ARRAY
@@ -74,13 +75,15 @@
  </div>
  
  
- <div class="container"
+ <div class="container" style="margin-top: 0px; width:100%; background-color: #ffffff;">
      
   <!-- FOOTER -->
  <hr class="content-divider">
+ <div class="container" style="padding-top:20px;">
       <footer>
         <p> Jam &copy; 2013 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer> 
+ </div>
 
  </div>
  

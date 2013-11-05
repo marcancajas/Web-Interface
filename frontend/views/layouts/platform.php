@@ -38,6 +38,7 @@
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 </head>
+
 <body>
  <!----- START OF NAVIGATION BAR ----->
  <?php $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -86,7 +87,6 @@
 
 <div id="platform_container"> <!-- start of platform-container -->
 
-
 <div id="user-menu">
         <?php  $this->widget('bootstrap.widgets.TbMenu', array(
             'type'=>'pills',
@@ -132,13 +132,7 @@
          <p>To play the game</p>
          <p>create a new hero,</p> 
          <p>click on the</p>
-         <p>heroes button</p>
-         <br>
-         <br>
-         <br>
-         <p>This sidebar</p>
-         <p>disappears below</p>
-         <p>1400 width resolution</p>
+         <p>heroes button</p> 
      </div>
      
      

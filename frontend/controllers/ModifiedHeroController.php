@@ -113,7 +113,15 @@ class ModifiedHeroController extends GxController
 
 	public function actionConnectToGame($id)
 	{
-		//Redirect the user to the game
-		$this->redirect('/Game',array('id'=>$id));
+     
+        apache_setenv("HEROID", $id); /* Set value $id into an environment variable called HERO_ID for Apache.
+         * Will be use to pass this as a cookie with the value of the users hero id  to the worker servers on proxypass calling mod_load_balancer
+         * See proxiedhosts at /etc/apache2/sites-available/ on web server.
+         * Also see apache mod_rewrite.
+         */
+        
+        //Redirect the user to the game
+        $this->redirect('/Game',array('id'=>$id));
 	}
 }
+?>

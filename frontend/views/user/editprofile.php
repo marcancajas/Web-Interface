@@ -3,15 +3,11 @@
 <!--User Update View-->
 
 <?php
-$this->pageTitle = Yii::app()->name . ' - Update Profile';
-$this->breadcrumbs = array(
-	'Edit Profile',
-);
+$this->pageTitle = Yii::app()->name . ' - Edit profile';
 ?> 
 
-
 <!--Page Title-->
-<h1><?php echo 'Edit Profile:' . ' ' .$model->username?></h1>
+<h1><?php echo 'Edit profile:' . ' ' .$model->username?></h1>
 
 <div class="form well">
 <?php
