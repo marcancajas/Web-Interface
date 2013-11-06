@@ -66,7 +66,8 @@ return CMap::mergeArray(
 				'publishAwesome'=>FALSE
 			),
 			'user' => array(
-				'returnUrl' => '/user',
+				'allowAutoLogin'=>false,
+				'returnUrl' => array('/user/index'),
 			),
 			#Beanstalk queue extension
 			'bootstrap' => array(

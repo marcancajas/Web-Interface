@@ -73,7 +73,10 @@ class SiteController extends Controller {
 			if ($model->validate(array('username', 'password')) && $model->login())
 			{
 				//echo user()->returnUrl;
-				$this->redirect(array('/user/index'));
+				//$this->redirect(array('/user/index'));
+				Yii::app()->user->setReturnUrl(array('/user/index'));
+				$this->redirect(user()->returnUrl);
+				app()->end();
 			}
 		}
 		// display the login form
@@ -215,6 +218,7 @@ class SiteController extends Controller {
 		$this->render('contact', array('model' => $model));
 
 	}
+<<<<<<< HEAD
         
         public function actionJamengine()
         {
@@ -226,5 +230,8 @@ class SiteController extends Controller {
             $this->render('About');
         }
          
+=======
+
+>>>>>>> Added returnUrl to frontend
 
 }
