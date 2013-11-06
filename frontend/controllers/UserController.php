@@ -1,8 +1,8 @@
 <?php
 class UserController extends GxController {
-    
+
     public $layout = '/layouts/platform'; //Sets the layout file of this controller
-    
+
 	public function accessRules() {
 		return array(
 			// not logged in users
@@ -85,12 +85,12 @@ class UserController extends GxController {
 			$this->redirect(array('site'));
 		}
 	}
-        
+
         public function actionProfile() {
-	
+
             $userid = Yii::app()->user->id;
-            $model = $this->loadModel($userid, 'user');  
-            
+            $model = $this->loadModel($userid, 'User');
+
             //Check to see if there is information to update
 		if (isset($_POST['User'])) {
 			//If there is infomration to update
@@ -104,7 +104,7 @@ class UserController extends GxController {
 			//If the information could not be saved, notify the user
 			user()->setFlash('Failure', $model->username.' information could not be updated');
 		}
-       
+
             $this->render('editprofile',array('model'=>$model));
 	}
 }
