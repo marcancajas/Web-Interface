@@ -218,8 +218,7 @@ class SiteController extends Controller {
 		$this->render('contact', array('model' => $model));
 
 	}
-<<<<<<< HEAD
-        
+
         public function actionJamengine()
         {
             $this->render('jamengine');
@@ -227,11 +226,7 @@ class SiteController extends Controller {
         
         public function actionAbout()
         {
-            $this->render('About');
-        }
-         
-=======
-
->>>>>>> Added returnUrl to frontend
+            $this->render('about');
+        }      
 
 }
