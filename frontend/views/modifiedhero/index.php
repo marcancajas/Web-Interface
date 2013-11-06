@@ -30,15 +30,15 @@
 				'htmlOptions'=>array('style'=>'text-align:center;vertical-align:middle;', 'width'=>'40px'),
 			),
 			array(
-				'value'=>'$this->grid->getOwner()->renderPartial("button",array("id"=>$data->id, "label"=>"View Statistics"))',
+				'value'=>'$this->grid->getOwner()->renderPartial("/modifiedhero/button",array("id"=>$data->id, "label"=>"View Statistics"))',
 				'htmlOptions'=>array('style'=>'text-align:center;vertical-align:middle;', 'width'=>'40px'),
 			),
 			array(
-				'value'=>'$this->grid->getOwner()->renderPartial("button",array("id"=>$data->id, "label"=>"Play Game"))',
+				'value'=>'$this->grid->getOwner()->renderPartial("/modifiedhero/button",array("id"=>$data->id, "label"=>"Play Game"))',
 				'htmlOptions'=>array('style'=>'text-align:center;vertical-align:middle;', 'width'=>'40px'),
 			),
 			array(
-				'value'=>'$this->grid->getOwner()->renderPartial("button",array("id"=>$data->id, "label"=>"Remove"))',
+				'value'=>'$this->grid->getOwner()->renderPartial("/modifiedhero/button",array("id"=>$data->id, "label"=>"Remove"))',
 				'htmlOptions'=>array('style'=>'text-align:center;vertical-align:middle;', 'width'=>'40px'),
 			),
 		),
