@@ -38,7 +38,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1 >Curtin computing expo 2013</h1>
-              <p class="lead">Welcome to the exciting tech software expo annually held at Curtin University, Hope you guys are enjoying the demonstrations!</p>
+              <p class="lead">Welcome to curtin computing expo! Enjoy the highlights and let us know what you think.</p>
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
