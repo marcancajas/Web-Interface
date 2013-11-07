@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="images/computingdep.jpg" alt="">
+          <img src="images/carouselthumb-2.png" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1 >Curtin computing expo 2013</h1>
