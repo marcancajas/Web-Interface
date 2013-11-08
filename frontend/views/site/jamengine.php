@@ -29,13 +29,18 @@ $this->breadcrumbs = array(
          
           <h2>Need help?</h2>
           <p>Have a question about JAM engine? Visit our <a href="<?php echo Yii::app()->getBaseUrl().'/site/contact' ?>">contact page</a> for questions and suggestions. </p>
+         
+          <!-- Demonstration Video -->
+          <iframe width="540" height="310" src="http://www.wideo.co/embed/936921383897187890?height=282&width=500" frameborder="0" allowfullscreen ></iframe>
+          <!-- -->
+          
         </div><!-- /.span4 -->
         <div class="span4">
         
    
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/jamenginelogo.png" style="margin-top:90px;" height="230" width="230"> 
+     
       
-       
+      
           
         </div><!-- /.span4 -->
       </div><!-- /.row -->
